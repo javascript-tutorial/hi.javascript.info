@@ -28,12 +28,11 @@
 
 प्रत्येक अध्याय, लेख या कार्यों का एक फ़ोल्डर है।
 
-फोल्डर का नाम `N-url` की तरह है, where `N` is a number for the sorting purposesउद्देश्यों and `url` is the URL part with title of the material.
+फोल्डर का नाम `N-url` की तरह है, जहान `N` श्रेणीकरण के उद्देश्यों के लिए एक संख्या है और `url` एक यूआरएल भाग है जिसमें सभी सामग्रीों का नाम है।
+सामग्री के प्रकार को के फ़ोल्डर अंदर फ़ाइल द्वारा परिभाषित किया जाता है:
 
-The type of the material is defined by the file inside the folder:
+  - `index.md` एक अध्याय है
+  - `article.md` एक लेख है
+  - `task.md` एक कार्य है (उपाय `solution.md` फाइल में भी प्रदान किया जाना चाहिए)
 
-  - `index.md` stands for a chapter
-  - `article.md` stands for an article
-  - `task.md` stands for a task (solution must be provided in `solution.md` file aswell)
-
-Each of these files starts from the `# Main header`.
+इसमें `# Main header` हर फाइल से शुरू होनी चाहिए।
