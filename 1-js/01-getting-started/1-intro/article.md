@@ -1,4 +1,4 @@
-# An Introduction to JavaScript
+# जावास्क्रिप्ट की परिचय
 
 Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
 
