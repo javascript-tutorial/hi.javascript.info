@@ -1,18 +1,18 @@
-# The JavaScript Tutorial
+# जावास्क्रिप्ट की शिक्षा
 
-This repository hosts the content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+यह भंडार आधुनिक जावास्क्रिप्ट की शिक्षा की सामग्री मेज़बानी करता है जो [https://javascript.info](https://javascript.info) पर प्रकाशित है।
 
-## Translations
+## अनुवाद
 
-(In alphabetical order):
+(अंग्रेजी वर्णानुक्रम में):
 
-| Language | Github | Translation leads | Translated (%) | Published |
+| भाषा | Github | मुख्या अनुवाद लेखक | अनूदित (%) | प्रकाशित |
 |----------|--------|-------------------|-----------------|-----------|
-| Chinese | https://github.com/xitu/javascript-tutorial-zh | @leviding | ![](http://translate-hook.javascript.info/stats/zh.svg?1) | https://zh.javascript.info |
-| Japanese | https://github.com/KenjiI/javascript-tutorial-ja | @KenjiI | ![](http://translate-hook.javascript.info/stats/ja.svg?1) | https://ja.javascript.info |
-| Romanian | https://github.com/lighthousand/javascript-tutorial-ro | @lighthousand | started | - |
-| Russian | https://github.com/iliakan/javascript-tutorial-ru | @iliakan | * | https://learn.javascript.ru |
-| Turkish | https://github.com/sahinyanlik/javascript-tutorial-tr | @sahinyanlik | ![](http://translate-hook.javascript.info/stats/tr.svg?1) | - |
+| चीनी | https://github.com/xitu/javascript-tutorial-zh | @leviding | ![](http://translate-hook.javascript.info/stats/zh.svg?1) | https://zh.javascript.info |
+| जापानी | https://github.com/KenjiI/javascript-tutorial-ja | @KenjiI | ![](http://translate-hook.javascript.info/stats/ja.svg?1) | https://ja.javascript.info |
+| रोमानियाई | https://github.com/lighthousand/javascript-tutorial-ro | @lighthousand | started | - |
+| रूसी | https://github.com/iliakan/javascript-tutorial-ru | @iliakan | * | https://learn.javascript.ru |
+| तुर्की | https://github.com/sahinyanlik/javascript-tutorial-tr | @sahinyanlik | ![](http://translate-hook.javascript.info/stats/tr.svg?1) | - |
 
 
 
