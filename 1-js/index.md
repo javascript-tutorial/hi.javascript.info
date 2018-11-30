@@ -1,4 +1,4 @@
-# The JavaScript language
+# जावास्क्रिप्ट की भाषा
 
 Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
 
