@@ -24,11 +24,12 @@ You can edit the text in any editor (markdown-like syntax). The server to run th
 
 
 
-## Structure
+## बनावट
 
-Every chapter, article or a task has its folder.
+प्रत्येक अध्याय, लेख या कार्यों का एक फ़ोल्डर है।
 
-The folder is named like `N-url`, where `N` is a number for the sorting purposes and `url` is the URL part with title of the material.
+फोल्डर का नाम `N-url` की तरह है, 
+The folder is named like , where `N` is a number for the sorting purposes and `url` is the URL part with title of the material.
 
 The type of the material is defined by the file inside the folder:
 
