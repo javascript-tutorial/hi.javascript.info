@@ -1,12 +1,12 @@
 # जावास्क्रिप्ट की परिचय
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+चलिए हम देखते हैं कि जावास्क्रिप् इतना खास क्यों है, हम इस से क्या प्राप्त कर सकते हैं औरा कौन से अन्य टेक्नोलॉजी इसके साथ अच्छे से काम करते हैं
 
-## What is JavaScript?
+## जावास्क्रिप्ट क्या है?
 
-*JavaScript* was initially created to *"make web pages alive"*.
+*जावास्क्रिप्ट* को पहली बार *वेब पेजेस चलाने* के लिए बनाया गया था
 
-The programs in this language are called *scripts*. They can be written right in the HTML and executed automatically as the page loads.
+इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है They can be written right in the HTML and executed automatically as the page loads.
 
 Scripts are provided and executed as a plain text. They don't need a special preparation or a compilation to run.
 
