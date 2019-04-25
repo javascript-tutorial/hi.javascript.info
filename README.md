@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 # The Modern JavaScript Tutorial in Hindi
 
 This repository hosts the translation of <https://javascript.info> in Hindi.
+=======
+# The Modern JavaScript Tutorial
+
+This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+>>>>>>> 273e47b70a14ae7a8b882b8d2543e581b000eefb
 
 Please help us to make the translation better.
 
+<<<<<<< HEAD
 - See the [Hindi Translate Progress](https://github.com/javascript-tutorial/hi.javascript.info/issues/1) issue.
 - Choose an unchecked article you'd like to translate.
 - Add a comment to that issue to inform the maintainer that you're translating it.
@@ -24,6 +31,21 @@ Every chapter, an article or a task resides in its own folder.
 The folder is named `N-url`, where `N` – is the number for sorting (articles are ordered), and `url` is the URL-slug on the site.
 
 The folder has one of files:
+=======
+We'd like to make the tutorial available in many languages. Please help us to translate.
+
+See <https://github.com/javascript-tutorial/translate> for the details.
+
+## Contributions
+
+We'd also like to collaborate on the tutorial with other people.
+
+Something's wrong? A topic is missing? Explain it to people, add as PR 👏
+
+**You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.  
+
+The list of contributors is available at <https://javascript.info/about#contributors>.
+>>>>>>> 273e47b70a14ae7a8b882b8d2543e581b000eefb
 
 - `index.md` for a section,
 - `article.md` for an article,
@@ -97,4 +119,14 @@ If a linked article has no translated version, leave the link "as is".
 
 You can run the tutorial locally, to immediately see the changes on-site.
 
+<<<<<<< HEAD
 The server is at <https://github.com/javascript-tutorial/server>. 
+=======
+Each of these files starts from the `# Main header`.
+
+It's very easy to add something new.
+
+---
+💓  
+Ilya Kantor @iliakan
+>>>>>>> 273e47b70a14ae7a8b882b8d2543e581b000eefb

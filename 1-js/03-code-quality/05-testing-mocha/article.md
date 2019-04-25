@@ -117,7 +117,7 @@ For the future, let's note that there are advanced test-runners, like [karma](ht
 Let's make a simple implementation of `pow`, for tests to pass:
 
 ```js
-function pow() {
+function pow(x, n) {
   return 8; // :) we cheat!
 }
 ```
@@ -233,7 +233,7 @@ Grouping is done with a nested `describe`:
 describe("pow", function() {
 
 *!*
-  describe("raises x to power n", function() {
+  describe("raises x to power 3", function() {
 */!*
 
     function makeTest(x) {
@@ -296,7 +296,7 @@ Testing finished – after all tests (after)
 
 [edit src="beforeafter" title="Open the example in the sandbox."]
 
-Usually, `beforeEach/afterEach` (`before/each`) are used to perform initialization, zero out counters or do something else between the tests (or test groups).
+Usually, `beforeEach/afterEach` (`before/after`) are used to perform initialization, zero out counters or do something else between the tests (or test groups).
 ````
 
 ## Extending the spec
