@@ -37,7 +37,8 @@ Additional resources and examples for the article or the task, are also in the s
 
 - The translation doesn't have to be word-by-word precise. It should be technically correct and explain well.
 - If you see that the English version can be improved – great, please send a PR to it.
-- Please keep line breaks and paragraphs "as is": makes it easy to merge future changes from the English version into the translation. 
+
+**Please keep line breaks and paragraphs "as is": don't add newlines and don't remove existing ones.** Makes it easy to merge future changes from the English version into the translation. 
 
 ### Text in Code Blocks
 
