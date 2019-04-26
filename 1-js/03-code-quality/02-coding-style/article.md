@@ -255,7 +255,7 @@ That's because when reading code, we first want to know *what it does*. If the c
 
 A style guide contains general rules about "how to write" code, e.g. which quotes to use, how many spaces to indent, where to put line breaks, etc. A lot of minor things.
 
-When all members of a team use the same style guide the code tends looks uniform, regardless of which team member wrote it.
+When all members of a team use the same style guide, the code looks uniform, regardless of which team member wrote it.
 
 Of course, a team can always write their own style guide. Most of the time though, there's no need to. There are many existing tried and true options to choose from, so adopting one of these is usually your best bet.
 
@@ -287,7 +287,7 @@ Most linters are integrated with many popular editors: just enable the plugin in
 
 For instance, for ESLint you should do the following:
 
-1. Install [Node.JS](https://nodejs.org/).
+1. Install [Node.js](https://nodejs.org/).
 2. Install ESLint with the command `npm install -g eslint` (npm is a JavaScript package installer).
 3. Create a config file named `.eslintrc` in the root of your JavaScript project (in the folder that contains all your files).
 4. Install/enable the plugin for your editor that integrates with ESLint. The majority of editors have one.
