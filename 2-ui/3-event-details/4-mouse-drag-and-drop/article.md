@@ -15,7 +15,7 @@ So here we'll see how to implement Drag'n'Drop using mouse events. Not that hard
 The basic Drag'n'Drop algorithm looks like this:
 
 1. Catch `mousedown` on a draggable element.
-2. Prepare the element to moving (maybe create a copy of it or whatever).
+2. Prepare the element for moving (maybe create a copy of it or whatever).
 3. Then on `mousemove` move it by changing `left/top` and `position:absolute`.
 4. On `mouseup` (button release) -- perform all actions related to a finished Drag'n'Drop.
 
@@ -58,7 +58,7 @@ ball.onmousedown = function(event) { // (1) start the process
 };
 ```
 
-If we run the code, we can notice something strange. On the beginning of the drag'n'drop, the ball "forks": we start to dragging it's "clone".
+If we run the code, we can notice something strange. On the beginning of the drag'n'drop, the ball "forks": we start dragging its "clone".
 
 ```online
 Here's an example in action:
@@ -101,7 +101,7 @@ ball.style.left = pageX - ball.offsetWidth / 2 + 'px';
 ball.style.top = pageY - ball.offsetHeight / 2 + 'px';
 ```
 
-Not bad, but there's a side-effect. To initiate the drag'n'drop can we `mousedown` anywhere on the ball. If do it at the edge, then the ball suddenly "jumps" to become centered.
+Not bad, but there's a side-effect. To initiate the drag'n'drop, we can `mousedown` anywhere on the ball. But if do it at the edge, then the ball suddenly "jumps" to become centered.
 
 It would be better if we keep the initial shift of the element relative to the pointer.
 
@@ -178,7 +178,7 @@ In action (inside `<iframe>`):
 [iframe src="ball3" height=230]
 ```
 
-The difference is especially noticeable if we drag the ball by it's right-bottom corner. In the previous example the ball "jumps" under the pointer. Now it fluently follows the cursor from the current position.
+The difference is especially noticeable if we drag the ball by its right-bottom corner. In the previous example the ball "jumps" under the pointer. Now it fluently follows the cursor from the current position.
 
 ## Detecting droppables
 

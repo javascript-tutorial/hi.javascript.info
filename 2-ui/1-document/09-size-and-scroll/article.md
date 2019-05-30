@@ -64,7 +64,7 @@ The `offsetParent` is the nearest ancestor that is:
 2. or `<td>`, `<th>`, `<table>`,
 2. or `<body>`.
 
-In most practical cases we can use `offsetParent` to get the nearest CSS-positioned ancestor. And `offsetLeft/offsetTop` provide x/y coordinates relative to it's upper-left corner.
+In most practical cases we can use `offsetParent` to get the nearest CSS-positioned ancestor. And `offsetLeft/offsetTop` provide x/y coordinates relative to its upper-left corner.
 
 In the example below the inner `<div>` has `<main>` as `offsetParent` and `offsetLeft/offsetTop` shifts from its upper-left corner (`180`):
 
@@ -202,7 +202,7 @@ On the picture below we can see `scrollHeight` and `scrollTop` for a block with 
 In other words, `scrollTop` is "how much is scrolled up".
 
 ````smart header="`scrollLeft/scrollTop` can be modified"
-Most geometry properties that are read-only, but `scrollLeft/scrollTop` can be changed, and the browser will scroll the element.
+Most of the geometry properties here are read-only, but `scrollLeft/scrollTop` can be changed, and the browser will scroll the element.
 
 ```online
 If you click the element below, the code `elem.scrollTop += 10` executes. That makes the element content scroll `10px` down.
