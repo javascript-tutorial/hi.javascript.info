@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 # The Modern JavaScript Tutorial in Hindi
 
 This repository hosts the translation of <https://javascript.info> in Hindi.
+=======
+# The Modern JavaScript Tutorial
+
+This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+>>>>>>> 9cb33f4039e5751bfd0e2bca565a37aa463fb477
 
 
+<<<<<<< HEAD
 **That's how you can contribute:**
 
 - See the [Hindi Translate Progress](https://github.com/javascript-tutorial/hi.javascript.info/issues/1) issue.
@@ -30,6 +37,21 @@ P.S. The full list of languages can be found at <https://javascript.info/transla
 Every chapter, an article or a task resides in its own folder.
 
 The folder is named `N-url`, where `N` – is the number for sorting (articles are ordered), and `url` is the URL-slug on the site.
+=======
+We'd like to make the tutorial available in many languages. Please help us to translate.
+
+See <https://javascript.info/translate> for the details.
+
+## Contributions
+
+We'd also like to collaborate on the tutorial with other people.
+
+Something's wrong? A topic is missing? Explain it to people, add as PR 👏
+
+**You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.  
+
+The list of contributors is available at <https://javascript.info/about#contributors>.
+>>>>>>> 9cb33f4039e5751bfd0e2bca565a37aa463fb477
 
 The folder has one of files:
 
@@ -133,4 +155,14 @@ Please don't translate or remove the `[#...]` part, it's for URL anchors.
 
 You can run the tutorial server locally to see how the translation looks.
 
+<<<<<<< HEAD
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
+=======
+Each of these files starts from the `# Main header`.
+
+It's very easy to add something new.
+
+---
+💓  
+Ilya Kantor @iliakan
+>>>>>>> 9cb33f4039e5751bfd0e2bca565a37aa463fb477
