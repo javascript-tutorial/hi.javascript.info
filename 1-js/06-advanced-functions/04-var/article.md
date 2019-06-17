@@ -11,7 +11,7 @@ In the very first chapter about [variables](info:variables), we mentioned three 
 
 But `var` is a very different beast, that originates from very old times. It's generally not used in modern scripts, but still lurks in the old ones.
 
-If you don't plan meeting such scripts you may even skip this chapter or postpone it, but then there's a chance that it bites you later.
+If you don't plan on meeting such scripts you may even skip this chapter or postpone it, but then there's a chance that it bites you later.
 
 From the first sight, `var` behaves similar to `let`. That is, declares a variable:
 
@@ -35,7 +35,7 @@ alert(phrase); // Error, phrase is not defined
 
 For instance:
 
-```js
+```js run
 if (true) {
   var test = true; // use "var" instead of "let"
 }
@@ -61,7 +61,7 @@ alert(i); // 10, "i" is visible after loop, it's a global variable
 
 If a code block is inside a function, then `var` becomes a function-level variable:
 
-```js
+```js run
 function sayHi() {
   if (true) {
     var phrase = "Hello";
@@ -71,10 +71,10 @@ function sayHi() {
 }
 
 sayHi();
-alert(phrase); // Error: phrase is not defined
+alert(phrase); // Error: phrase is not defined (Check the Developer Console)
 ```
 
-As we can see, `var` pierces through `if`, `for` or other code blocks. That's because a long time ago in JavaScript blocks had no Lexical Environments. And `var` is a reminiscence of that.
+As we can see, `var` pierces through `if`, `for` or other code blocks. That's because a long time ago in JavaScript blocks had no Lexical Environments. And `var` is a remnant of that.
 
 ## "var" are processed at the function start
 
@@ -84,7 +84,7 @@ In other words, `var` variables are defined from the beginning of the function, 
 
 So this code:
 
-```js
+```js run
 function sayHi() {
   phrase = "Hello";
 
@@ -94,11 +94,12 @@ function sayHi() {
   var phrase;
 */!*
 }
+sayHi();
 ```
 
 ...Is technically the same as this (moved `var phrase` above):
 
-```js
+```js run
 function sayHi() {
 *!*
   var phrase;
@@ -108,11 +109,12 @@ function sayHi() {
 
   alert(phrase);
 }
+sayHi();
 ```
 
 ...Or even as this (remember, code blocks are ignored):
 
-```js
+```js run
 function sayHi() {
   phrase = "Hello"; // (*)
 
@@ -124,6 +126,7 @@ function sayHi() {
 
   alert(phrase);
 }
+sayHi();
 ```
 
 People also call such behavior "hoisting" (raising), because all `var` are "hoisted" (raised) to the top of the function.
@@ -182,4 +185,4 @@ There are two main differences of `var`:
 
 There's one more minor difference related to the global object, we'll cover that in the next chapter.
 
-These differences are actually a bad thing most of the time. First, we can't create block-local variables. And hoisting just creates more space for errors. So, for new scripts `var` is used exceptionally rarely.
+These differences are actually a bad thing most of the time. Block-level variables is such a great thing. That's why `let` was introduced in the standard long ago, and is now a major way (along with `const`) to declare a variable.
