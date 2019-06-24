@@ -66,7 +66,7 @@ alert(json);
 
 The method `JSON.stringify(student)` takes the object and converts it into a string.
 
-The resulting `json` string is a called *JSON-encoded* or *serialized* or *stringified* or *marshalled* object. We are ready to send it over the wire or put into a plain data store.
+The resulting `json` string is called a *JSON-encoded* or *serialized* or *stringified* or *marshalled* object. We are ready to send it over the wire or put into a plain data store.
 
 
 Please note that a JSON-encoded object has several important differences from the object literal:
@@ -361,7 +361,7 @@ alert( JSON.stringify(meetup) );
 
 Here we can see that `date` `(1)` became a string. That's because all dates have a built-in `toJSON` method which returns such kind of string.
 
-Now let's add a custom `toJSON` for our object `room`:
+Now let's add a custom `toJSON` for our object `room` `(2)`:
 
 ```js run
 let room = {
