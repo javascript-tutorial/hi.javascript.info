@@ -10,15 +10,17 @@ The `mouseover` event occurs when a mouse pointer comes over an element, and `mo
 
 These events are special, because they have a `relatedTarget`.
 
+This property complements `target`. When a mouse leaves one element for another, one of them becomes `target`, and the other one `relatedTarget`.
+
 For `mouseover`:
 
 - `event.target` -- is the element where the mouse came over.
-- `event.relatedTarget` -- is the element from which the mouse came.
+- `event.relatedTarget` -- is the element from which the mouse came (`relatedTarget` -> `target`).
 
 For `mouseout` the reverse:
 
 - `event.target` -- is the element that mouse left.
-- `event.relatedTarget` -- is the new under-the-pointer element (that mouse left for).
+- `event.relatedTarget` -- is the new under-the-pointer element, that mouse left for (`target` -> `relatedTarget`).
 
 ```online
 In the example below each face feature is an element. When you move the mouse, you can see mouse events in the text area.
@@ -50,7 +52,7 @@ If the mouse moves very fast from `#FROM` to `#TO` elements as painted above, th
 
 In practice that's helpful, because if there may be many intermediate elements. We don't really want to process in and out of each one.
 
-From the other side, we should keep in mind that we can't assume that the mouse slowly moves from one event to another. No, it can "jump".
+On the other hand, we should keep in mind that we can't assume that the mouse slowly moves from one event to another. No, it can "jump".
 
 In particular it's possible that the cursor jumps right inside the middle of the page from out of the window. And `relatedTarget=null`, because it came from "nowhere":
 
@@ -96,7 +98,7 @@ Try entering the blue element and then moving the mouse on the red one -- and wa
 
 So, for a handler that does not take `target` into account, it looks like we left the parent in `mouseout` in `(2)` and returned back to it by `mouseover` in `(3)`.
 
-If we perform some actions on entering/leaving the element, then we'll get a lot of extra "false" runs. For simple stuff may be unnoticeable. For complex things that may bring unwanted side-effects.
+If we perform some actions on entering/leaving the element, then we'll get a lot of extra "false" runs. For simple stuff that may be unnoticeable. For complex things that may bring unwanted side-effects.
 
 We can fix it by using `mouseenter/mouseleave` events instead.
 
