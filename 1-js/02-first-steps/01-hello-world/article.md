@@ -1,8 +1,8 @@
 # Hello, world!
 
-The tutorial that you're reading is about core JavaScript, which is platform-independent. Further on, you will learn Node.JS and other platforms that use it.
+शिक्षण जो आप पढ़ रहे हैं, वह कोर जावास्क्रिप्ट के बारे में है, जो प्लेटफ़ॉर्म-स्वतंत्र है। इसके अलावा, आप Node.JS और इसका उपयोग करने वाले अन्य प्लेटफ़ॉर्म सीखेंगे।
 
-But, we need a working environment to run our scripts, and, just because this book is online, the browser is a good choice. We'll keep the amount of browser-specific commands (like `alert`) to a minimum so that you don't spend time on them if you plan to concentrate on another environment like Node.JS. On the other hand, browser details are explained in detail in the [next part](/ui) of the tutorial.
+लेकिन, हमें अपनी स्क्रिप्ट को चलाने के लिए काम करने का माहौल चाहिए, और, सिर्फ इसलिए कि यह पुस्तक ऑनलाइन है, ब्राउज़र एक अच्छा विकल्प है। हम ब्राउज़र-विशिष्ट आदेशों की मात्रा रखेंगे (jase ki `alert`) यदि आप किसी अन्य वातावरण जैसे Node.JS पर ध्यान केंद्रित करने की योजना बनाते हैं, तो न्यूनतम समय पर उन पर समय व्यतीत न करें। दूसरी ओर, ब्राउज़र विवरण में विस्तार से बताया गया है [अगला भाग](/ui) ट्यूटोरियल का.
 
 So first, let's see how to attach a script to a webpage. For server-side environments, you can just execute it with a command like `"node my.js"` for Node.JS.
 
