@@ -93,6 +93,20 @@ But if you click the second one, there's no focus.
 
 That's because the browser action is canceled on `mousedown`. The focusing is still possible if we use another way to enter the input. For instance, the `key:Tab` key to switch from the 1st input into the 2nd. But not with the mouse click any more.
 
+## The "passive" handler option
+
+The optional `passive: true` option of `addEventListener` signals the browser that the handler is not going to call `preventDefault()`.
+
+Why that may be needed?
+
+There are some events like `touchmove` on mobile devices (when the user moves their finger across the screen), that cause scrolling by default, but that scrolling can be prevented using `preventDefault()` in the handler.
+
+So when the browser detects such event, it has first to process all handlers, and then if `preventDefault` is not called anywhere, it can proceed with scrolling. That may cause unnecessary delays and "jitters" in the UI.
+
+The `passive: true` options tells the browser that the handler is not going to cancel scrolling. Then browser scrolls immediately providing a maximally fluent experience, and the event is handled by the way.
+
+For some browsers (Firefox, Chrome), `passive` is `true` by default for `touchstart` and `touchmove` events.
+
 
 ## event.defaultPrevented
 
@@ -215,12 +229,14 @@ All the default actions can be prevented if we want to handle the event exclusiv
 
 To prevent a default action -- use either `event.preventDefault()` or  `return false`. The second method works only for handlers assigned with `on<event>`.
 
+The `passive: true` option of `addEventListener` tells the browser that the action is not going to be prevented. That's useful for some mobile events, like `touchstart` and `touchmove`, to tell the browser that it should not wait for all handlers to finish before scrolling.
+
 If the default action was prevented, the value of `event.defaultPrevented` becomes `true`, otherwise it's `false`.
 
 ```warn header="Stay semantic, don't abuse"
 Technically, by preventing default actions and adding JavaScript we can customize the behavior of any elements. For instance, we can make a link `<a>` work like a button, and a button `<button>` behave as a link (redirect to another URL or so).
 
-But we should generally keep the semantic meaning of HTML elements. For instance, `<a>` should preform navigation, not a button.
+But we should generally keep the semantic meaning of HTML elements. For instance, `<a>` should perform navigation, not a button.
 
 Besides being "just a good thing", that makes your HTML better in terms of accessibility.
 
