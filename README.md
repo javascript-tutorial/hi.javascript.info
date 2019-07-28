@@ -150,7 +150,7 @@ Please don't translate or remove the `[#...]` part, it's for URL anchors.
 
 You can run the tutorial server locally to see how the translation looks.
 
-<<<<<<< HEAD
+
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
 =======
 Each of these files starts from the `# Main header`.
