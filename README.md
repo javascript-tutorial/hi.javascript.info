@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # The Modern JavaScript Tutorial in Hindi
 
 This repository hosts the translation of <https://javascript.info> in Hindi.
@@ -6,10 +5,7 @@ This repository hosts the translation of <https://javascript.info> in Hindi.
 # The Modern JavaScript Tutorial
 
 This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
->>>>>>> 4a8d8987dfc3256045e6b4a3bd8810ad3b25d1b3
 
-
-<<<<<<< HEAD
 **That's how you can contribute:**
 
 - See the [Hindi Translate Progress](https://github.com/javascript-tutorial/hi.javascript.info/issues/1) issue.
@@ -51,7 +47,6 @@ Something's wrong? A topic is missing? Explain it to people, add as PR 👏
 **You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.  
 
 The list of contributors is available at <https://javascript.info/about#contributors>.
->>>>>>> 4a8d8987dfc3256045e6b4a3bd8810ad3b25d1b3
 
 The folder has one of files:
 
@@ -165,4 +160,3 @@ It's very easy to add something new.
 ---
 ♥  
 Ilya Kantor @iliakan
->>>>>>> 4a8d8987dfc3256045e6b4a3bd8810ad3b25d1b3
