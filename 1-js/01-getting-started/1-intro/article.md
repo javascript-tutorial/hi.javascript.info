@@ -9,7 +9,6 @@
 इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है They can be written right in the HTML and executed automatically as the page loads.
 
 The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
->>>>>>> 4a8d8987dfc3256045e6b4a3bd8810ad3b25d1b3
 
 Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
 
