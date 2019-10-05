@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Show an alert
+# एक चेतावनी(alert) दिखाएं
 
-Create a page that shows a message "I'm JavaScript!".
+एक पेज बनाएँ जो एक संदेश दिखाता है "I'm JavaScript!".
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+सैंडबॉक्स में करें, या अपनी हार्ड ड्राइव पर, कोई फर्क नहीं पड़ता, बस यह सुनिश्चित करें कि यह काम करता है।
 
 [demo src="solution"]
 
