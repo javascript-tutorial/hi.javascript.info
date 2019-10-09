@@ -2,8 +2,7 @@ importance: 5
 
 ---
 
-# Show an alert with an external script
+# बाहरी(external) स्क्रिप्ट के साथ अलर्ट(alert) दिखाएं
 
-Take the solution of the previous task <info:task/hello-alert>. Modify it by extracting the script content into an external file `alert.js`, residing in the same folder.
-
-Open the page, ensure that the alert works.
+पिछले कार्य का हल निकालें <info:task/hello-alert>.एक बाहरी फ़ाइल में स्क्रिप्ट सामग्री को निकालकर इसे संशोधित(extract) करें `alert.js`, एक ही फ़ोल्डर में रहते हैं।
+पृष्ठ खोलें, यह सुनिश्चित करें कि अलर्ट(alert) काम करता है।
