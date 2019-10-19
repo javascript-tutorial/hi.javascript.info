@@ -1,6 +1,6 @@
 # जावास्क्रिप्ट की भाषा
 
-Here we learn JavaScript, starting from scratch and go on to advanced concepts like OOP.
+यहाँ हम सीखते हैं JavaScript, खरोंच से शुरू और उन्नत अवधारणाओं की तरह चलते हैं OOP.
 
-We concentrate on the language itself here, with the minimum of environment-specific notes.
+हम पर्यावरण-विशिष्ट नोटों की न्यूनतम के साथ ही यहां की भाषा पर ध्यान केंद्रित करते हैं।
 
