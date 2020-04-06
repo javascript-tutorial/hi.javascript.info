@@ -4,9 +4,13 @@
 
 ## जावास्क्रिप्ट क्या है?
 
+<<<<<<< HEAD
 *जावास्क्रिप्ट* को पहली बार *वेब पेजेस चलाने* के लिए बनाया गया था
 
 इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है They can be written right in the HTML and executed automatically as the page loads.
+=======
+*JavaScript* was initially created to "make web pages alive".
+>>>>>>> c89ddc5d92195e08e2c32e30526fdb755fec4622
 
 The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
 
