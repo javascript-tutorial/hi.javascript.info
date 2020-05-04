@@ -1,22 +1,16 @@
 # जावास्क्रिप्ट की परिचय
 
-चलिए हम देखते हैं कि जावास्क्रिप् इतना खास क्यों है, हम इस से क्या प्राप्त कर सकते हैं औरा कौन से अन्य टेक्नोलॉजी इसके साथ अच्छे से काम करते हैं
+चलिए हम देखते हैं कि जावास्क्रिप् इतना खास क्यों है, हम इस से क्या प्राप्त कर सकते हैं औरा कौन से अन्य टेक्नोलॉजी इसके साथ अच्छे से काम करते हैं।
 
 ## जावास्क्रिप्ट क्या है?
 
-<<<<<<< HEAD
 *जावास्क्रिप्ट* को पहली बार *वेब पेजेस चलाने* के लिए बनाया गया था
 
-इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है They can be written right in the HTML and executed automatically as the page loads.
-=======
-*JavaScript* was initially created to "make web pages alive".
->>>>>>> c89ddc5d92195e08e2c32e30526fdb755fec4622
+इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है। उन्हें एचटीएमएल में ही लिखा जा सकता है और वो पेज लोड होते ही अपने आप एक्सेक्यूट (निष्पादित) हो जाता है।
 
-The programs in this language are called *scripts*. They can be written right in a web page's HTML and run automatically as the page loads.
+स्क्रिप्ट्स को एक प्लेन टेक्स्ट के रूप में प्रदान एक्सेक्यूट (निष्पादित) किया जाता है. उन्हें चलाने के लिए एक विशेष तैयारी या संकलन की आवश्यकता नहीं है।
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
-
-In this aspect, JavaScript is very different from another language called [Java](https://en.wikipedia.org/wiki/Java_(programming_language)).
+इस पहलू में, जावास्क्रिप्ट, [जावा](https://en.wikipedia.org/wiki/Java_(programming_language)) नामक एक अन्य भाषा से बहुत अलग है।
 
 ```smart header="Why is it called <u>Java</u>Script?"
 When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
