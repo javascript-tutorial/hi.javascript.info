@@ -1,4 +1,4 @@
-# Code editors
+# कोड संपादक
 
 A code editor is the place where programmers spend most of their time.
 
