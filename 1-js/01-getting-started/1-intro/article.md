@@ -4,18 +4,18 @@
 
 ## जावास्क्रिप्ट क्या है?
 
-*जावास्क्रिप्ट* को पहली बार *वेब पेजेस चलाने* के लिए बनाया गया था
+*जावास्क्रिप्ट* को पहली बार *वेब पेजेस चलाने* के लिए बनाया गया था।
 
-इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है। उन्हें एचटीएमएल में ही लिखा जा सकता है और वो पेज लोड होते ही अपने आप एक्सेक्यूट (निष्पादित) हो जाता है।
+इस भाषा में प्रोग्राम को *स्क्रिप्ट्स* कहा जाता है। उन्हें एचटीएमएल के अंदर में ही लिखा जा सकता है और वो पेज लोड होते ही अपने आप एक्सेक्यूट (निष्पादित) हो जाता है।
 
-स्क्रिप्ट्स को एक प्लेन टेक्स्ट के रूप में प्रदान एक्सेक्यूट (निष्पादित) किया जाता है. उन्हें चलाने के लिए एक विशेष तैयारी या संकलन की आवश्यकता नहीं है।
+स्क्रिप्ट्स को एक प्लेन टेक्स्ट के रूप में लिखा तथा एक्सेक्यूट (निष्पादित) किया जाता है. उन्हें चलाने के लिए एक विशेष तैयारी या संकलन की आवश्यकता नहीं है।
 
 इस पहलू में, जावास्क्रिप्ट, [जावा](https://en.wikipedia.org/wiki/Java_(programming_language)) नामक एक अन्य भाषा से बहुत अलग है।
 
 ```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+जब जावास्क्रिप्ट बनाया गया था, तो शुरू में इसका दूसरा नाम था: "LiveScript"। लेकिन उस समय जावा बहुत लोकप्रिय था, इसलिए यह निर्णय लिया गया कि जावा के "छोटे भाई" के रूप में प्रस्तुत करने से एक नई भाषा की स्थिति में मदद मिलेगी।
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+लेकिन जैसे यह विकसित हुआ, जावास्क्रिप्ट अपने स्वयं के विनिर्देशन के साथ एक पूरी तरह से स्वतंत्र भाषा बन गई इसे कहा जाता है [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), और अब इसका जावा से कोई संबंध नहीं है।
 ```
 
 Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
