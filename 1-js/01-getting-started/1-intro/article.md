@@ -18,11 +18,11 @@
 लेकिन जैसे यह विकसित हुआ, जावास्क्रिप्ट अपने स्वयं के विनिर्देशन के साथ एक पूरी तरह से स्वतंत्र भाषा बन गई इसे कहा जाता है [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), और अब इसका जावा से कोई संबंध नहीं है।
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+आज, जावास्क्रिप्ट को न केवल ब्राउज़र में निष्पादित किया जा सकता है, लेकिन सर्वर पर भी, या वास्तव में किसी भी डिवाइस पर, जिसमें एक विशेष कार्यक्रम है जिसे [जावास्क्रिप्ट इंजन](https://en.wikipedia.org/wiki/JavaScript_engine) कहा जाता है।
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+ब्राउज़र में एक एकीकृत इंजन होता है जिसे कभी-कभी "जावास्क्रिप्ट वर्चुअल मशीन" कहा जाता है।
 
-Different engines have different "codenames". For example:
+अलग-अलग इंजनों के अलग-अलग "कोडनेम" होते हैं। उदाहरण के लिए:
 
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
