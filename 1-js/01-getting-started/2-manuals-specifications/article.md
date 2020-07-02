@@ -1,42 +1,42 @@
 
-# Manuals and specifications
+# मैनुअल और विशिष्टता
 
-This book is a *tutorial*. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other sources.
+यह पुस्तक एक * ट्यूटोरियल * है। इसका उद्देश्य आपको धीरे-धीरे जावास्क्रिप्ट सीखने में मदद करना है। एक बार जब आप मूल बातें से परिचित हो जाते हैं, तो आपको अन्य स्त्रोत की आवश्यकता होगी।
 
-## Specification
+## विशिष्टता
 
-[The ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+[ECMA-262 विशिष्टता] (https://www.ecma-international.org/publications/standards/Ecma-262.htm) में {जावास्क्रिप्ट} के बारे में सबसे अधिक गहन, विस्तृत और औपचारिक जानकारी है। यह जावास्क्रिप्ट को परिभाषित करता है।
 
-But being that formalized, it's difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place. But it's not for everyday use.
+लेकिन औपचारिक होने के नाते, यह पहली बार में समझना मुश्किल है। इसलिए यदि आपको जावास्क्रिप्ट के विवरण के बारे में सबसे भरोसेमंद स्त्रोत की आवश्यकता है, तो विशिष्टता सही जगह है। लेकिन यह रोजमर्रा के उपयोग के लिए नहीं है।
 
-A new specification version is released every year. In-between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+हर साल एक नया विशिष्टता संस्करण जारी किया जाता है। इन रिलीज़ों के बीच, नवीनतम विशिष्टता ड्राफ्ट <https://tc39.es/ecma262/> पर है।
 
-To read about new bleeding-edge features, including those that are "almost standard" (so-called "stage 3"), see proposals at <https://github.com/tc39/proposals>.
+नवीनतम विशेषताओं के बारे में पढ़ने के लिए, जिनमें "लगभग मानक" (तथाकथित "स्टेज 3") शामिल हैं, <https://github.com/tc39/proposals> पर प्रस्ताव देखें।
 
-Also, if you're in developing for the browser, then there are other specs covered in the [second part](info:browser-environment) of the tutorial.
+इसके अलावा, यदि आप ब्राउज़र के लिए विकसित कर रहे हैं, तो ट्यूटोरियल के [दूसरे भाग](info:browser-environment) में अन्य विशिष्टताएं शामिल हैं।
 
-## Manuals
+## मैनुअल
 
-- **MDN (Mozilla) JavaScript Reference** is a manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+- **एमडीएन (मोज़िला) जावास्क्रिप्ट संदर्भ** उदाहरण और अन्य जानकारी के साथ एक मैनुअल है।यह जावास्क्रिप्ट के फंक्षन, मेतड आदि के बारे में गहराई से जानकारी प्राप्त करना बहुत अच्छा है।
 
-    One can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+    कोई इसे <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> पर पा सकता है।
 
-    Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+    हालांकि, इसके बजाय अक्सर इंटरनेट खोज का उपयोग करना सबसे अच्छा है। बस क्वेरी में "एमडीएन [टर्म]" का उपयोग करें। {`parseInt`} फ़ंक्शन की खोज करने के लिए <https://google.com/search?q=MDN+parseInt> पर जाएं।
 
 
-- **MSDN** – Microsoft manual with a lot of information, including JavaScript (often referred to as JScript). If one needs something specific to Internet Explorer, better go there: <http://msdn.microsoft.com/>.
+- **MSDN** – Microsoft की मैनुअल मे बहुत सारी जानकारी है, जिसमें जावास्क्रिप्ट (अक्सर JScript के रूप में संदर्भित) शामिल है। अगर किसी को इंटरनेट एक्सप्लोरर के लिए कुछ विशिष्ट चाहिए, तो यहा जाएं: <http://msdn.microsoft.com/>।
 
-    Also, we can use an internet search with phrases such as "RegExp MSDN" or "RegExp MSDN jscript".
+    इसके अलावा, हम "RegExp MSDN" या "RegExp MSDN jscript" जैसे वाक्यांशों के साथ एक इंटरनेट खोज का उपयोग कर सकते हैं।
 
-## Compatibility tables
+## संगतता टेबल
 
-JavaScript is a developing language, new features get added regularly.
+जावास्क्रिप्ट एक विकासशील भाषा है, नई विशेषताएं को नियमित रूप से जोड़ा जाता है।
 
-To see their support among browser-based and other engines, see:
+ब्राउज़र-आधारित और अन्य इंजनों के बीच उनका समर्थन देखने के लिए, देखें:
 
-- <http://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
-- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+- <http://caniuse.com> - समर्थन की प्रति-सुविधा तालिका, उदाहरण के लिए, यह देखने के लिए कि कौन से इंजन आधुनिक क्रिप्टोग्राफी फंक्षन का समर्थन करते हैं: <http://caniuse.com/#feat=cryptography>
+- <https://kangax.github.io/compat-table> - जावास्क्रिप्ट सुविधाओं और इंजनों के साथ एक तालिका जो समर्थन करती है या समर्थन नहीं करती है।
 
-All these resources are useful in real-life development, as they contain valuable information about language details, their support etc.
+ये सभी संसाधन वास्तविक जीवन के विकास में उपयोगी होते हैं, क्योंकि इनमें जावास्क्रिप्ट के विवरण, उनके समर्थन आदि के बारे में बहुमूल्य जानकारी होती है।
 
-Please remember them (or this page) for the cases when you need in-depth information about a particular feature.
+कृपया उन्हें (या यह पृष्ठ) उन मामलों के लिए याद रखें जब आपको किसी विशेष सुविधा के बारे में गहराई से जानकारी की आवश्यकता होगी।
