@@ -24,28 +24,28 @@
 
 अलग-अलग इंजनों के अलग-अलग "कोडनेम" होते हैं। उदाहरण के लिए:
 
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- क्रोम (Chrome) और ओपेरा (Opera) में।
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- फ़ायरफ़ॉक्स (Firefox) में।
+- ...IE के विभिन्न संस्करणों के लिए "ट्राइडेंट" (Trident) और "चक्र" (Chakra) जैसे अन्य कोडनेम हैं, माइक्रोसॉफ्ट एज के लिए "चक्रकोर" (ChakraCore), "नाइट्रो" (Nitro) और सफारी के लिए "स्क्विरफेलिश" (SquirrelFish) आदि।
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+उपरोक्त शब्द याद रखने के लिए अच्छे हैं क्योंकि इनका उपयोग इंटरनेट पर डेवलपर लेखों में किया जाता है। हम भी उनका उपयोग करेंगे। उदाहरण के लिए, यदि "एक सुविधा X V8 द्वारा समर्थित है", तो यह शायद क्रोम और ओपेरा में काम करता है।
 
 ```smart header="How do engines work?"
 
-Engines are complicated. But the basics are easy.
+इंजन जटिल हैं। लेकिन मूल बातें आसान हैं।
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+1. इंजन (एम्बेडेड अगर यह एक ब्राउज़र है) स्क्रिप्ट पढ़ता है (parse)।
+2. फिर यह मशीन भाषा के लिए स्क्रिप्ट ("संकलन") को परिवर्तित करता है (compile)।
+3. और फिर मशीन कोड चलता है, (बहुत तेज)।
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+इंजन प्रक्रिया के प्रत्येक चरण में अनुकूलन (Optimisation) लागू करता है। यह संकलित (complied) स्क्रिप्ट को भी देखता है, इसके माध्यम से बहने वाले डेटा का विश्लेषण करता है, और आगे उस ज्ञान के आधार पर मशीन कोड का आगे अनुकूलन करता है।
 ```
 
-## What can in-browser JavaScript do?
+## एक ब्राउज़र में जावास्क्रिप्ट क्या कर सकता है?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+आधुनिक जावास्क्रिप्ट एक "सुरक्षित" प्रोग्रामिंग भाषा है। यह मेमोरी या सीपीयू तक निम्न-स्तरीय पहुंच प्रदान नहीं करता है, क्योंकि यह शुरू में उन ब्राउज़रों के लिए बनाया गया था जिन्हें इसकी आवश्यकता नहीं है।
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+जावास्क्रिप्ट की क्षमताएं बहुत हद तक उस वातावरण पर निर्भर करती हैं, जिसमें वह चल रहा है. उदाहरण के लिए, [Node.js] (https://wikipedia.org/wiki/Node.js) ऐसे कार्यों का समर्थन करता है जो जावास्क्रिप्ट को मनमाने ढंग से फाइल पढ़ने / लिखने, नेटवर्क अनुरोध करने, आदि की अनुमति देता है।
 
 In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
 
@@ -113,8 +113,8 @@ Examples of such languages:
 
 There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
 
-## Summary
+## सारांश
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- जावास्क्रिप्ट को शुरुआत में केवल ब्राउज़र-भाषा के रूप में बनाया गया था, लेकिन अब इसे कई अन्य वातावरणों में भी उपयोग किया जाता है।
+- आज, जावास्क्रिप्ट HTML / CSS के साथ पूर्ण एकीकरण के साथ सबसे व्यापक रूप से अपनाया जाने वाला एक अद्वितीय ब्राउज़र-भाषा है।
+- कई भाषाएं हैं जो जावास्क्रिप्ट में "transpiled" (किसी अन्य भाषा में अनुवाद करने की प्रक्रिया) होती हैं और कुछ विशेषताएं प्रदान करती हैं।जावास्क्रिप्ट पर महारत हासिल करने के बाद, कम से कम संक्षेप में उन पर एक नज़र डालने की सलाह दी जाती है।
