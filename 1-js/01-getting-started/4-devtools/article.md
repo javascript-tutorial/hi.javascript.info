@@ -1,6 +1,6 @@
-# Developer console
+# डेवलपर कंसोल (Developer console)
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+कोड में त्रुटि की संभावना है। आप संभवतः त्रुटियां करेंगे। ओह, मैं किस बारे में बात कर रहा हूं? आप *बिल्कुल* त्रुटियां करेंगे, कम से कम यदि आप एक इंसान हैं, [रोबोट](https://en.wikipedia.org/wiki/Bender_(Futurama)). नहीं।
 
 But in the browser, users don't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
 
