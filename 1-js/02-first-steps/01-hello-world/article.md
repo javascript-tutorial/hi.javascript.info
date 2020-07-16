@@ -1,4 +1,4 @@
-# Hello, world! 
+# Hello, world! (नमस्ते दुनिया!)
 
 शिक्षण जो आप पढ़ रहे हैं, वह कोर जावास्क्रिप्ट के बारे में है, जो प्लेटफ़ॉर्म-स्वतंत्र है। इसके अलावा, आप Node.JS और इसका उपयोग करने वाले अन्य प्लेटफ़ॉर्म सीखेंगे।
 
@@ -46,11 +46,11 @@
 `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
 : पुराने HTML संस्करण, HTML4 में स्क्रिप्ट में एका attribute `type` की आवश्यकता होती है। `type`. आमतौर पर यह `type="text/javascript"` था. इसकी अब आवश्यकता नहीं है। साथ ही, आधुनिक HTML मानक ने इस विशेषता के अर्थ को पूरी तरह से बदल दिया है। अब, इसका उपयोग जावास्क्रिप्ट मॉड्यूल के लिए किया जा सकता है। लेकिन यह एक उन्नत विषय है, हम ट्यूटोरियल के दूसरे भाग में मॉड्यूल के बारे में बात करेंगे।
 
-The `language` attribute: <code>&lt;script <u>language</u>=...&gt;</code>
-: This attribute was meant to show the language of the script. This attribute no longer makes sense because JavaScript is the default language. There is no need to use it.
+`language` attribute: <code>&lt;script <u>language</u>=...&gt;</code>
+: यह attribute स्क्रिप्ट की भाषा दिखाने के लिए थी। यह attribute अब मायने नहीं रखती है क्योंकि जावास्क्रिप्ट डिफ़ॉल्ट भाषा है। इसका उपयोग करने की कोई आवश्यकता नहीं है।
 
-Comments before and after scripts.
-: In really ancient books and guides, you may find comments inside `<script>` tags, like this:
+स्क्रिप्ट से पहले और बाद की टिप्पणियाँ।
+: वास्तव में पुरानी किताबों और गाइडों में, आप इस तरह से `<स्क्रिप्ट> टैग के अंदर टिप्पणी पा सकते हैं:
 
     ```html no-beautify
     <script type="text/javascript"><!--
@@ -58,28 +58,28 @@ Comments before and after scripts.
     //--></script>
     ```
 
-    This trick isn't used in modern JavaScript. These comments hide JavaScript code from old browsers that didn't know how to process the `<script>` tag. Since browsers released in the last 15 years don't have this issue, this kind of comment can help you identify really old code.
+    इस तकनीक का उपयोग आधुनिक जावास्क्रिप्ट में नहीं किया जाता है। ये टिप्पणियां जावास्क्रिप्ट कोड को उन पुराने ब्राउज़रों से छिपाती हैं, जो '<स्क्रिप्ट>' टैग को प्रोसेस करना नहीं जानते थे। चूंकि पिछले 15 वर्षों में जारी किए गए ब्राउज़रों में यह समस्या नहीं है, इसलिए इस तरह की टिप्पणी से आप वास्तव में पुराने कोड को पहचान सकते हैं।
 
 
-## External scripts
+## बाहरी स्क्रिप्ट
 
-If we have a lot of JavaScript code, we can put it into a separate file.
+यदि हमारे पास बहुत अधिक जावास्क्रिप्ट कोड है, तो हम इसे एक अलग फाइल में डाल सकते हैं।
 
-Script files are attached to HTML with the `src` attribute:
+स्क्रिप्ट फाइलें HTML से `src` विशेषता के साथ जुड़ी हुई हैं:
 
 ```html
 <script src="/path/to/script.js"></script>
 ```
 
-Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"` would mean a file `"script.js"` in the current folder.
+यहाँ, `/path/to/script.js` यह साइट रूट से स्क्रिप्ट के लिए एक absolute (निरपेक्ष) पथ है। वर्तमान पृष्ठ से कोई एक relative (आपेक्षिक) पथ भी प्रदान कर सकता है। उदाहरण के लिए, `src="script.js"` वर्तमान फोल्डर के अंदर एक फ़ाइल `"script.js"` का अर्थ होगा।
 
-We can give a full URL as well. For instance:
+हम एक पूर्ण URL भी दे सकते हैं। उदाहरण के लिए:
 
 ```html
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
-To attach several scripts, use multiple tags:
+कई स्क्रिप्ट संलग्न करने के लिए, कई टैग का उपयोग करें:
 
 ```html
 <script src="/js/script1.js"></script>
@@ -88,23 +88,23 @@ To attach several scripts, use multiple tags:
 ```
 
 ```smart
-As a rule, only the simplest scripts are put into HTML. More complex ones reside in separate files.
+एक नियम के रूप में, केवल सरलतम स्क्रिप्ट HTML में डाली जाती हैं। अधिक जटिल अलग फ़ाइलों में रहते हैं।
 
-The benefit of a separate file is that the browser will download it and store it in its [cache](https://en.wikipedia.org/wiki/Web_cache).
+एक अलग फ़ाइल का लाभ यह है कि ब्राउज़र इसे डाउनलोड करेगा और इसे अपने कैश में रखेगा [cache](https://en.wikipedia.org/wiki/Web_cache).
 
-Other pages that reference the same script will take it from the cache instead of downloading it, so the file is actually downloaded only once.
+उसी स्क्रिप्ट को संदर्भित करने वाले अन्य पृष्ठ इसे डाउनलोड करने के बजाय इसे कैश से ले लेंगे, इसलिए फ़ाइल वास्तव में केवल एक बार डाउनलोड की जाती है।
 
-That reduces traffic and makes pages faster.
+यह ट्रैफ़िक कम करता है और पृष्ठों को तेज़ बनाता है।
 ```
 
-````warn header="If `src` is set, the script content is ignored."
-A single `<script>` tag can't have both the `src` attribute and code inside.
+````warn header="यदि `src` सेट है, तो स्क्रिप्ट के अंदर मौजूद कोड को अनदेखा कर दिया जाता है।"
+एक <script> `टैग के अंदर` src` attribute और कोड दोनों नहीं हो सकते।
 
-This won't work:
+यह काम नहीं करेगा:
 
 ```html
 <script *!*src*/!*="file.js">
-  alert(1); // the content is ignored, because src is set
+  alert(1); // इस कोड को अनदेखा कर दिया जाएगा, क्योंकि src सेट है
 </script>
 ```
 
