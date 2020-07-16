@@ -2,17 +2,15 @@
 
 शिक्षण जो आप पढ़ रहे हैं, वह कोर जावास्क्रिप्ट के बारे में है, जो प्लेटफ़ॉर्म-स्वतंत्र है। इसके अलावा, आप Node.JS और इसका उपयोग करने वाले अन्य प्लेटफ़ॉर्म सीखेंगे।
 
-लेकिन, हमें अपनी स्क्रिप्ट को चलाने के लिए काम करने का environment चाहिए, और, सिर्फ इसलिए कि यह पुस्तक ऑनलाइन है, ब्राउज़र एक अच्छा विकल्प है। हम ब्राउज़र-विशिष्ट commands की मात्रा रखेंगे (jase ki `alert`) यदि आप किसी अन्य environment जैसे Node.JS पर ध्यान केंद्रित करने की योजना बनाते हैं, तो न्यूनतम समय मैं उन पर समय व्यतीत न करें। दूसरी ओर, ब्राउज़र विवरण में विस्तार से बताया गया है [अगला भाग](/ui) ट्यूटोरियल का. (update required)
+लेकिन, हमें अपनी स्क्रिप्ट को चलाने के लिए काम करने का environment चाहिए, और, सिर्फ इसलिए कि यह पुस्तक ऑनलाइन है, ब्राउज़र एक अच्छा विकल्प है। हम ब्राउज़र-विशिष्ट commands की मात्रा कम रखेंगे (जैसे `alert`) ताकि, यदि आप किसी अन्य environment जैसे Node.JS पर ध्यान केंद्रित करने की योजना बनाते हैं, तब आप ब्राउज़र जावास्क्रिप्ट सीखने में समय व्यतीत नहीं करेंगे। हम ट्यूटोरियल के [अगले भाग](/ui) में ब्राउज़र जावास्क्रिप्ट पर ध्यान केंद्रित करेंगे।
 
+तो पहले यह देखते हैं कि हम किसी स्क्रिप्ट को वेबपेज से कैसे जोड़ते हैं। सर्वर-साइड वातावरण (जैसे Node.js) के लिए, आप स्क्रिप्ट को `"node my.js"` जैसे कमांड से निष्पादित कर सकते हैं।
 
-So first, let's see how we attach a script to a webpage. For server-side environments (like Node.js), you can execute the script with a command like `"node my.js"`.
+## "स्क्रिप्ट" टैग
 
+जावास्क्रिप्ट प्रोग्रामों को HTML दस्तावेज़ के किसी भी भाग में `<script>` टैग की सहायता से डाला जा सकता है।
 
-## The "script" tag
-
-JavaScript programs can be inserted into any part of an HTML document with the help of the `<script>` tag.
-
-For instance:
+उदाहरण के लिए:
 
 ```html run height=100
 <!DOCTYPE HTML>
@@ -20,7 +18,7 @@ For instance:
 
 <body>
 
-  <p>Before the script...</p>
+  <p>स्क्रिप्ट से पहले...</p>
 
 *!*
   <script>
@@ -28,7 +26,7 @@ For instance:
   </script>
 */!*
 
-  <p>...After the script.</p>
+  <p>...स्क्रिप्ट के बाद.</p>
 
 </body>
 
@@ -36,18 +34,17 @@ For instance:
 ```
 
 ```online
-You can run the example by clicking the "Play" button in the right-top corner of the box above.
+आप ऊपर दिए गए बॉक्स के दाएं-कोने में "प्ले" बटन पर क्लिक करके उदाहरण चला सकते हैं।
 ```
 
-The `<script>` tag contains JavaScript code which is automatically executed when the browser processes the tag.
+`<स्क्रिप्ट>` टैग में जावास्क्रिप्ट कोड होता है जो ब्राउज़र द्वारा टैग को संसाधित (process) करने पर स्वचालित रूप से निष्पादित होता है।
 
+## आधुनिक मार्कअप (markup)
 
-## Modern markup
+`<स्क्रिप्ट>` टैग में कुछ attributes (विशेषताएं) हैं जो आजकल शायद ही कभी उपयोग की जाती हैं, लेकिन अभी भी पुराने कोड में पाई जा सकती हैं:
 
-The `<script>` tag has a few attributes that are rarely used nowadays but can still be found in old code:
-
-The `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
-: The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic, we'll talk about modules in another part of the tutorial.
+`type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
+: पुराने HTML संस्करण, HTML4 में स्क्रिप्ट में एका attribute `type` की आवश्यकता होती है। `type`. आमतौर पर यह `type="text/javascript"` था. इसकी अब आवश्यकता नहीं है। साथ ही, आधुनिक HTML मानक ने इस विशेषता के अर्थ को पूरी तरह से बदल दिया है। अब, इसका उपयोग जावास्क्रिप्ट मॉड्यूल के लिए किया जा सकता है। लेकिन यह एक उन्नत विषय है, हम ट्यूटोरियल के दूसरे भाग में मॉड्यूल के बारे में बात करेंगे।
 
 The `language` attribute: <code>&lt;script <u>language</u>=...&gt;</code>
 : This attribute was meant to show the language of the script. This attribute no longer makes sense because JavaScript is the default language. There is no need to use it.
@@ -111,9 +108,9 @@ This won't work:
 </script>
 ```
 
-We must choose either an external `<script src="…">` or a regular `<script>` with code.
+हमें या तो बाहरी स्क्रिप्ट का चयन करना होगा जैसे `<script src =" ... ">` या हमें नियमित रूप से `<script>` टैग के अंदर कोड लिखना होगा।
 
-The example above can be split into two scripts to work:
+ऊपर दिए गए उदाहरण को कार्य करने के लिए दो लिपियों में विभाजित किया जा सकता है:
 
 ```html
 <script src="file.js"></script>
@@ -123,11 +120,11 @@ The example above can be split into two scripts to work:
 ```
 ````
 
-## Summary
+## सारांश
 
-- We can use a `<script>` tag to add JavaScript code to a page.
-- The `type` and `language` attributes are not required.
-- A script in an external file can be inserted with `<script src="path/to/script.js"></script>`.
+- हम एक पृष्ठ पर जावास्क्रिप्ट कोड जोड़ने के लिए एक `<स्क्रिप्ट>` टैग का उपयोग कर सकते हैं।
+- `टाइप` और` भाषा` attribute की आवश्यकता नहीं है।
+- एक बाहरी फाइल में लिखी गई स्क्रिप्ट को `<script src ="path/to/script.js"> </script> के साथ डाला जा सकता है।
 
 
-There is much more to learn about browser scripts and their interaction with the webpage. But let's keep in mind that this part of the tutorial is devoted to the JavaScript language, so we shouldn't distract ourselves with browser-specific implementations of it. We'll be using the browser as a way to run JavaScript, which is very convenient for online reading, but only one of many.
+ब्राउज़र स्क्रिप्ट और वेबपेज के interaction (परस्पर क्रिया) के बारे में जानने के लिए बहुत कुछ है। लेकिन ध्यान रखें कि ट्यूटोरियल का यह हिस्सा जावास्क्रिप्ट भाषा के लिए समर्पित है, इसलिए हमें इसके विशिष्ट ब्राउज़र कार्यान्वयन के साथ खुद को विचलित नहीं करना चाहिए। हम जावास्क्रिप्ट को चलाने के लिए ब्राउज़र का उपयोग करेंगे, जो कई विकल्पों में से ऑनलाइन पढ़ने के लिए बहुत सुविधाजनक है।
