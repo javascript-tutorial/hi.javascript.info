@@ -2,7 +2,7 @@ importance: 3
 
 ---
 
-# Giving the right name
+# सही नाम देना
 
-1. Create a variable with the name of our planet. How would you name such a variable?
-2. Create a variable to store the name of a current visitor to a website. How would you name that variable?
+1. हमारे planet के नाम के साथ एक variable बनाएं। आप ऐसे variable का नाम कैसे देंगे?
+2. किसी वेबसाइट पर करंट विजिटर का नाम स्टोर करने के लिए variable बनाएं। आप उस variable का नाम कैसे देंगे?
