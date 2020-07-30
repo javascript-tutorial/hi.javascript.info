@@ -1,7 +1,7 @@
-In the code below, each line corresponds to the item in the task list.
+नीचे दिए गए कोड में, प्रत्येक पंक्ति कार्य सूची में आइटम से मेल खाती है।
 
 ```js run
-let admin, name; // can declare two variables at once
+let admin, name; // एक साथ दो variables घोषित कर सकते हैं|
 
 name = "John";
 
