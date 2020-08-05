@@ -24,11 +24,11 @@ let message;
 let message;
 
 *!*
-message = 'Hello'; // स्ट्रिंग स्टोर करें
+message = 'Hello'; // string स्टोर करें
 */!*
 ```
 
-स्ट्रिंग को अब variable के साथ जुड़े मेमोरी क्षेत्र में सहेजा गया है। हम variable नाम का उपयोग करके इसे प्राप्त कर सकते हैं:
+string को अब variable के साथ जुड़े मेमोरी क्षेत्र में सहेजा गया है। हम variable नाम का उपयोग करके इसे प्राप्त कर सकते हैं:
 
 ```js run
 let message;
