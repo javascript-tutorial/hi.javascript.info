@@ -1,5 +1,7 @@
-We generally use upper case for constants that are "hard-coded". Or, in other words, when the value is known prior to execution and directly written into the code.
+हम आमतौर पर कांस्तान्ट्स के लिए बड़ा अक्षर का उपयोग करते हैं जो "हार्ड-कोडेड" हैं। या, दूसरे शब्दों में, जब मूल्य क्रियान्वयन से पहले जाना जाता है और सीधे कोड में लिखा जाता है।
 
-In this code, `birthday` is exactly like that. So we could use the upper case for it.
+इस कोड में, `birthday` बिल्कुल वैसा ही है। इसलिए हम इसके लिए बड़ा अक्षर का उपयोग कर सकते हैं।
 
-In contrast, `age` is evaluated in run-time. Today we have one age, a year after we'll have another one. It is constant in a sense that it does not change through the code execution. But it is a bit "less of a constant" than `birthday`: it is calculated, so we should keep the lower case for it.
+इसके विपरीत, रन-टाइम में `age` का मूल्यांकन किया जाता है। आज हमारी एक उम्र है, एक साल बाद हम 
+एक और जोड़ देंगे। यह इस अर्थ में निरंतर है कि यह कोड क्रियान्वयन के माध्यम से नहीं बदलता है। लेकिन यह `birthday` की तुलना में "थोड़ा कम स्थिर" है: इसकी गणना की जाती है, इसलिए हमें इसके लिए 
+छोटे अक्षर का उपयोग करना चाहिए।

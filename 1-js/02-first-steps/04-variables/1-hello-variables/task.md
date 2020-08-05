@@ -2,9 +2,9 @@ importance: 2
 
 ---
 
-# Working with variables
+# Variables के साथ काम करना।
 
-1. Declare two variables: `admin` and `name`.
-2. Assign the value `"John"` to `name`.
-3. Copy the value from `name` to `admin`.
-4. Show the value of `admin` using `alert` (must output "John").
+1. दो variables घोषित करें: `admin` और `name`।
+2. `name` variable को मान `"John"` से असाइन करें।
+3. `admin` variable में `name` का मान कॉपी करें।
+4. `alert` ("John" उत्पादन करना चाहिए) का उपयोग करके `admin` का मान दिखाएँ।
