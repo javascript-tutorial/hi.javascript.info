@@ -1,42 +1,42 @@
-# Code structure
+# कोड संरचना
 
-The first thing we'll study is the building blocks of code.
+पहली चीज जो हम अध्ययन करेंगे, वह है कोड की नींव की ईंटें (building blocks)।
 
-## Statements
+## उक्ति (Statements) [#उक्ति]
 
-Statements are syntax constructs and commands that perform actions.
+उक्ति कार्य करने वाले वाक्य रचना और आदेश हैं।
 
-We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
+हमने पहले ही एक उक्ति देखा है, `alert('हेलो विश्व!')`, "हेलो विश्व" जो संदेश दिखाता है।
 
-We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+हम अपने कोड में जितने चाहें उतने उक्ति दे सकते हैं। उक्ति अर्धविराम से अलग किए जा सकते हैं।
 
-For example, here we split "Hello World" into two alerts:
-
-```js run no-beautify
-alert('Hello'); alert('World');
-```
-
-Usually, statements are written on separate lines to make the code more readable:
+उदाहरण के लिए, यहां हमने "हेलो विश्व!" को दो अलर्ट में विभाजित किया है:
 
 ```js run no-beautify
-alert('Hello');
-alert('World');
+alert('हेलो!'); alert('विश्व');
 ```
 
-## Semicolons [#semicolon]
-
-A semicolon may be omitted in most cases when a line break exists.
-
-This would also work:
+आमतौर पर कोड को अधिक पठनीय बनाने के लिए अलग-अलग लाइनों पर उक्ति लिखे जाते हैं:
 
 ```js run no-beautify
-alert('Hello')
-alert('World')
+alert('हेलो');
+alert('विश्व');
 ```
 
-Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+## अर्धविराम [#अर्धविराम]
 
-**In most cases, a newline implies a semicolon. But "in most cases" does not mean "always"!**
+लाइन ब्रेक मौजूद होने पर अधिकांश मामलों में अर्धविराम छोड़ा जा सकता है।
+
+यह कोड काम करेगा:
+
+```js run no-beautify
+alert('हेलो')
+alert('विश्व')
+```
+
+यहाँ, जावास्क्रिप्ट लाइन ब्रेक (एक पंक्ति का अंत) को "निहित" अर्धविराम के रूप में मानता है। इसे [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) कहा जाता है। 
+
+**ज्यादातर मामलों में, एक नई पंक्ति का अर्थ अर्धविराम है। लेकिन "ज्यादातर मामलों में" का अर्थ "हमेशा" नहीं होता है!**
 
 There are cases when a newline does not mean a semicolon. For example:
 
