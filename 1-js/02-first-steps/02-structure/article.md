@@ -38,7 +38,7 @@ alert('विश्व')
 
 **ज्यादातर मामलों में, एक नई पंक्ति का अर्थ अर्धविराम है। लेकिन "ज्यादातर मामलों में" का अर्थ "हमेशा" नहीं होता है!**
 
-There are cases when a newline does not mean a semicolon. For example:
+ऐसे मामले हैं जब एक नई लाइन का अर्थ अर्धविराम नहीं है। उदाहरण के लिए:
 
 ```js run no-beautify
 alert(3 +
@@ -46,93 +46,93 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so the semicolon is not required. And in this case that works as intended.
+कोड `6` आउटपुट करता है क्योंकि जावास्क्रिप्ट यहाँ अर्धविराम नहीं डालता है। यह सहज रूप से स्पष्ट है कि यदि उक्ति एक प्लस `" + "` के साथ समाप्त होता है, तो यह एक "अपूर्ण उक्ति" है, इसलिए अर्धविराम की आवश्यकता नहीं है। और इस मामले में जो इरादा के अनुसार काम करता है।
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
+**लेकिन ऐसी परिस्थितियां भी हैं जहां जावास्क्रिप्ट अर्धविराम लगाने के लिए "विफल" होता है, जहां इसकी वास्तव में आवश्यकता होती है।**
 
-Errors which occur in such cases are quite hard to find and fix.
+ऐसे मामलों में होने वाली त्रुटियां खोजने और ठीक करने में काफी कठिन हैं।
 
-````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+````smart header="एक त्रुटि का उदाहरण"
+यदि आप ऐसी त्रुटि का ठोस उदाहरण देखने के लिए उत्सुक हैं, तो इस कोड को देखें:
 
 ```js run
 [1, 2].forEach(alert)
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of the code: it shows `1` then `2`.
+`[]` और 'forEach` के अर्थ के बारे में सोचने की आवश्यकता नहीं है। हम उनका अध्ययन बाद में करेंगे। अभी के लिए, बस कोड का परिणाम याद रखें: यह `1` दिखाता है फिर` 2`।
 
-Now, let's add an `alert` before the code and *not* finish it with a semicolon:
+अब, कोड से पहले एक `अलर्ट` जोड़ें और अर्धविराम के साथ इसे *समाप्त न करें*:
 
 ```js run no-beautify
-alert("There will be an error")
+alert("इस कोड में एक त्रुटि होगी")
 
 [1, 2].forEach(alert)
 ```
 
-Now if we run the code, only the first `alert` is shown and then we have an error!
+अब यदि हम कोड चलाते हैं, तो केवल पहले `alert` दिखाया जाता है और फिर एक त्रुटि होती है!
 
-But everything is fine again if we add a semicolon after `alert`:
+लेकिन सब कुछ फिर से ठीक है अगर हम `alert` के बाद एक अर्धविराम जोड़ते हैं:
 ```js run
-alert("All fine now");
+alert("अब सब ठीक है");
 
 [1, 2].forEach(alert)  
 ```
 
-Now we have the "All fine now" message followed by `1` and `2`.
+अब हमें "अब सब ठीक है" संदेश मिलता है और उसके बाद `1` और` 2` मिलते हैं।
 
 
-The error in the no-semicolon variant occurs because JavaScript does not assume a semicolon before square brackets `[...]`.
+बिना अर्धविराम के संस्करण में त्रुटि होती है क्योंकि `[...]` से पहले जावास्क्रिप्ट अर्धविराम नहीं मानता है।
 
-So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. Here's how the engine sees it:
+इसलिए, क्योंकि अर्धविराम को ऑटो-सम्मिलित नहीं किया गया है, पहले उदाहरण में कोड को एकल उक्ति माना जाता है। यहां बताया गया है कि इंजन इसे कैसे देखता है:
 
 ```js run no-beautify
-alert("There will be an error")[1, 2].forEach(alert)
+alert("इस कोड में एक त्रुटि होग")[1, 2].forEach(alert)
 ```
 
-But it should be two separate statements, not one. Such a merging in this case is just wrong, hence the error. This can happen in other situations.
+लेकिन यह दो अलग-अलग कथन होने चाहिए, एक नहीं। इस मामले में ऐसा विलय सिर्फ गलत है, इसलिए त्रुटि होती है। यह अन्य स्थितियों में हो सकता है।
 ````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+हम बयानों के बीच अर्धविराम लगाने की सलाह देते हैं, भले ही वे नई लाइनों से अलग हों। इस नियम को समुदाय द्वारा व्यापक रूप से अपनाया जाता है। आइए एक बार फिर ध्यान दें -- *यह संभव है* अधिकांश समय अर्धविरामों को छोड़ने के लिए। लेकिन यह सुरक्षित है -- विशेष रूप से नौसिखिए के लिए -- अर्धविराम का उपयोग करने के लिए।
 
-## Comments [#code-comments]
+## टिप्पणियाँ [#टिप्पणियाँ]
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
+जैसे-जैसे समय बीतता है, कोड अधिक से अधिक जटिल होते जाते हैं। यह आवश्यक है कि *टिप्पणियों* को जोड़ा जाए जो यह बताता है कि कोड क्या करता है और क्यों।
 
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+टिप्पणियाँ किसी स्क्रिप्ट के किसी भी स्थान पर डाली जा सकती हैं। वे इसके निष्पादन को प्रभावित नहीं करते हैं क्योंकि इंजन उन्हें अनदेखा करता है।
 
-**One-line comments start with two forward slash characters `//`.**
+**एक-पंक्ति टिप्पणियाँ दो फ़ॉरवर्ड स्लैश वर्णों से शुरू होती हैं `//`.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+शेष पंक्ति एक टिप्पणी है। यह अपनी खुद की एक पूरी लाइन पर कब्जा कर सकता है या एक उक्ति के पीछे आ सकता है.
 
-Like here:
+जैसे यहाँ:
 ```js run
-// This comment occupies a line of its own
-alert('Hello');
+// यह टिप्पणी स्वयं की एक लाइन पर है
+alert('हैलो');
 
-alert('World'); // This comment follows the statement
+alert('विश्व'); // यह टिप्पणी उक्ति के बाद आई है
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**बहुस्तरीय टिप्पणियां आगे की स्लैश और तारांकन के साथ शुरू होती हैं <code>/&#42;</code> और एक तारांकन और एक आगे की स्लैश के साथ समाप्त होती हैं <code>&#42;/</code>.**
 
-Like this:
+जैसे यहाँ:
 
 ```js run
-/* An example with two messages.
-This is a multiline comment.
+/* दो संदेशों के साथ एक उदाहरण।
+यह एक बहुस्तरीय टिप्पणी है।
 */
-alert('Hello');
-alert('World');
+alert('हैलो');
+alert('विश्व');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
+टिप्पणियों में कोड को अनदेखा किया जाता है, इसलिए यदि हम कोड को अंदर रखते हैं, <code>/&#42; ... &#42;/</code>, यह निष्पादित नहीं होगा।
 
-Sometimes it can be handy to temporarily disable a part of code:
+कभी-कभी इस तकनीक का उपयोग करके कोड के एक भाग को अस्थायी रूप से अक्षम करना आसान होता है
 
 ```js run
-/* Commenting out the code
-alert('Hello');
+/* कोड टिप्पणी की गई है
+alert('हैलो');
 */
-alert('World');
+alert('विश्व');
 ```
 
 ```smart header="Use hotkeys!"
@@ -152,8 +152,8 @@ alert( 'World' );
 ```
 ````
 
-Please, don't hesitate to comment your code.
+कृपया, अपने कोड में टिप्पणी करने में संकोच न करें।
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
+टिप्पणियाँ कोड के समग्र आकार को बढ़ाती हैं, लेकिन यह बिल्कुल समस्या नहीं है। कई उपकरण हैं जो सर्वर पर प्रकाशित होने से पहले कोड को छोटा करते हैं। वे टिप्पणियों को हटा देते हैं, इसलिए वे काम करने वाली स्क्रिप्ट में दिखाई नहीं देते हैं। इसलिए, टिप्पणियों का अंतिम उत्पादन (production) पर नकारात्मक प्रभाव नहीं पड़ता है।
 
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+बाद में ट्यूटोरियल में एक अध्याय होगा <info:code-quality> जो यह भी बताता है कि बेहतर टिप्पणी कैसे लिखनी है।
