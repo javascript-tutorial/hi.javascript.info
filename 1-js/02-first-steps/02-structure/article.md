@@ -135,20 +135,20 @@ alert('हैलो');
 alert('विश्व');
 ```
 
-```smart header="Use hotkeys!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+```smart header="हॉट कुंजी का उपयोग करें!"
+अधिकांश संपादकों में, कोड की एक पंक्ति को एक-लाइन टिप्पणी के लिए `key: Ctrl + /` को दबाकर टिप्पणी की जा सकती है और बहुस्तरीय टिप्पणियों के लिए `key: Ctrl + Shift + /` (कोड का एक टुकड़ा चुनें और हॉटकी दबाएं)। Mac के लिए, `key: Ctrl` के बजाय `key: Cmd` और `key: Shift` के बजाय  `key: Option` आज़माएं।
 ```
 
-````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+````warn header="टिप्पणियाँ जो अन्य टिप्पणियों के अंदर हैं समर्थित नहीं हैं!"
+एक `/*...*/` के अंदर `/*...*/` नहीं हो सकता है
 
-Such code will die with an error:
+इस तरह के कोड में त्रुटि होगी:
 
 ```js run no-beautify
 /*
-  /* nested comment ?!? */
+  /* नेस्टेड टिप्पणी ?!? */
 */
-alert( 'World' );
+alert( 'विश्व' );
 ```
 ````
 
