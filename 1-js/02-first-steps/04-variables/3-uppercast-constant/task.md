@@ -2,9 +2,9 @@ importance: 4
 
 ---
 
-# Uppercase const?
+# बड़े अक्षर का उपयोग const के लिये?
 
-Examine the following code:
+निम्नलिखित कोड की जाँच करें:
 
 ```js
 const birthday = '18.04.1982';
@@ -12,13 +12,13 @@ const birthday = '18.04.1982';
 const age = someCode(birthday);
 ```
 
-Here we have a constant `birthday` date and the `age` is calculated from `birthday` with the help of some code (it is not provided for shortness, and because details don't matter here).
+यहां हमारे पास एक निरंतर `birthday` तिथि है और `age` की गणना `birthday` से कुछ कोड की सहायता से की जाती है (यह संक्षिप्तता के लिए प्रदान नहीं की जाती है, और क्योंकि विवरण से यहां कोई फर्क नहीं पड़ता)।
 
-Would it be right to use upper case for `birthday`? For `age`? Or even for both?
+क्या `birthday` के लिए बड़ा अक्षर का उपयोग करना सही होगा? `age` के लिए? या दोनों के लिए भी?
 
 ```js
-const BIRTHDAY = '18.04.1982'; // make uppercase?
+const BIRTHDAY = '18.04.1982'; // बड़ा अक्षर बनाएं?
 
-const AGE = someCode(BIRTHDAY); // make uppercase?
+const AGE = someCode(BIRTHDAY); // बड़ा अक्षर बनाएं?
 ```
 
