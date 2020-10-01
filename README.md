@@ -1,4 +1,4 @@
-# The Modern JavaScript Tutorial in Hindi
+******The Modern JavaScript Tutorial in Hindi********
 
 This repository hosts the translation of <https://javascript.info> in Hindi.
 =======
