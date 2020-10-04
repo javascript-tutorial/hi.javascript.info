@@ -24,15 +24,10 @@
 
 अलग-अलग इंजनों के अलग-अलग "कोडनेम" होते हैं। उदाहरण के लिए:
 
-<<<<<<< HEAD
+
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- क्रोम (Chrome) और ओपेरा (Opera) में।
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- फ़ायरफ़ॉक्स (Firefox) में।
 - ...IE के विभिन्न संस्करणों के लिए "ट्राइडेंट" (Trident) और "चक्र" (Chakra) जैसे अन्य कोडनेम हैं, माइक्रोसॉफ्ट एज के लिए "चक्रकोर" (ChakraCore), "नाइट्रो" (Nitro) और सफारी के लिए "स्क्विरफेलिश" (SquirrelFish) आदि।
-=======
-- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Chakra" for IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
->>>>>>> f489145731a45df6e369a3c063e52250f3f0061d
 
 उपरोक्त शब्द याद रखने के लिए अच्छे हैं क्योंकि इनका उपयोग इंटरनेट पर डेवलपर लेखों में किया जाता है। हम भी उनका उपयोग करेंगे। उदाहरण के लिए, यदि "एक सुविधा X V8 द्वारा समर्थित है", तो यह शायद क्रोम और ओपेरा में काम करता है।
 
