@@ -1,8 +1,8 @@
 # निंजा कोड
 
 
-```उद्धरण लेखक = "कन्फ्यूशियस (अनालेक्ट्स)"
-बिना सोचे-समझे सीखना श्रम खो गया है; सीखने के बिना सोचा खतरनाक है।
+```quote author="Confucius (Analects)"
+Learning without thought is labor lost; thought without learning is perilous.
 ```
 
 अतीत के प्रोग्रामर निन्जा ने कोड बनाए रखने वालों के दिमाग को तेज करने के लिए इन तकनीकीयो का उपयोग किया।
@@ -14,8 +14,8 @@
 उन्हें ध्यान से पढ़ें और पता करें कि आप कौन हैं - एक निंजा, एक नौसिखिया, या शायद एक कोड समीक्षक?
 
 
-```चेतावनी शीर्षक = "आइरनी का पता लगाया"
-कई निंजा पथ का अनुसरण करने की कोशिश करते हैं। कुछ सफल।
+```warn header="Irony detected"
+Many try to follow ninja paths. Few succeed.
 ```
 
 
@@ -38,9 +38,9 @@ i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
 
 ## एक अक्षर के वेरियबल्स
 
-```उद्धरण लेखक = "लाओजी (ताओ ते चिंग)"
-दाउ शब्दविहीनता में छिप जाता है। केवल दाओ को अच्छी तरह से शुरू किया गया है
-पूरा कर लिया है।
+```quote author="Laozi (Tao Te Ching)"
+The Dao hides in wordlessness. Only the Dao is well begun and well
+completed.
 ```
 
 कोड को कम करने का एक और तरीका है कि हर जगह सिंगल-लेटर चर नामों का उपयोग किया जाए। जैसे `ए`,` बी` या `सी`।
@@ -60,17 +60,17 @@ i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
 - `list` -> `lst`.
 - `userAgent` -> `ua`.
 - `browser` -> `brsr`.
-- ...आदि
+- ...etc
 
 वास्तव में अच्छे अंतर्ज्ञान वाले व्यक्ति ही ऐसे नामों को समझ पाएंगे। हर चीज को छोटा करने की कोशिश करें। केवल एक योग्य व्यक्ति को आपके कोड के विकास को बनाए रखने में सक्षम होना चाहिए।
 
 ## ऊँचा होना। सार हो।
 
-```उद्धरण लेखक = "लाओजी (ताओ ते चिंग)"
-महान वर्ग कोने रहित है <br>
-महान पोत अंतिम पूर्ण है, <br>
-महान नोट दुर्लभ ध्वनि है, <br>
-महान छवि का कोई रूप नहीं है।
+```quote author="Laozi (Tao Te Ching)"
+The great square is cornerless<br>
+The great vessel is last complete,<br>
+The great note is rarified sound,<br>
+The great image has no form.
 ```
 
 नाम चुनते समय सबसे सार शब्द का उपयोग करने का प्रयास करें। जैसे valueobj`, `data`,` value`, `item`, ʻelem` और इसी तरह।
@@ -104,8 +104,9 @@ i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
 
 ## स्मार्ट पर्यायवाची
 
-```उद्धरण लेखक = "लाओजी (ताओ ते चिंग)"
-जिस ताओ को बताया जा सकता है वह शाश्वत ताओ नहीं है। जो नाम रखा जा सकता है, वह शाश्वत नाम नहीं है।
+
+```quote author="Laozi (Tao Te Ching)"
+The Tao that can be told is not the eternal Tao. The name that can be named is not the eternal name.
 ```
 
 * समान * चीजों के लिए * समान * नामों का उपयोग करना जीवन को अधिक रोचक बनाता है और आपकी रचनात्मकता को जनता को दिखाता है।
@@ -124,13 +125,12 @@ i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
 
 ## नामों का पुन: उपयोग करें
 
-```उद्धरण लेखक = "लाओजी (ताओ ते चिंग)"
-एक बार जब पूरा विभाजित हो जाता है, तो पार्ट्स <br>
-नाम की जरूरत है। <br>
-पहले से ही पर्याप्त नाम हैं। <br>
-किसी को पता होना चाहिए कि कब रुकना है।
+```quote author="Laozi (Tao Te Ching)"
+Once the whole is divided, the parts<br>
+need names.<br>
+There are already enough names.<br>
+One must know when to stop.
 ```
-
 जब आवश्यक हो तभी एक नया चर जोड़ें।
 
 इसके बजाय, मौजूदा नामों का पुन: उपयोग करें। बस उनमें नए मूल्य लिखिए।
@@ -174,9 +174,9 @@ function ninjaFunction(elem) {
 
 ## बाहरी चर ओवरलैप करें
 
-```उद्धरण लेखक = "गुआन यिन ज़ी"
-जब प्रकाश में, अंधेरे में कुछ भी नहीं देख सकता। <br>
-अंधेरे में, प्रकाश में सब कुछ देख सकता है।
+```quote author="Guan Yin Zi"
+When in the light, can't see anything in the darkness.<br>
+When in the darkness, can see everything in the light.
 ```
 
 किसी फ़ंक्शन के अंदर और बाहर चर के लिए समान नामों का उपयोग करें। सरल के रूप में। नए नामों का आविष्कार करने का कोई प्रयास नहीं।
@@ -189,7 +189,7 @@ function render() {
   ...
   ...many lines...
   ...
-  ... // <-- एक प्रोग्रामर यहाँ और उपयोगकर्ता के साथ काम करना चाहता है...
+  ... // <-- a programmer wants to work with user here and...
   ...
 }
 ```
@@ -216,9 +216,9 @@ function render() {
 
 ## शक्तिशाली कार्य!
 
-```उद्धरण लेखक = "लाओजी (ताओ ते चिंग)"
-महान ताओ हर जगह बहती है, <br>
-दोनों बाईं और दाईं ओर।
+```quote author="Laozi (Tao Te Ching)"
+The great Tao flows everywhere,<br>
+both to the left and to the right.
 ```
 
 फ़ंक्शन को उसके नाम में लिखे गए द्वारा सीमित न करें। व्यापक हो।
