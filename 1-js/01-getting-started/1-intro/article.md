@@ -24,7 +24,6 @@
 
 अलग-अलग इंजनों के अलग-अलग "कोडनेम" होते हैं। उदाहरण के लिए:
 
-
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- क्रोम (Chrome) और ओपेरा (Opera) में।
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- फ़ायरफ़ॉक्स (Firefox) में।
 - ...IE के विभिन्न संस्करणों के लिए "ट्राइडेंट" (Trident) और "चक्र" (Chakra) जैसे अन्य कोडनेम हैं, माइक्रोसॉफ्ट एज के लिए "चक्रकोर" (ChakraCore), "नाइट्रो" (Nitro) और सफारी के लिए "स्क्विरफेलिश" (SquirrelFish) आदि।
