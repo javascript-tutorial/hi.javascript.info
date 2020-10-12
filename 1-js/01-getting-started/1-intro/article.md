@@ -1,6 +1,10 @@
 # जावास्क्रिप्ट की परिचय
 
+<<<<<<< HEAD
 चलिए हम देखते हैं कि जावास्क्रिप् इतना खास क्यों है, हम इस से क्या प्राप्त कर सकते हैं और कौन से अन्य टेक्नोलॉजी इसके साथ अच्छे से काम करते हैं।
+=======
+Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
 ## जावास्क्रिप्ट क्या है?
 
@@ -67,8 +71,13 @@
 
     आधुनिक ब्राउज़र इसे फ़ाइलों के साथ काम करने की अनुमति देता है, लेकिन पहुंच सीमित है और केवल तभी प्रदान की जाती है जब उपयोगकर्ता कुछ कार्य करता है, जैसे किसी फ़ाइल को ब्राउज़र विंडो में "ड्रॉप करना" या input ('इनपुट') टैग के माध्यम से चुनना।
 
+<<<<<<< HEAD
     कैमरा / माइक्रोफोन और अन्य उपकरणों के साथ बातचीत करने के तरीके हैं, लेकिन उन्हें उपयोगकर्ता की स्पष्ट अनुमति की आवश्यकता होती है। इसलिए एक जावास्क्रिप्ट-सक्षम पेज वेब-कैमरा को चुपके से सक्षम नहीं कर सकता है, परिवेश का निरीक्षण नहीं कर सकता है और [एनएसए](https://en.wikipedia.org/wiki/National_Security_Agency) को जानकारी नहीं भेज सकता है।
 - विभिन्न टैब / विंडो आमतौर पर एक-दूसरे के बारे में नहीं जानते हैं। कभी-कभी वे जानते हैं, उदाहरण के लिए जब एक window दूसरे को खोलने के लिए जावास्क्रिप्ट का उपयोग करती है। लेकिन इस मामले में भी, एक पृष्ठ से जावास्क्रिप्ट दूसरे तक नहीं पहुंच सकता है यदि वे विभिन्न साइटों (एक अलग डोमेन, प्रोटोकॉल या पोर्ट से) से आते हैं।
+=======
+    There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+- Different tabs/windows generally do not know about each other. Sometimes they do; for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
     इसे "Same Origin Policy" ("समान उत्पत्ति नीति") कहा जाता है। उस के आसपास काम करने के लिए, * दोनों पृष्ठों * को डेटा एक्सचेंज के लिए सहमत होना चाहिए और इसमें एक विशेष जावास्क्रिप्ट कोड होना चाहिए जो इसे संभालता है। हम इसे बाद में ट्यूटोरियल में पढ़ेंगे।
 
@@ -115,6 +124,14 @@
 
 ## सारांश
 
+<<<<<<< HEAD
 - जावास्क्रिप्ट को शुरुआत में केवल ब्राउज़र-भाषा के रूप में बनाया गया था, लेकिन अब इसे कई अन्य वातावरणों में भी उपयोग किया जाता है।
 - आज, जावास्क्रिप्ट HTML / CSS के साथ पूर्ण एकीकरण के साथ सबसे व्यापक रूप से अपनाया जाने वाला एक अद्वितीय ब्राउज़र-भाषा है।
 - कई भाषाएं हैं जो जावास्क्रिप्ट में रूपांतरित ("transpiled", किसी अन्य भाषा में अनुवाद करने की प्रक्रिया) होती हैं और कुछ विशेषताएं प्रदान करती हैं।जावास्क्रिप्ट पर महारत हासिल करने के बाद, कम से कम संक्षेप में उन पर एक नज़र डालने की सलाह दी जाती है।
+=======
+## Summary
+
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration in HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779

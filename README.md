@@ -4,7 +4,7 @@ This repository hosts the translation of <https://javascript.info> in Hindi.
 =======
 # The Modern JavaScript Tutorial
 
-This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+This repository hosts the English content of the Modern JavaScript Tutorial, published in [https://javascript.info](https://javascript.info).
 
 **That's how you can contribute:**
 
@@ -150,6 +150,12 @@ Please don't translate or remove the `[#...]` part, it's for URL anchors.
 
 You can run the tutorial server locally to see how the translation looks.
 
+<<<<<<< HEAD
+=======
+  - `index.md` stands for a chapter
+  - `article.md` stands for an article
+  - `task.md` stands for a task (solution must be provided in `solution.md` file as well)
+>>>>>>> 0599d07b3c13ee25f583fc091cead3c17a7e7779
 
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
 =======
