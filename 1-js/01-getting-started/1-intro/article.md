@@ -1,10 +1,6 @@
 # जावास्क्रिप्ट की परिचय
 
-<<<<<<< HEAD
 चलिए हम देखते हैं कि जावास्क्रिप् इतना खास क्यों है, हम इस से क्या प्राप्त कर सकते हैं और कौन से अन्य टेक्नोलॉजी इसके साथ अच्छे से काम करते हैं।
-=======
-Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
->>>>>>> 2d5be7b7307b0a4a85e872d229e0cebd2d8563b5
 
 ## जावास्क्रिप्ट क्या है?
 
@@ -119,14 +115,7 @@ Let's see what's so special about JavaScript, what we can achieve with it, and w
 
 ## सारांश
 
-<<<<<<< HEAD
 - जावास्क्रिप्ट को शुरुआत में केवल ब्राउज़र-भाषा के रूप में बनाया गया था, लेकिन अब इसे कई अन्य वातावरणों में भी उपयोग किया जाता है।
 - आज, जावास्क्रिप्ट HTML / CSS के साथ पूर्ण एकीकरण के साथ सबसे व्यापक रूप से अपनाया जाने वाला एक अद्वितीय ब्राउज़र-भाषा है।
 - कई भाषाएं हैं जो जावास्क्रिप्ट में रूपांतरित ("transpiled", किसी अन्य भाषा में अनुवाद करने की प्रक्रिया) होती हैं और कुछ विशेषताएं प्रदान करती हैं।जावास्क्रिप्ट पर महारत हासिल करने के बाद, कम से कम संक्षेप में उन पर एक नज़र डालने की सलाह दी जाती है।
-=======
-## Summary
 
-- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration in HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
->>>>>>> 2d5be7b7307b0a4a85e872d229e0cebd2d8563b5
