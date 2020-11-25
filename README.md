@@ -154,6 +154,6 @@ You can run the tutorial server locally to see how the translation looks.
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
 
 
----
-♥
+---  
+♥. 
 Ilya Kantor @iliakan
