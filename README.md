@@ -155,5 +155,5 @@ The server and install instructions are at <https://github.com/javascript-tutori
 
 
 ---  
-♥. 
+♥  
 Ilya Kantor @iliakan
