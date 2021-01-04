@@ -10,7 +10,13 @@
 
 जावास्क्रिप्ट प्रोग्रामों को HTML दस्तावेज़ के किसी भी भाग में `<script>` टैग की सहायता से डाला जा सकता है।
 
+<<<<<<< HEAD
 उदाहरण के लिए:
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+
+For instance:
+>>>>>>> 039716de8a96f49b5fccd7aed5effff2e719dfe5
 
 ```html run height=100
 <!DOCTYPE HTML>
