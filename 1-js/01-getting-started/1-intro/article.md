@@ -106,12 +106,21 @@
 
 ऐसी भाषाओं के उदाहरण:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) यह जावास्क्रिप्ट के लिए "सिंटैक्टिक शुगर" है। यह छोटे वाक्यविन्यास का परिचय देता है, जिससे हमें स्पष्ट और अधिक सटीक कोड लिखने की अनुमति मिलती है। आमतौर पर, Ruby (रूबी) डेवलपर इसे पसंद करते हैं।
 - [TypeScript](http://www.typescriptlang.org/) यह जटिल प्रणालियों के विकास और समर्थन को आसान बनाने के लिए "सख्त डेटा टाइपिंग" को जोड़ने पर केंद्रित है। यह Microsoft द्वारा विकसित किया गया है।
 - [Flow](http://flow.org/) यह डेटा टाइपिंग भी जोड़ता है, लेकिन एक अलग तरीके से। Facebook द्वारा विकसित।
 - [Dart](https://www.dartlang.org/) यह एक स्वतंत्र भाषा है जिसका अपना इंजन है जो गैर-ब्राउज़र वातावरण (जैसे मोबाइल ऐप) में चलता है, लेकिन इसे जावास्क्रिप्ट पर भी रूपांतरित किया जा सकता है। Google द्वारा विकसित किया गया।
 और भी कई हैं। बेशक, भले ही हम रूपांतरित भाषाओं में से एक का उपयोग करें, हमें यह भी जानना चाहिए कि हम वास्तव में क्या कर रहे हैं, यह समझने के लिए जावास्क्रिप्ट जानना महत्वपूर्ण है।
 - [Brython](https://brython.info/) यह जावास्क्रिप्ट के लिए एक पायथन ट्रांसपिलर है जो जावास्क्रिप्ट के बिना शुद्ध पायथन में एप्लिकेशन लिखने में सक्षम बनाता है।
+=======
+- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
+- [Kotlin](https://kotlinlang.org/docs/reference/js-overview.html) is a modern, concise and safe programming language that can target the browser or Node.
+>>>>>>> 7533c719fbf62ba57188d6d51fe4c038b282bd0c
 
 ## सारांश
 
