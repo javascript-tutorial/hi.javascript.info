@@ -11,7 +11,11 @@ A good page to see the current state of support for language features is <https:
 
 As programmers, we'd like to use most recent features. The more good stuff - the better!
 
+<<<<<<< HEAD
 From the other hand, how to make out modern code work on older engines that don't understand recent features yet?
+=======
+On the other hand, how to make our modern code work on older engines that don't understand recent features yet?
+>>>>>>> 7b76185892aa9798c3f058256aed44a9fb413cc3
 
 There are two tools for that:
 
