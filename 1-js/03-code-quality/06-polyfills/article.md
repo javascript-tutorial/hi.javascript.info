@@ -11,7 +11,11 @@ A good page to see the current state of support for language features is <https:
 
 As programmers, we'd like to use most recent features. The more good stuff - the better!
 
+<<<<<<< HEAD
 From the other hand, how to make out modern code work on older engines that don't understand recent features yet?
+=======
+On the other hand, how to make our modern code work on older engines that don't understand recent features yet?
+>>>>>>> fb4fc33a2234445808100ddc9f5e4dcec8b3d24c
 
 There are two tools for that:
 
@@ -48,7 +52,11 @@ Modern project build systems, such as [webpack](http://webpack.github.io/), prov
 
 New language features may include not only syntax constructs and operators, but also built-in functions.
 
+<<<<<<< HEAD
 For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23) = 1`.
+=======
+For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23)` returns `1`.
+>>>>>>> fb4fc33a2234445808100ddc9f5e4dcec8b3d24c
 
 In some (very outdated) JavaScript engines, there's no `Math.trunc`, so such code will fail.
 
