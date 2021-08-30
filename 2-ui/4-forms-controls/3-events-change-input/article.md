@@ -76,7 +76,11 @@ For instance, the code below prevents all such events and shows what we are tryi
 
 Please note, that it's possible to copy/paste not just text, but everything. For instance, we can copy a file in the OS file manager, and paste it.
 
+<<<<<<< HEAD
 That's because `clipboardData` implements `DataTransfer` interface, commonly used for drag'n'drop and copy/pasting. It's bit beyound our scope now, but you can find its methods [in the specification](https://html.spec.whatwg.org/multipage/dnd.html#the-datatransfer-interface).
+=======
+That's because `clipboardData` implements `DataTransfer` interface, commonly used for drag'n'drop and copy/pasting. It's bit beyond our scope now, but you can find its methods [in the specification](https://html.spec.whatwg.org/multipage/dnd.html#the-datatransfer-interface).
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
 
 ```warn header="ClipboardAPI: user safety restrictions"
 The clipboard is a "global" OS-level thing. So most browsers allow read/write access to the clipboard only in the scope of certain user actions for the safety, e.g. in `onclick` event handlers.
