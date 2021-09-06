@@ -3,7 +3,7 @@ Using a question mark operator `'?'`:
 
 ```js
 function checkAge(age) {
-  return age > 18 ? true : confirm("Did parents allow you?");
+  return (age > 18) ? true : confirm('Did parents allow you?');
 }
 ```
 
@@ -12,7 +12,7 @@ OR ऑपरेटर का उपयोग करते हुए `||` (सब
 
 ```js
 function checkAge(age) {
-  return age > 18 || confirm("Did parents allow you?");
+  return (age > 18) || confirm('Did parents allow you?');
 }
 ```
 
