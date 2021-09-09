@@ -4,7 +4,7 @@ importance: 4
 
 # Function pow(x,n)
 
-Write a function `pow(x,n)` that returns `x` in power `n`. Or, in other words, multiplies `x` by itself `n` times and returns the result.
+एक function लिखें `pow(x,n)` जो `x` को `n` के शक्ति में लौटाता है। या, दूसरे शब्दों में, `x` को अपने आप से `n` गुणा से गुणा करता है और परिणाम देता है।
 
 ```js
 pow(3, 2) = 3 * 3 = 9
@@ -12,8 +12,8 @@ pow(3, 3) = 3 * 3 * 3 = 27
 pow(1, 100) = 1 * 1 * ...* 1 = 1
 ```
 
-Create a web-page that prompts for `x` and `n`, and then shows the result of `pow(x,n)`.
+एक वेब-पेज बनाएं जो `x` और `n` के लिए संकेत देता है, और फिर `pow(x,n)` का परिणाम दिखाता है।
 
 [demo]
 
-P.S. In this task the function should support only natural values of `n`: integers up from `1`.
+नोट: इस टास्क में function को केवल `n` के प्राकृतिक मान का समर्थन करना चाहिए: `1` से ऊपर के पूर्णांक।
