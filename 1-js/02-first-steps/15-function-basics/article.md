@@ -18,7 +18,7 @@ function बनाने के लिए हम एक _function declaration_ �
 
 ```js
 function showMessage() {
-  alert("सभी को नमस्कार!");
+  alert( "सभी को नमस्कार!" );
 }
 ```
 
@@ -335,7 +335,7 @@ function doNothing() {
   /* खाली */
 }
 
-alert(doNothing() === undefined); // सच
+alert( doNothing() === undefined ); // सच
 ```
 
 एक खाली `return` भी `return undefined` जैसा ही है:
@@ -345,7 +345,7 @@ function doNothing() {
   return;
 }
 
-alert(doNothing() === undefined); // सच
+alert( doNothing() === undefined ); // सच
 ```
 
 `````
@@ -376,7 +376,7 @@ return (
   )
 ```
 और यह वैसे ही काम करेगा जैसा हम उम्मीद करते हैं।
-`````
+````
 
 ## एक function का नामकरण [#function-naming]
 
@@ -444,7 +444,7 @@ function showPrimes(n) {
       if (i % j == 0) continue nextPrime;
     }
 
-    alert(i); // एक अभाज्य संख्या
+    alert( i ); // एक अभाज्य संख्या
   }
 }
 ```
