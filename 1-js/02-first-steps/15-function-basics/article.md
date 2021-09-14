@@ -335,7 +335,7 @@ function doNothing() {
   /* खाली */
 }
 
-alert( doNothing() === undefined ); // सच
+alert( doNothing() === undefined ); // true
 ```
 
 एक खाली `return` भी `return undefined` जैसा ही है:
@@ -345,7 +345,7 @@ function doNothing() {
   return;
 }
 
-alert( doNothing() === undefined ); // सच
+alert( doNothing() === undefined ); // true
 ```
 
 `````
