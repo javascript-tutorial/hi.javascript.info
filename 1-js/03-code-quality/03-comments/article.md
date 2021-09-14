@@ -1,30 +1,30 @@
-# Comments
+# टिप्पणियाँ
 
-As we know from the chapter <info:structure>, comments can be single-line: starting with `//` and multiline: `/* ... */`.
+जैसा कि हम अध्याय जानकारी:संरचना से जानते हैं, टिप्पणियाँ सिंगल-लाइन हो सकती हैं: // से शुरू, और मल्टीलाइन : /* ... */ से शुरू । 
 
-We normally use them to describe how and why the code works.
+हम आमतौर पर उनका उपयोग यह वर्णन करने के लिए करते हैं कि कोड कैसे और क्यों काम करता है।
 
-At first sight, commenting might be obvious, but novices in programming often use them wrongly.
+पहली नजर में, टिप्पणी करना स्पष्ट हो सकता है, लेकिन प्रोग्रामिंग में नौसिखिए अक्सर उनका गलत इस्तेमाल करते हैं।
 
-## Bad comments
+## खराब टिप्पणियाँ
 
-Novices tend to use comments to explain "what is going on in the code". Like this:
+नौसिखिए "कोड में क्या हो रहा है" समझाने के लिए टिप्पणियों का उपयोग करते हैं। इस कदर:
 
 ```js
-// This code will do this thing (...) and that thing (...)
-// ...and who knows what else...
-very;
-complex;
-code;
+// यह कोड यह काम करेगा (...) और वह काम (...)
+// ... और कौन जानता है ...
+बहुत;
+जटिल;
+कोड;
 ```
 
-But in good code, the amount of such "explanatory" comments should be minimal. Seriously, the code should be easy to understand without them.
+लेकिन अच्छे कोड में, ऐसी "व्याख्यात्मक" टिप्पणियों की मात्रा न्यूनतम होनी चाहिए। गंभीरता से, कोड को उनके बिना समझना आसान होना चाहिए।
 
-There's a great rule about that: "if the code is so unclear that it requires a comment, then maybe it should be rewritten instead".
+इसके बारे में एक महान नियम है: "यदि कोड इतना अस्पष्ट है कि उसे एक टिप्पणी की आवश्यकता है, तो शायद इसे इसके बजाय फिर से लिखा जाना चाहिए"।
 
-### Recipe: factor out functions
+### विधि: कारक बाहर कार्य
 
-Sometimes it's beneficial to replace a code piece with a function, like here:
+कभी-कभी किसी function के साथ कोड टुकड़ा को बदलना फायदेमंद होता है, जैसे यहाँ:
 
 ```js
 function showPrimes(n) {
@@ -32,7 +32,7 @@ function showPrimes(n) {
   for (let i = 2; i < n; i++) {
 
 *!*
-    // check if i is a prime number
+    // check if i is a prime number जांचें कि क्या i एक प्रमुख संख्या है
     for (let j = 2; j < i; j++) {
       if (i % j == 0) continue nextPrime;
     }
@@ -43,7 +43,7 @@ function showPrimes(n) {
 }
 ```
 
-The better variant, with a factored out function `isPrime`:
+फ़ैक्टर आउट फ़ंक्शन `isPrime` के साथ बेहतर संस्करण:
 
 
 ```js
@@ -65,21 +65,21 @@ function isPrime(n) {
 }
 ```
 
-Now we can understand the code easily. The function itself becomes the comment. Such code is called *self-descriptive*.
+अब हम कोड को आसानी से समझ सकते हैं। function ही टिप्पणी बन जाता है। ऐसे कोड को *स्व-वर्णनात्मक* कहा जाता है।
 
-### Recipe: create functions
+### विधि: functions बनाएँ
 
-And if we have a long "code sheet" like this:
+और अगर हमारे पास इस तरह एक लंबी "कोड शीट" है:
 
 ```js
-// here we add whiskey
+// यहाँ हम whiskey जोड़ते हैं
 for(let i = 0; i < 10; i++) {
   let drop = getWhiskey();
   smell(drop);
   add(drop, glass);
 }
 
-// here we add juice
+// यहाँ हम juice जोड़ते हैं
 for(let t = 0; t < 3; t++) {
   let tomato = getTomato();
   examine(tomato);
@@ -90,7 +90,7 @@ for(let t = 0; t < 3; t++) {
 // ...
 ```
 
-Then it might be a better variant to refactor it into functions like:
+फिर इसे कार्यों को दोबारा करने के लिए यह एक बेहतर संस्करण हो सकता है जैसे:
 
 ```js
 addWhiskey(glass);
@@ -111,70 +111,70 @@ function addJuice(container) {
 }
 ```
 
-Once again, functions themselves tell what's going on. There's nothing to comment. And also the code structure is better when split. It's clear what every function does, what it takes and what it returns.
+एक बार फिर, functions स्वयं बताते हैं कि क्या हो रहा है। टिप्पणी करने के लिए कुछ भी नहीं है। और विभाजित होने पर कोड संरचना भी बेहतर होती है। यह स्पष्ट है कि प्रत्येक कार्य क्या करता है, यह क्या लेता है और यह क्या लौटाता है।
 
-In reality, we can't totally avoid "explanatory" comments. There are complex algorithms. And there are smart "tweaks" for purposes of optimization. But generally we should try to keep the code simple and self-descriptive.
+वास्तव में, हम "व्याख्यात्मक" टिप्पणियों से पूरी तरह से बच नहीं सकते हैं। जटिल एल्गोरिदम होते हैं और अनुकूलन के प्रयोजनों के लिए चतुर "बदलाव" हैं। लेकिन आम तौर पर हमें कोड को सरल और स्व-वर्णनात्मक रखने का प्रयास करना चाहिए।
 
-## Good comments
+## अच्छी टिप्पणियाँ
 
-So, explanatory comments are usually bad. Which comments are good?
+इसलिए, व्याख्यात्मक टिप्पणियां आमतौर पर खराब होती हैं। कौन सी टिप्पणियाँ अच्छी हैं?
 
-Describe the architecture
-: Provide a high-level overview of components, how they interact, what's the control flow in various situations... In short -- the bird's eye view of the code. There's a special language [UML](http://wikipedia.org/wiki/Unified_Modeling_Language) to build high-level architecture diagrams explaining the code. Definitely worth studying.
+वास्तुकला का वर्णन करें
+: घटकों का एक उच्च-स्तरीय अवलोकन प्रदान करें, वे कैसे बातचीत करते हैं, विभिन्न स्थितियों में नियंत्रण प्रवाह क्या है... संक्षेप में - कोड के बारे में विहंगम दृष्टि। कोड की व्याख्या करने वाले उच्च-स्तरीय आर्किटेक्चर आरेख बनाने के लिए एक विशेष भाषा [UML](http://wikipedia.org/wiki/Unified_Modeling_Language) है। निश्चित रूप से ये अध्ययन करने लायक।
 
-Document function parameters and usage
-: There's a special syntax [JSDoc](http://en.wikipedia.org/wiki/JSDoc) to document a function: usage, parameters, returned value.
+दस्तावेज़ फ़ंक्शन पैरामीटर और उपयोग
+: किसी फ़ंक्शन का दस्तावेज़ीकरण करने के लिए एक विशेष सिंटैक्स [JSDoc](http://en.wikipedia.org/wiki/JSDoc) है: उपयोग, पैरामीटर, लौटाया गया मान।
 
-For instance:
+उदाहरण के लिए:
 ```js
 /**
- * Returns x raised to the n-th power.
+ * Returns x को n-वें घात तक बढ़ा देता है।
  *
- * @param {number} x The number to raise.
- * @param {number} n The power, must be a natural number.
- * @return {number} x raised to the n-th power.
+ * @param {number} x संख्या बढ़ाने के लिए।
+ * @param {number} n घात, एक प्राकृत संख्या होनी चाहिए।
+ * @return {number} x को n-वें घात तक बढ़ा दिया गया है।
  */
 function pow(x, n) {
   ...
 }
 ```
 
-Such comments allow us to understand the purpose of the function and use it the right way without looking in its code.
+इस तरह की टिप्पणियाँ हमें फ़ंक्शन के उद्देश्य को समझने और इसके कोड को देखे बिना इसका सही तरीके से उपयोग करने की अनुमति देती हैं।
 
-By the way, many editors like [WebStorm](https://www.jetbrains.com/webstorm/) can understand them as well and use them to provide autocomplete and some automatic code-checking.
+वैसे, [वेबस्टॉर्म](https://www.jetbrains.com/webstorm/) जैसे कई संपादक उन्हें भी समझ सकते हैं और स्वत: पूर्ण और कुछ स्वचालित कोड-जांच प्रदान करने के लिए उनका उपयोग कर सकते हैं।
 
-Also, there are tools like [JSDoc 3](https://github.com/jsdoc3/jsdoc) that can generate HTML-documentation from the comments. You can read more information about JSDoc at <http://usejsdoc.org/>.
+साथ ही, [JSDoc 3](https://github.com/jsdoc3/jsdoc) जैसे टूल हैं जो टिप्पणियों से HTML-दस्तावेज़ीकरण उत्पन्न कर सकते हैं। आप JSDoc के बारे में अधिक जानकारी <http://usejsdoc.org/> पर पढ़ सकते हैं।
 
-Why is the task solved this way?
-: What's written is important. But what's *not* written may be even more important to understand what's going on. Why is the task solved exactly this way? The code gives no answer.
+इस तरह से कार्य क्यों हल किया जाता है?
+: क्या लिखा है महत्वपूर्ण है। लेकिन जो *नहीं* लिखा है, वह  और भी महत्वपूर्ण हो सकता है समझने के लिए कि क्या हो रहा है। कार्य को ठीक इस तरह क्यों हल किया जाता है? कोड कोई जवाब नहीं देता है।
 
-    If there are many ways to solve the task, why this one? Especially when it's not the most obvious one.
+    यदि कार्य को हल करने के कई तरीके हैं, तो यह क्यों? खासकर जब यह सबसे प्रत्यक्ष नहीं है।
+    
+    ऐसी टिप्पणियों के बिना निम्नलिखित स्थिति संभव है:
+    1. आप (या आपके सहयोगी) कुछ समय पहले लिखे गए कोड को खोलते हैं, और देखते हैं कि यह "उप-इष्टतम" है।
+    2. आप सोचते हैं: "मैं तब कितना मूर्ख था, और अब मैं कितना होशियार हूं", और "अधिक स्पष्ट और सही" संस्करण का उपयोग करके फिर से लिखें।
+    3. ...फिर से लिखने की ललक अच्छी थी। लेकिन इस प्रक्रिया में आप देखते हैं कि वास्तव में "अधिक स्पष्ट" समाधान की कमी है। आपको यह भी याद नहीं है कि क्यों, क्योंकि आप इसे बहुत पहले ही आजमा चुके हैं। आप सही संस्करण पर वापस जाते हैं, लेकिन समय बर्बाद होता है।
 
-    Without such comments the following situation is possible:
-    1. You (or your colleague) open the code written some time ago, and see that it's "suboptimal".
-    2. You think: "How stupid I was then, and how much smarter I'm now", and rewrite using the "more obvious and correct" variant.
-    3. ...The urge to rewrite was good. But in the process you see that the "more obvious" solution is actually lacking. You even dimly remember why, because you already tried it long ago. You revert to the correct variant, but the time was wasted.
+    समाधान की व्याख्या करने वाली टिप्पणियाँ बहुत महत्वपूर्ण हैं। वे विकास को सही तरीके से जारी रखने में मदद करते हैं।
 
-    Comments that explain the solution are very important. They help to continue development the right way.
+कोड की कोई सूक्ष्म विशेषताएं? उनका उपयोग कहाँ किया जाता है?
+: यदि कोड में कुछ भी सूक्ष्म और प्रति-सहज ज्ञान युक्त है, तो यह निश्चित रूप से टिप्पणी करने योग्य है।
 
-Any subtle features of the code? Where they are used?
-: If the code has anything subtle and counter-intuitive, it's definitely worth commenting.
+## सारांश
 
-## Summary
+एक अच्छे डेवलपर का एक महत्वपूर्ण संकेत टिप्पणियाँ हैं: उनकी उपस्थिति और यहाँ तक कि उनकी अनुपस्थिति भी।
 
-An important sign of a good developer is comments: their presence and even their absence.
+अच्छी टिप्पणियाँ हमें कोड को अच्छी तरह से बनाए रखने, देरी के बाद उस पर वापस आने और इसे अधिक प्रभावी ढंग से उपयोग करने की अनुमति देती हैं।
 
-Good comments allow us to maintain the code well, come back to it after a delay and use it more effectively.
+**यह टिप्पणी करें:**
 
-**Comment this:**
+- समग्र वास्तुकला, उच्च स्तरीय दृश्य।
+- समारोह का उपयोग।
+- महत्वपूर्ण समाधान, खासकर जब तुरंत स्पष्ट न हों।
 
-- Overall architecture, high-level view.
-- Function usage.
-- Important solutions, especially when not immediately obvious.
+**टिप्पणियों से बचें:**
 
-**Avoid comments:**
+- यह बताएं कि "कोड कैसे काम करता है" और "यह क्या करता है"।
+- उन्हें तभी डालें जब कोड को इतना सरल और स्व-वर्णनात्मक बनाना असंभव हो कि इसके लिए उनकी आवश्यकता न हो।
 
-- That tell "how code works" and "what it does".
-- Put them in only if it's impossible to make the code so simple and self-descriptive that it doesn't require them.
-
-Comments are also used for auto-documenting tools like JSDoc3: they read them and generate HTML-docs (or docs in another format).
+टिप्पणियों का उपयोग JSDoc3 जैसे ऑटो-डॉक्यूमेंटिंग टूल के लिए भी किया जाता है: वे उन्हें पढ़ते हैं और HTML-डॉक्स (या किसी अन्य प्रारूप में डॉक्स) उत्पन्न करते हैं।
