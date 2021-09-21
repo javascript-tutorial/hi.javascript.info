@@ -210,7 +210,7 @@ function showMessage(from, text = anotherFunction()) {
 ```smart header="Evaluation of default parameters"
 जावास्क्रिप्ट में, हर बार संबंधित parameter के बिना function को कॉल किए जाने पर एक डिफ़ॉल्ट parameter का मूल्यांकन किया जाता है।
 
-ऊपर दिए गए उदाहरण में, `another function()` को हर बार कॉल किया जाता है जब भी `showMessage()` को `text` parameter के बिना कॉल किया जाता है।
+ऊपर दिए गए उदाहरण में, `anotherFunction()` को हर बार कॉल किया जाता है जब भी `showMessage()` को `text` parameter के बिना कॉल किया जाता है।
 ```
 
 ### वैकल्पिक डिफ़ॉल्ट parameters
