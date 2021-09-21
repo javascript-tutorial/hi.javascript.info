@@ -335,8 +335,7 @@ function doNothing() {
 
 alert( doNothing() === undefined ); // true
 ```
-
-`````
+````
 
 ````warn header="Never add a newline between `return` and the value"
 `return` में एक लंबी अभिव्यक्ति के लिए, इसे एक अलग लाइन पर रखना आकर्षक हो सकता है, जैसे:
