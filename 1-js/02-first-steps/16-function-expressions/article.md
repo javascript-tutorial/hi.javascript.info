@@ -1,8 +1,8 @@
-# Function expressions
+# Function व्यंजक
 
-In JavaScript, a function is not a "magical language structure", but a special kind of value.
+जावास्क्रिप्ट में, एक function "जादुई भाषा संरचना" नहीं है, बल्कि एक विशेष प्रकार का मूल्य है।
 
-The syntax that we used before is called a *Function Declaration*:
+हमने पहले जिस सिंटैक्स का उपयोग किया था, उसे *function घोषणा* कहा जाता है:
 
 ```js
 function sayHi() {
@@ -10,9 +10,9 @@ function sayHi() {
 }
 ```
 
-There is another syntax for creating a function that is called a *Function Expression*.
+function बनाने के लिए एक और सिंटैक्स है जिसे *फंक्शन व्यंजक* कहा जाता है।
 
-It looks like this:
+यह इस तरह दीखता है:
 
 ```js
 let sayHi = function() {
