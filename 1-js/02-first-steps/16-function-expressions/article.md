@@ -20,11 +20,11 @@ let sayHi = function() {
 };
 ```
 
-Here, the function is created and assigned to the variable explicitly, like any other value. No matter how the function is defined, it's just a value stored in the variable `sayHi`.
+यहां, function को किसी अन्य मान की तरह, स्पष्ट रूप से बनाया गया है और variable को असाइन किया गया है। कोई फर्क नहीं पड़ता कि function को कैसे परिभाषित किया गया है, यह केवल 'sayHi' variable में संग्रहीत एक मान है।
 
-The meaning of these code samples is the same: "create a function and put it into the variable `sayHi`".
+इन कोड नमूनों का अर्थ एक ही है: "एक function बनाएं और इसे variable `sayHi` में डालें"।
 
-We can even print out that value using `alert`:
+हम `alert` का उपयोग करके उस मूल्य को प्रिंट भी कर सकते हैं:
 
 ```js run
 function sayHi() {
@@ -36,15 +36,15 @@ alert( sayHi ); // shows the function code
 */!*
 ```
 
-Please note that the last line does not run the function, because there are no parentheses after `sayHi`. There are programming languages where any mention of a function name causes its execution, but JavaScript is not like that.
+कृपया ध्यान दें कि अंतिम पंक्ति function नहीं चलाती है, क्योंकि `sayHi` के बाद कोई कोष्ठक नहीं है। ऐसी प्रोग्रामिंग भाषाएं हैं जहां किसी function नाम का कोई उल्लेख इसके निष्पादन का कारण बनता है, लेकिन Javascript ऐसा नहीं है।
 
-In JavaScript, a function is a value, so we can deal with it as a value. The code above shows its string representation, which is the source code.
+Javascript में, एक function एक मान है, इसलिए हम इसे एक मान के रूप में व्यवहार कर सकते हैं। उपरोक्त कोड इसका स्ट्रिंग प्रतिनिधित्व दिखाता है, जो स्रोत कोड है।
 
-Surely, a function is a special value, in the sense that we can call it like `sayHi()`.
+निश्चित रूप से, एक function  एक विशेष मूल्य है, इस अर्थ में कि हम इसे `sayHi()` की तरह कॉल कर सकते हैं।
 
-But it's still a value. So we can work with it like with other kinds of values.
+लेकिन यह फिर भी एक मूल्य है। इसलिए हम इसके साथ अन्य प्रकार के मूल्यों की तरह काम कर सकते हैं।
 
-We can copy a function to another variable:
+हम एक function को दूसरे variable में कॉपी कर सकते हैं:
 
 ```js run no-beautify
 function sayHi() {   // (1) create
