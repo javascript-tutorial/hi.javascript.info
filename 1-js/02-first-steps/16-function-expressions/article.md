@@ -1,4 +1,4 @@
-# Function व्यंजक
+# Function एक्सप्रेशन
 
 Javascript में, एक function "जादुई भाषा संरचना" नहीं है, बल्कि एक विशेष प्रकार का मूल्य है।
 
@@ -10,7 +10,7 @@ function sayHi() {
 }
 ```
 
-function बनाने के लिए एक और सिंटैक्स है जिसे *फंक्शन व्यंजक* कहा जाता है।
+function बनाने के लिए एक और सिंटैक्स है जिसे *function एक्सप्रेशन* कहा जाता है।
 
 यह इस तरह दीखता है:
 
@@ -57,13 +57,13 @@ func(); // Hello     // (3) run the copy (it works)!
 sayHi(); // Hello    //     this still works too (why wouldn't it)
 ```
 
-Here's what happens above in detail:
+ऊपर विस्तार से यह होता है:
 
-1. The Function Declaration `(1)` creates the function and puts it into the variable named `sayHi`.
-2. Line `(2)` copies it into the variable `func`. Please note again: there are no parentheses after `sayHi`. If there were, then `func = sayHi()` would write  *the result of the call* `sayHi()` into `func`, not *the function* `sayHi` itself.
-3. Now the function can be called as both `sayHi()` and `func()`.
+1. Function घोषणा `(1)` function बनाता है और इसे `sayHi` नाम के variable में डालता है।
+2. लाइन `(2)` इसे variable `func` में कॉपी करती है। कृपया फिर से ध्यान दें: `sayHi` के बाद कोई कोष्ठक नहीं है। अगर वहाँ होता, तो `func = sayHi()` *कॉल का परिणाम* `sayHi()` को `func` में लिखता, न कि *function* `sayHi` को ही।
+3. अब function को `sayHi()` और `func()` दोनों के रूप में कॉल किया जा सकता है।
 
-Note that we could also have used a Function Expression to declare `sayHi`, in the first line:
+ध्यान दें कि हम पहली पंक्ति में `sayHi` घोषित करने के लिए एक function एक्सप्रेशन का भी इस्तेमाल कर सकते थे:
 
 ```js
 let sayHi = function() {
@@ -74,11 +74,11 @@ let func = sayHi;
 // ...
 ```
 
-Everything would work the same.
+सब कुछ वैसा ही काम करेगा।
 
 
-````smart header="Why is there a semicolon at the end?"
-You might wonder, why does Function Expression have a semicolon `;` at the end, but Function Declaration does not:
+````smart header="अंत में अर्धविराम क्यों है?"
+आपको आश्चर्य हो सकता है कि function एक्सप्रेशन के अंत में अर्धविराम क्यों होता है, लेकिन function डिक्लेरेशन में यह नहीं होता है:
 
 ```js
 function sayHi() {
@@ -90,27 +90,27 @@ let sayHi = function() {
 }*!*;*/!*
 ```
 
-The answer is simple:
-- There's no need for `;` at the end of code blocks and syntax structures that use them like `if { ... }`, `for {  }`, `function f { }` etc.
-- A Function Expression is used inside the statement: `let sayHi = ...;`, as a value. It's not a code block, but rather an assignment. The semicolon `;` is recommended at the end of statements, no matter what the value is. So the semicolon here is not related to the Function Expression itself, it just terminates the statement.
+उत्तर सीधा है:
+- कोड ब्लॉक और सिंटैक्स संरचनाओं के अंत में `;` की कोई आवश्यकता नहीं है जो उनका उपयोग करते हैं जैसे `if {...}`, `के लिए { }`, `फ़ंक्शन f { }` आदि।
+- स्टेटमेंट के अंदर एक function एक्सप्रेशन का उपयोग किया जाता है: `let sayHi = ...;`, मान के रूप में। यह एक कोड ब्लॉक नहीं है, बल्कि एक असाइनमेंट है। स्टेटमेंट के अंत में अर्धविराम `;` की सिफारिश की जाती है, भले ही मूल्य कुछ भी हो। तो यहां अर्धविराम function अभिव्यक्ति से संबंधित नहीं है, यह केवल स्टेटमेंट को समाप्त करता है।
 ````
 
-## Callback functions
+## कॉलबैक functions
 
-Let's look at more examples of passing functions as values and using function expressions.
+आइए function को मानों के रूप में पास करने और function एक्सप्रेशन का उपयोग करने के अधिक उदाहरण देखें।
 
-We'll write a function `ask(question, yes, no)` with three parameters:
+हम तीन parameters के साथ `ask(question, yes, no)` function लिखेंगे:
 
 `question`
-: Text of the question
+: प्रश्न का पाठ
 
 `yes`
-: Function to run if the answer is "Yes"
+: यदि उत्तर "हां" है तो function चलेगा
 
 `no`
-: Function to run if the answer is "No"
+: यदि उत्तर "नहीं" है तो function चलेगा
 
-The function should ask the `question` and, depending on the user's answer, call `yes()` or `no()`:
+Function को `प्रश्न` पूछना चाहिए और, उपयोगकर्ता के उत्तर के आधार पर, `yes()` या `no()` पर कॉल करना चाहिए:
 
 ```js run
 *!*
