@@ -4,9 +4,9 @@ importance: 1
 
 # Function min(a, b)
 
-एक फ़ंक्शन लिखें `min(a,b)` जो `a` और `b` नंबर में से जो सबसे छोटा है उसको लौटाता हो।
+Write a function `min(a,b)` which returns the least of two numbers `a` and `b`.
 
-उदाहरण के लिए:
+For instance:
 
 ```js
 min(2, 5) == 2
