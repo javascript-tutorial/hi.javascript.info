@@ -12,7 +12,11 @@ In JavaScript, objects have a special hidden property `[[Prototype]]` (as named 
 
 ![prototype](object-prototype-empty.svg)
 
+<<<<<<< HEAD
 When we read a property from `object`, and it's missing, JavaScript automatically takes it from the prototype. In programming, such thing is called "prototypal inheritance". And soon we'll study many examples of such inheritance, as well as cooler language features built upon it.
+=======
+When we read a property from `object`, and it's missing, JavaScript automatically takes it from the prototype. In programming, this is called "prototypal inheritance". And soon we'll study many examples of such inheritance, as well as cooler language features built upon it.
+>>>>>>> eda333d423db8ade41f75d2e2d30ea06c7d997ef
 
 The property `[[Prototype]]` is internal and hidden, but there are many ways to set it.
 
