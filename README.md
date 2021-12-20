@@ -131,6 +131,7 @@ Some files, usually tasks, have YAML metadata at the top, delimited by `---`:
 ```md
 importance: 5
 
+<<<<<<< HEAD
 ---
 ...
 ```
@@ -154,6 +155,8 @@ You can run the tutorial server locally to see how the translation looks.
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
 
 
+=======
+>>>>>>> 8d04d0d2db97276dbb2b451c30a7bd3e05d65831
 ---  
 ♥  
 Ilya Kantor @iliakan
