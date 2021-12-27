@@ -11,7 +11,11 @@ A good page to see the current state of support for language features is <https:
 
 As programmers, we'd like to use most recent features. The more good stuff - the better!
 
+<<<<<<< HEAD
 From the other hand, how to make out modern code work on older engines that don't understand recent features yet?
+=======
+On the other hand, how to make our modern code work on older engines that don't understand recent features yet?
+>>>>>>> 3c934b5a46a76861255e3a4f29da6fd54ab05c8c
 
 There are two tools for that:
 
@@ -22,7 +26,11 @@ Here, in this chapter, our purpose is to get the gist of how they work, and thei
 
 ## Transpilers
 
+<<<<<<< HEAD
 A [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler) is a special piece of software that can parse ("read and understand") modern code, and rewrite it using older syntax constructs, so that the result would be the same.
+=======
+A [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler) is a special piece of software that translates source code to another source code. It can parse ("read and understand") modern code and rewrite it using older syntax constructs, so that it'll also work in outdated engines.
+>>>>>>> 3c934b5a46a76861255e3a4f29da6fd54ab05c8c
 
 E.g. JavaScript before year 2020 didn't have the "nullish coalescing operator" `??`. So, if a visitor uses an outdated browser, it may fail to understand the code like `height = height ?? 100`.
 
@@ -48,7 +56,11 @@ Modern project build systems, such as [webpack](http://webpack.github.io/), prov
 
 New language features may include not only syntax constructs and operators, but also built-in functions.
 
+<<<<<<< HEAD
 For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23) = 1`.
+=======
+For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23)` returns `1`.
+>>>>>>> 3c934b5a46a76861255e3a4f29da6fd54ab05c8c
 
 In some (very outdated) JavaScript engines, there's no `Math.trunc`, so such code will fail.
 
