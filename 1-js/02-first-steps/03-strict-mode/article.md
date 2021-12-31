@@ -1,16 +1,16 @@
-# The modern mode, "use strict"
+# आधुनिक मोड, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+लंबे समय तक, जावास्क्रिप्ट संगतता मुद्दों के बिना विकसित हुआ। भाषा में नई सुविधाएँ जोड़ी गईं जबकि पुरानी कार्यक्षमता नहीं बदली।
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
+मौजूदा कोड को कभी नहीं तोड़ने का इसका लाभ था। लेकिन नकारात्मक पक्ष यह था कि जावास्क्रिप्ट के रचनाकारों द्वारा की गई कोई भी गलती या अपूर्ण निर्णय हमेशा के लिए भाषा में फंस गया।
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+2009 तक ऐसा ही था जब ECMAScript 5 (ES5) आया। तब इसने भाषा में नई सुविधाएँ जोड़ीं और कुछ मौजूदा को संशोधित किया। पुराने कोड को काम करने के लिए, ऐसे अधिकांश संशोधन डिफ़ॉल्ट रूप से बंद होते हैं। आपको उन्हें एक विशेष निर्देश के साथ स्पष्ट रूप से सक्षम करने की आवश्यकता है: `"use strict"`.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+निर्देश एक स्ट्रिंग की तरह दिखता है: `"use strict"` या `'use strict'`. जब यह एक स्क्रिप्ट के शीर्ष पर स्थित होता है, तो पूरी स्क्रिप्ट "आधुनिक" तरीके से काम करती है।
 
-For example:
+उदाहरण के लिए:
 
 ```js
 "use strict";
@@ -19,40 +19,40 @@ For example:
 ...
 ```
 
-Quite soon we're going to learn functions (a way to group commands), so let's note in advance that `"use strict"` can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.
+बहुत जल्द हम फंक्शन (कमांड को ग्रुप करने का एक तरीका) सीखने जा रहे हैं, तो आइए पहले से ध्यान दें कि किसी फंक्शन की शुरुआत में `"use strict"` लगाया जा सकता है। ऐसा करने से केवल उस फंक्शन में स्ट्रिक्ट मोड सक्षम होता है। लेकिन आमतौर पर लोग इसका इस्तेमाल पूरी स्क्रिप्ट के लिए करते हैं।
 
-````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
+````warn header="सुनिश्चित करें कि \"use strict\" शीर्ष पर है।"
+कृपया सुनिश्चित करें कि `"use strict"` आपकी स्क्रिप्ट के शीर्ष पर है, अन्यथा सख्त मोड सक्षम नहीं किया जा सकता है।
 
-Strict mode isn't enabled here:
+Strict मोड यहां सक्षम नहीं है:
 
 ```js no-strict
 alert("some code");
-// "use strict" below is ignored--it must be at the top
+// "use strict" नीचे अनदेखा किया गया है, यह सबसे ऊपर होना चाहिए
 
 "use strict";
 
-// strict mode is not activated
+// strict mode सक्रिय नहीं है
 ```
 
-Only comments may appear above `"use strict"`.
+`"use strict"` के ऊपर केवल टिप्पणियां ही दिखाई दे सकती हैं।
 ````
 
-```warn header="There's no way to cancel `use strict`"
-There is no directive like `"no use strict"` that reverts the engine to old behavior.
+```warn header="`use strict` को रद्द करने का कोई तरीका नहीं है"
+`"no use strict"` जैसा कोई निर्देश नहीं है जो इंजन को पुराने व्यवहार में बदल देता है।
 
-Once we enter strict mode, there's no going back.
+एक बार जब हम सख्त मोड में प्रवेश कर जाते हैं, तो हम इसे वापस नहीं बदल सकते।
 ```
 
 ## Browser console
 
-When you use a [developer console](info:devtools) to run code, please note that it doesn't `use strict` by default.
+जब आप [developer console](info:devtools) का उपयोग करते हैं कोड चलाने के लिए, कृपया ध्यान दें कि यह डिफ़ॉल्ट रूप से `"use strict"` नहीं करता है।
 
-Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+कभी-कभी, जब `"use strict"` कुछ बदलाव करता है, तो आपको गलत परिणाम मिलेंगे।
 
-So, how to actually `use strict` in the console?
+तो, वास्तव में `use strict` का उपयोग कैसे करें कंसोल में?
 
-First, you can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+सबसे पहले, आप `key:Shift+Enter` दबाने की कोशिश कर सकते हैं कई पंक्तियों को इनपुट करने के लिए, और डालें `use strict` शीर्ष पर, इस तरह:
 
 ```js
 'use strict'; <Shift+Enter for a newline>
@@ -60,9 +60,9 @@ First, you can try to press `key:Shift+Enter` to input multiple lines, and put `
 <Enter to run>
 ```
 
-It works in most browsers, namely Firefox and Chrome.
+यह Firefox और Chrome जैसे अधिकांश ब्राउज़रों में काम करता है।
 
-If it doesn't, e.g. in an old browser, there's an ugly, but reliable way to ensure `use strict`. Put it inside this kind of wrapper:
+यदि ऐसा नहीं होता है, उदाहरण के लिए किसी पुराने ब्राउज़र में, तो `"use strict"` को सुनिश्चित करने का एक बदसूरत, लेकिन विश्वसनीय तरीका है। इसे इस तरह के रैपर के अंदर रखें:
 
 ```js
 (function() {
@@ -72,18 +72,18 @@ If it doesn't, e.g. in an old browser, there's an ugly, but reliable way to ensu
 })()
 ```
 
-## Should we "use strict"?
+## क्या हमें "use strict" का उपयोग करना चाहिए?
 
-The question may sound obvious, but it's not so.
+सवाल स्पष्ट लग सकता है, लेकिन ऐसा नहीं है।
 
-One could recommend to start scripts with `"use strict"`... But you know what's cool?
+कोई स्क्रिप्ट को `"use strict"` से शुरू करने की सिफारिश कर सकता है . . . लेकिन आप जानते हैं कि क्या अच्छा है?
 
-Modern JavaScript supports "classes" and "modules" - advanced language structures (we'll surely get to them), that enable `use strict` automatically. So we don't need to add the `"use strict"` directive, if we use them.
+आधुनिक जावास्क्रिप्ट "कक्षाओं" और "मॉड्यूल" का समर्थन करता है - जो की उन्नत भाषा संरचनाएं है (हम निश्चित रूप से इन्हे जानेंगे), जो`use strict` को सक्षम करें खुद ब खुद। यदि हम उनका उपयोग करते हैं तो हमें `"use strict"` निर्देश लिखने की आवश्यकता नहीं है।
 
-**So, for now `"use strict";` is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.**
+**तो अब के लिए `"use strict";` आपकी स्क्रिप्ट के शीर्ष पर एक स्वागत योग्य अतिथि है। बाद में, जब आपका कोड पूरा कक्षाओं और मॉड्यूल में लिखा हो, तो आप इसे छोड़ सकते हैं।**
 
-As of now, we've got to know about `use strict` in general.
+अभी तक, हमें `use strict` के बारे में सामान्य रूप से पता चल गया है।
 
-In the next chapters, as we learn language features, we'll see the differences between the strict and old modes. Luckily, there aren't many and they actually make our lives better.
+अगले अध्यायों में, जैसे जैसेि हम भाषा की विशेषताओं को सीखते हैं, हम सख्त और पुराने तरीकों के बीच अंतर देखेंगे। सौभाग्य से, बहुत सारे नहीं हैं और वे वास्तव में हमारे जीवन को बेहतर बनाते हैं।
 
-All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+इस ट्यूटोरियल में सभी उदाहरण सख्त मोड मानते हैं जब तक कि (बहुत ही कम) अन्यथा निर्दिष्ट न हो।
