@@ -1,17 +1,17 @@
-# Ninja code
+# निंजा कोड
 
 
 ```quote author="Confucius (Analects)"
 Learning without thought is labor lost; thought without learning is perilous.
 ```
 
-Programmer ninjas of the past used these tricks to sharpen the mind of code maintainers.
+अतीत के प्रोग्रामर निन्जा ने कोड बनाए रखने वालों के दिमाग को तेज करने के लिए इन तकनीकीयो का उपयोग किया।
 
-Code review gurus look for them in test tasks.
+परीक्षण कार्यों में कोड समीक्षा गुरु उनके लिए देखते हैं।
 
-Novice developers sometimes use them even better than programmer ninjas.
+नौसिखिया डेवलपर्स कभी-कभी प्रोग्रामर निन्जा की तुलना में भी बेहतर उपयोग करते हैं।
 
-Read them carefully and find out who you are -- a ninja, a novice, or maybe a code reviewer?
+उन्हें ध्यान से पढ़ें और पता करें कि आप कौन हैं - एक निंजा, एक नौसिखिया, या शायद एक कोड समीक्षक?
 
 
 ```warn header="Irony detected"
@@ -19,52 +19,52 @@ Many try to follow ninja paths. Few succeed.
 ```
 
 
-## Brevity is the soul of wit
+## अल्पता बुद्धि की आत्मा है
 
-Make the code as short as possible. Show how smart you are.
+कोड को यथासंभव छोटा करें। दिखाओ कि आप कितने स्मार्ट हो।
 
-Let subtle language features guide you.
+सूक्ष्म भाषा की विशेषताएँ आपको गाइड करती हैं।
 
-For instance, take a look at this ternary operator `'?'`:
+उदाहरण के लिए, इस टर्नरी ऑपरेटर पर एक नज़र डालें `'?'`:
 
 ```js
 // taken from a well-known javascript library
 i = i ? i < 0 ? Math.max(0, len + i) : i : 0;
 ```
 
-Cool, right? If you write like that, a developer who comes across this line and tries to understand what is the value of `i` is going to have a merry time. Then come to you, seeking for an answer.
+बिल्कुल सटीक? यदि आप ऐसा लिखते हैं, तो एक डेवलपर जो इस लाइन के पार आता है और यह समझने की कोशिश करता है कि `i` का मान क्या है, एक खुशी का समय होने वाला है। फिर आपके पास आते हैं, जवाब मांगने।
 
-Tell them that shorter is always better. Initiate them into the paths of ninja.
+उन्हें बताएं कि छोटा हमेशा बेहतर होता है। उन्हें निंजा के रास्तों में शामिल करें।
 
-## One-letter variables
+## एक अक्षर के वेरियबल्स
 
 ```quote author="Laozi (Tao Te Ching)"
 The Dao hides in wordlessness. Only the Dao is well begun and well
 completed.
 ```
 
-Another way to code shorter is to use single-letter variable names everywhere. Like `a`, `b` or `c`.
+कोड को कम करने का एक और तरीका है कि हर जगह सिंगल-लेटर चर नामों का उपयोग किया जाए। जैसे `ए`,` बी` या `सी`।
 
-A short variable disappears in the code like a real ninja in the forest. No one will be able to find it using "search" of the editor. And even if someone does, they won't be able to "decipher" what the name `a` or `b` means.
+जंगल में एक वास्तविक निंजा की तरह कोड में एक छोटा चर गायब हो जाता है। कोई भी इसे संपादक की "खोज" का उपयोग करने में सक्षम नहीं होगा। और यहां तक कि अगर कोई करता है, तो वे "डिक्रिप्ट" नहीं कर पाएंगे, जिसका नाम `ए` या` बी` है।
 
-...But there's an exception. A real ninja will never use `i` as the counter in a `"for"` loop. Anywhere, but not here. Look around, there are many more exotic letters. For instance, `x` or `y`.
+... लेकिन एक अपवाद है। एक वास्तविक निनजा कभी भी `` लूप के लिए `` में काउंटर के रूप में `i` का उपयोग नहीं करेगा। कहीं भी, लेकिन यहां नहीं। चारों ओर देखें, कई और अधिक आकर्षक पत्र हैं। उदाहरण के लिए, `x` या` y`।
 
-An exotic variable as a loop counter is especially cool if the loop body takes 1-2 pages (make it longer if you can). Then if someone looks deep inside the loop, they won't be able to quickly figure out that the variable named `x` is the loop counter.
+लूप काउंटर के रूप में एक विदेशी चर विशेष रूप से अच्छा है यदि लूप बॉडी 1-2 पृष्ठ लेता है (यदि आप कर सकते हैं तो इसे अधिक लंबा करें)। फिर अगर कोई लूप के अंदर गहरा दिखता है, तो वे जल्दी से पता नहीं लगा पाएंगे कि `x` नाम का वेरिएबल लूप काउंटर है।
 
-## Use abbreviations
+## संक्षिप्तीकरण का उपयोग करें
 
-If the team rules forbid the use of one-letter and vague names -- shorten them, make abbreviations.
+यदि टीम एक-अक्षर और अस्पष्ट नामों के उपयोग के लिए मना करती है - तो उन्हें संक्षिप्त करें, संक्षिप्त करें।
 
-Like this:
+इस कदर:
 
 - `list` -> `lst`.
 - `userAgent` -> `ua`.
 - `browser` -> `brsr`.
 - ...etc
 
-Only the one with truly good intuition will be able to understand such names. Try to shorten everything. Only a worthy person should be able to uphold the development of your code.
+वास्तव में अच्छे अंतर्ज्ञान वाले व्यक्ति ही ऐसे नामों को समझ पाएंगे। हर चीज को छोटा करने की कोशिश करें। केवल एक योग्य व्यक्ति को आपके कोड के विकास को बनाए रखने में सक्षम होना चाहिए।
 
-## Soar high. Be abstract.
+## ऊँचा होना। सार हो।
 
 ```quote author="Laozi (Tao Te Ching)"
 The great square is cornerless<br>
@@ -73,56 +73,57 @@ The great note is rarified sound,<br>
 The great image has no form.
 ```
 
-While choosing a name try to use the most abstract word. Like `obj`, `data`, `value`, `item`, `elem` and so on.
+नाम चुनते समय सबसे सार शब्द का उपयोग करने का प्रयास करें। जैसे valueobj`, `data`,` value`, `item`, ʻelem` और इसी तरह।
 
-- **The ideal name for a variable is `data`.** Use it everywhere you can. Indeed, every variable holds *data*, right?
+- **एक चर का आदर्श नाम `data` है। ** इसका उपयोग आप हर जगह कर सकते हैं। वास्तव में, प्रत्येक चर * डेटा *, सही रखता है?
 
-    ...But what to do if `data` is already taken? Try `value`, it's also universal. After all, a variable eventually gets a *value*.
+     ... लेकिन अगर 'डेटा' पहले ही लिया गया हो तो क्या करें? `मान` का प्रयास करें, यह भी सार्वभौमिक है। आखिरकार, एक चर को अंततः एक * मान * मिलता है।
 
-- **Name a variable by its type: `str`, `num`...**
+- **इसके प्रकार से एक चर का नाम दें: `str`,` num` ... **
 
-    Give them a try. A young initiate may wonder -- are such names really useful for a ninja? Indeed, they are!
+     उन्हें एक कोशिश दे। एक युवा दीक्षा आश्चर्यचकित हो सकती है - क्या ऐसे नाम वास्तव में निंजा के लिए उपयोगी हैं? वास्तव में, वे हैं!
 
-    Sure, the variable name still means something. It says what's inside the variable: a string, a number or something else. But when an outsider tries to understand the code, they'll be surprised to see that there's actually no information at all! And will ultimately fail to alter your well-thought code.
+     ज़रूर, चर नाम अभी भी कुछ मतलब है। यह कहता है कि चर के अंदर क्या है: एक स्ट्रिंग, एक संख्या या कुछ और। लेकिन जब कोई बाहरी व्यक्ति कोड को समझने की कोशिश करता है, तो उन्हें यह देखकर आश्चर्य होगा कि वास्तव में कोई जानकारी नहीं है! और अंततः आपके सुविचारित कोड को बदलने में विफल हो जाएगा।
 
-    The value type is easy to find out by debugging. But what's the meaning of the variable? Which string/number does it store?
+     मूल्य प्रकार डीबगिंग द्वारा पता लगाना आसान है। लेकिन चर का अर्थ क्या है? कौन सी स्ट्रिंग / संख्या इसे स्टोर करती है?
 
-    There's just no way to figure out without a good meditation!
+     एक अच्छा ध्यान के बिना पता लगाने का कोई तरीका नहीं है!
 
-- **...But what if there are no more such names?** Just add a number: `data1, item2, elem5`...
+- **... लेकिन क्या होगा अगर ऐसे कोई और नाम नहीं हैं? ** बस एक नंबर जोड़ें: `data1, item2, elem5` ...
 
-## Attention test
+## ध्यान की परीक्षा
 
-Only a truly attentive programmer should be able to understand your code. But how to check that?
+केवल सही मायने में चौकस प्रोग्रामर ही आपके कोड को समझने में सक्षम होना चाहिए। लेकिन यह कैसे जांचें?
 
-**One of the ways -- use similar variable names, like `date` and `data`.**
+**इनमें से एक तरीका - समान चर नामों का उपयोग करें, जैसे `तारीख` और` डेटा`। **
 
-Mix them where you can.
+उन्हें मिलाएं जहां आप कर सकते हैं।
 
-A quick read of such code becomes impossible. And when there's a typo... Ummm... We're stuck for long, time to drink tea.
+ऐसे कोड का त्वरित पठन असंभव हो जाता है। और जब कोई टाइपो है ... उम्म्म ... हम लंबे समय से चाय पीने के लिए समय के लिए फंस गए हैं।
 
 
-## Smart synonyms
+## स्मार्ट पर्यायवाची
+
 
 ```quote author="Laozi (Tao Te Ching)"
 The Tao that can be told is not the eternal Tao. The name that can be named is not the eternal name.
 ```
 
-Using *similar* names for *same* things makes life more interesting and shows your creativity to the public.
+* समान * चीजों के लिए * समान * नामों का उपयोग करना जीवन को अधिक रोचक बनाता है और आपकी रचनात्मकता को जनता को दिखाता है।
 
-For instance, consider function prefixes. If a function shows a message on the screen -- start it with `display…`, like `displayMessage`. And then if another function shows on the screen something else, like a user name, start it with `show…` (like `showName`).
+उदाहरण के लिए, फ़ंक्शन उपसर्गों पर विचार करें। यदि कोई फ़ंक्शन स्क्रीन पर एक संदेश दिखाता है - इसे `डिस्प्ले…` से शुरू करें, जैसे `डिस्प्लेमैसेज`। और फिर यदि स्क्रीन पर कोई अन्य फ़ंक्शन कुछ और दिखाता है, तो उपयोगकर्ता नाम की तरह, इसे `शो…` (जैसे `शोनेम`) से शुरू करें।
 
-Insinuate that there's a subtle difference between such functions, while there is none.
+इस बात पर ध्यान दें कि ऐसे कार्यों के बीच एक सूक्ष्म अंतर है, जबकि कोई भी नहीं है।
 
-Make a pact with fellow ninjas of the team: if John starts "showing" functions with `display...` in his code, then Peter could use `render..`, and Ann -- `paint...`. Note how much more interesting and diverse the code became.
+टीम के साथी निन्जा के साथ एक समझौता करें: यदि जॉन अपने कोड में `डिस्प्ले 'के साथ" कार्य "दिखाना शुरू कर देता है, तो पीटर` रेंडर..`, और ऐन - `पेंट ...` का उपयोग कर सकता है। ध्यान दें कि कोड कितना अधिक दिलचस्प और विविध बन गया।
 
-...And now the hat trick!
+... और अब हैट्रिक!
 
-For two functions with important differences -- use the same prefix!
+महत्वपूर्ण अंतर वाले दो कार्यों के लिए - एक ही उपसर्ग का उपयोग करें!
 
-For instance, the function `printPage(page)` will use a printer. And the function `printText(text)` will put the text on-screen. Let an unfamiliar reader think well over similarly named function `printMessage`: "Where does it put the message? To a printer or on the screen?". To make it really shine, `printMessage(message)` should output it in the new window!
+उदाहरण के लिए, फ़ंक्शन `प्रिंटपेज (पेज)` एक प्रिंटर का उपयोग करेगा। और फ़ंक्शन `PrintText (पाठ)` पाठ को स्क्रीन पर रखेगा। एक अपरिचित पाठक को समान रूप से नामित फ़ंक्शन 'प्रिंटमेसेज' पर अच्छी तरह से सोचने दें: "यह संदेश कहां डालता है। प्रिंटर या स्क्रीन पर?"। इसे वास्तव में चमकाने के लिए, `प्रिंटमेसेज (संदेश)` को नई विंडो में आउटपुट करना चाहिए!
 
-## Reuse names
+## नामों का पुन: उपयोग करें
 
 ```quote author="Laozi (Tao Te Ching)"
 Once the whole is divided, the parts<br>
@@ -130,18 +131,17 @@ need names.<br>
 There are already enough names.<br>
 One must know when to stop.
 ```
+जब आवश्यक हो तभी एक नया चर जोड़ें।
 
-Add a new variable only when absolutely necessary.
+इसके बजाय, मौजूदा नामों का पुन: उपयोग करें। बस उनमें नए मूल्य लिखिए।
 
-Instead, reuse existing names. Just write new values into them.
+एक फ़ंक्शन में मापदंडों के रूप में पारित केवल चर का उपयोग करने का प्रयास करें।
 
-In a function try to use only variables passed as parameters.
+यह वास्तव में यह पहचानना कठिन बना देगा कि वास्तव में चर * * में क्या है। और यह भी कि यह कहां से आता है। उद्देश्य कोड पढ़ने वाले व्यक्ति के अंतर्ज्ञान और स्मृति को विकसित करना है। कमजोर अंतर्ज्ञान वाले व्यक्ति को कोड लाइन-बाय-लाइन का विश्लेषण करना होगा और हर कोड शाखा के माध्यम से परिवर्तनों को ट्रैक करना होगा।
 
-That would make it really hard to identify what's exactly in the variable *now*. And also where it comes from. The purpose is to develop the intuition and memory of a person reading the code. A person with weak intuition would have to analyze the code line-by-line and track the changes through every code branch.
+**दृष्टिकोण का एक उन्नत संस्करण गुप्त रूप से (!) मूल्य को लूप या फ़ंक्शन के बीच में कुछ समान रूप से प्रतिस्थापित करता है।**
 
-**An advanced variant of the approach is to covertly (!) replace the value with something alike in the middle of a loop or a function.**
-
-For instance:
+उदाहरण के लिए:
 
 ```js
 function ninjaFunction(elem) {
@@ -153,33 +153,33 @@ function ninjaFunction(elem) {
 }
 ```
 
-A fellow programmer who wants to work with `elem` in the second half of the function will be surprised... Only during the debugging, after examining the code they will find out that they're working with a clone!
+एक साथी प्रोग्रामर जो फ़ंक्शन के दूसरे भाग में programelem` के साथ काम करना चाहता है, उसे आश्चर्य होगा ... केवल डिबगिंग के दौरान, कोड की जांच के बाद उन्हें पता चलेगा कि वे एक क्लोन के साथ काम कर रहे हैं!
 
-Seen in code regularly. Deadly effective even against an experienced ninja.
+नियमित रूप से कोड में देखा। एक अनुभवी निंजा के खिलाफ भी घातक प्रभावी।
 
-## Underscores for fun
+## मनोरंजन के लिए अंडरस्कोर
 
-Put underscores `_` and `__` before variable names. Like `_name` or `__value`. It would be great if only you knew their meaning. Or, better, add them just for fun, without particular meaning at all. Or different meanings in different places.
+चर नामों से पहले अंडरस्कोर `_` और` __` लगाएं। जैसे `_name` या` __value`। यह बहुत अच्छा होगा यदि केवल आप उनका अर्थ जानते हैं। या, बेहतर, उन्हें केवल मज़े के लिए जोड़ें, बिना किसी विशेष अर्थ के। या अलग-अलग जगहों पर अलग-अलग अर्थ।
 
-You kill two rabbits with one shot. First, the code becomes longer and less readable, and the second, a fellow developer may spend a long time trying to figure out what the underscores mean.
+आप एक शॉट के साथ दो खरगोशों को मारते हैं। सबसे पहले, कोड लंबा और कम पठनीय हो जाता है, और दूसरा, एक साथी डेवलपर लंबे समय तक यह जानने की कोशिश कर सकता है कि अंडरस्कोर का मतलब क्या है।
 
-A smart ninja puts underscores at one spot of code and evades them at other places. That makes the code even more fragile and increases the probability of future errors.
+एक स्मार्ट निंजा कोड के एक स्थान पर अंडरस्कोर लगाता है और उन्हें अन्य स्थानों पर विकसित करता है। यह कोड को और अधिक नाजुक बनाता है और भविष्य की त्रुटियों की संभावना को बढ़ाता है।
 
-## Show your love
+## अपना प्यार दिखाओ
 
-Let everyone see how magnificent your entities are! Names like `superElement`, `megaFrame` and `niceItem` will definitely enlighten a reader.
+हर कोई देखता है कि आपकी संस्थाएं कितनी शानदार हैं! `सुपरफ्लेम`,` मेगाफ्रेम` और `नाइसइम` जैसे नाम निश्चित रूप से एक पाठक को मंत्रमुग्ध कर देंगे।
 
-Indeed, from one hand, something is written: `super..`, `mega..`, `nice..` But from the other hand -- that brings no details. A reader may decide to look for a hidden meaning and meditate for an hour or two of their paid working time.
+दरअसल, एक हाथ से, कुछ लिखा है: `सुपर..`,` मेगा..`, `अच्छा..` लेकिन दूसरे हाथ से - जो कोई विवरण नहीं लाता है। एक पाठक एक छिपे हुए अर्थ को देखने और अपने भुगतान किए गए कार्य समय के एक या दो घंटे के लिए ध्यान लगाने का निर्णय ले सकता है।
 
 
-## Overlap outer variables
+## बाहरी चर ओवरलैप करें
 
 ```quote author="Guan Yin Zi"
 When in the light, can't see anything in the darkness.<br>
 When in the darkness, can see everything in the light.
 ```
 
-Use same names for variables inside and outside a function. As simple. No efforts to invent new names.
+किसी फ़ंक्शन के अंदर और बाहर चर के लिए समान नामों का उपयोग करें। सरल के रूप में। नए नामों का आविष्कार करने का कोई प्रयास नहीं।
 
 ```js
 let *!*user*/!* = authenticateUser();
@@ -194,47 +194,47 @@ function render() {
 }
 ```
 
-A programmer who jumps inside the `render` will probably fail to notice that there's a local `user` shadowing the outer one.
+एक प्रोग्रामर जो `रेंडर` के अंदर कूदता है, संभवतः यह नोटिस करने में विफल होगा कि बाहरी एक को छायांकित करने के लिए एक स्थानीय whouser` है।
 
-Then they'll try to work with `user` assuming that it's the external variable, the result of `authenticateUser()`... The trap is sprung! Hello, debugger...
-
-
-## Side-effects everywhere!
-
-There are functions that look like they don't change anything. Like `isReady()`, `checkPermission()`, `findTags()`... They are assumed to carry out calculations, find and return the data, without changing anything outside of them. In other words, without "side-effects".
-
-**A really beautiful trick is to add a "useful" action to them, besides the main task.**
-
-An expression of dazed surprise on the face of your colleague when they see a function named `is..`, `check..` or `find...` changing something -- will definitely broaden your boundaries of reason.
-
-**Another way to surprise is to return a non-standard result.**
-
-Show your original thinking! Let the call of `checkPermission` return not `true/false`, but a complex object with the results of the check.
-
-Those developers who try to write `if (checkPermission(..))`, will wonder why it doesn't work. Tell them: "Read the docs!". And give this article.
+फिर वे `उपयोगकर्ता` के साथ काम करने की कोशिश करेंगे, यह मानते हुए कि यह बाहरी चर है,` प्रमाणिकता '() `... जाल का परिणाम है! हैलो, डीबगर ...
 
 
-## Powerful functions!
+## हर जगह दुष्प्रभाव!
+
+ऐसे कार्य हैं जो ऐसे दिखते हैं जैसे वे कुछ भी नहीं बदलते हैं। जैसे `Ready () `,` checkPermission () `,` findTags () `... उन्हें गणनाओं को पूरा करने, डेटा खोजने और वापस करने के लिए माना जाता है, उनके बाहर कुछ भी बदले बिना। दूसरे शब्दों में, "साइड-इफेक्ट्स" के बिना।
+
+**वास्तव में एक सुंदर चाल है, मुख्य कार्य के अलावा, उनके लिए एक "उपयोगी" क्रिया जोड़ना है।
+
+अपने सहकर्मी के चेहरे पर चकित आश्चर्य की एक अभिव्यक्ति जब वे `is..`, `चेक..` या` खोजें ...` नाम से एक फ़ंक्शन देखते हैं - तो निश्चित रूप से आपके कारण की सीमाओं को व्यापक किया जाएगा।
+
+**अचंभे का एक और तरीका एक गैर-मानक परिणाम वापस करना है। **
+
+अपनी मूल सोच दिखाएं! बता दें कि `checkPermission` की वापसी` सच / गलत` नहीं, बल्कि चेक के परिणामों के साथ एक जटिल वस्तु है।
+
+जो डेवलपर्स `if (checkPermission (..))` लिखने की कोशिश करते हैं, उन्हें आश्चर्य होगा कि यह काम क्यों नहीं करता है। उन्हें बताएं: "डॉक्स पढ़ें!"। और यह लेख दे।
+
+
+## शक्तिशाली कार्य!
 
 ```quote author="Laozi (Tao Te Ching)"
 The great Tao flows everywhere,<br>
 both to the left and to the right.
 ```
 
-Don't limit the function by what's written in its name. Be broader.
+फ़ंक्शन को उसके नाम में लिखे गए द्वारा सीमित न करें। व्यापक हो।
 
-For instance, a function `validateEmail(email)` could (besides checking the email for correctness) show an error message and ask to re-enter the email.
+उदाहरण के लिए, एक फ़ंक्शन `validateEmail (ईमेल)` सकता है (शुद्धता के लिए ईमेल की जाँच करने के अलावा) एक त्रुटि संदेश दिखाता है और ईमेल को फिर से दर्ज करने के लिए कहता है।
 
-Additional actions should not be obvious from the function name. A true ninja coder will make them not obvious from the code as well.
+फ़ंक्शन नाम से अतिरिक्त क्रियाएं स्पष्ट नहीं होनी चाहिए। एक सच्चे निंजा कोडर उन्हें कोड से भी स्पष्ट नहीं करेगा।
 
-**Joining several actions into one protects your code from reuse.**
+**कई कार्यों को एक में शामिल करना आपके कोड को पुन: उपयोग करने से बचाता है। **
 
-Imagine, another developer wants only to check the email, and not output any message. Your function  `validateEmail(email)` that does both will not suit them. So they won't break your meditation by asking anything about it.
+कल्पना कीजिए, एक और डेवलपर केवल ईमेल की जांच करना चाहता है, और किसी संदेश को आउटपुट नहीं करना चाहता है। आपका कार्य `validateEmail (ईमेल)` जो दोनों करता है उन पर सूट नहीं करेगा। इसलिए वे इसके बारे में कुछ भी पूछकर आपका ध्यान नहीं तोड़ेंगे।
 
-## Summary
+## सारांश
 
-All "pieces of advice" above are from the real code... Sometimes, written by experienced developers. Maybe even more experienced than you are ;)
+उपरोक्त सभी "सलाह के टुकड़े" वास्तविक कोड से हैं ... कभी-कभी, अनुभवी डेवलपर्स द्वारा लिखित। शायद तुम से भी अधिक अनुभवी;)
 
-- Follow some of them, and your code will become full of surprises.
-- Follow many of them, and your code will become truly yours, no one would want to change it.
-- Follow all, and your code will become a valuable lesson for young developers looking for enlightenment.
+- उनमें से कुछ का पालन करें, और आपका कोड आश्चर्य से भरा हो जाएगा।
+- उनमें से कई का पालन करें, और आपका कोड वास्तव में आपका हो जाएगा, कोई भी इसे बदलना नहीं चाहेगा।
+- सभी का पालन करें, और आपका कोड ज्ञान की तलाश में युवा डेवलपर्स के लिए एक मूल्यवान सबक बन जाएगा।
