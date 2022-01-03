@@ -127,17 +127,17 @@ Please note that both key and value must be strings.
 If were any other type, like a number, or an object, it gets converted to string automatically:
 
 ```js run
-sessionStorage.user = {name: "John"};
-alert(sessionStorage.user); // [object Object]
+localStorage.user = {name: "John"};
+alert(localStorage.user); // [object Object]
 ```
 
 We can use `JSON` to store objects though:
 
 ```js run
-sessionStorage.user = JSON.stringify({name: "John"});
+localStorage.user = JSON.stringify({name: "John"});
 
 // sometime later
-let user = JSON.parse( sessionStorage.user );
+let user = JSON.parse( localStorage.user );
 alert( user.name ); // John
 ```
 
@@ -202,7 +202,11 @@ If both windows are listening for `window.onstorage`, then each one will react o
 
 ```js run
 // triggers on updates made to the same storage from other documents
+<<<<<<< HEAD
 window.onstorage = event => { // same as window.addEventListener('storage', event => {
+=======
+window.onstorage = event => { // can also use window.addEventListener('storage', event => {
+>>>>>>> 3c934b5a46a76861255e3a4f29da6fd54ab05c8c
   if (event.key != 'now') return;
   alert(event.key + ':' + event.newValue + " at " + event.url);
 };
