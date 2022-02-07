@@ -24,7 +24,11 @@ let message;
 let message;
 
 *!*
+<<<<<<< HEAD
 message = 'Hello'; // string स्टोर करें
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 */!*
 ```
 

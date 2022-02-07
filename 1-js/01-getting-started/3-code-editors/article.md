@@ -31,11 +31,18 @@
 
 निम्नलिखित विकल्प आपके ध्यान देने योग्य हैं:
 
+<<<<<<< HEAD
 - [एटम](https://atom.io/) (क्रॉस-प्लेटफॉर्म, निशुल्करी)।
 - [विजुअल स्टूडियो कोड](https://code.visualstudio.com/) (क्रॉस-प्लेटफॉर्म, निशुल्कत)।
 - [उदात्त पाठ](http://www.sublimetext.com) (क्रॉस-प्लेटफ़ॉर्म, शेयरवेयर)।
 - [नोटपैड](https://notepad-plus-plus.org/) (विंडोज,निशुल्क)।
 - [Vim](http://www.vim.org/) और [Emacs](https://www.gnu.org/software/emacs/) भी अच्छे हैं यदि आप जानते हैं कि उनका उपयोग कैसे करना है।
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 71da17e5960f1c76aad0d04d21f10bc65318d3f6
 
 ## चलो बहस नहीं करते
 
