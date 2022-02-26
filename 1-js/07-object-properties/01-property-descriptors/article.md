@@ -1,27 +1,25 @@
 
-# Property flags and descriptors
+# संपत्ति के झंडे और वर्णनकर्ता
 
-As we know, objects can store properties.
+जैसा कि हम जानते हैं, वस्तुएं गुणों को संग्रहीत कर सकती हैं।
 
-Until now, a property was a simple "key-value" pair to us. But an object property is actually a more flexible and powerful thing.
+अब तक, एक संपत्ति हमारे लिए एक साधारण "की-वैल्यू" जोड़ी थी। लेकिन एक वस्तु संपत्ति वास्तव में एक अधिक लचीली और शक्तिशाली चीज है।
 
-In this chapter we'll study additional configuration options, and in the next we'll see how to invisibly turn them into getter/setter functions.
+इस अध्याय में हम अतिरिक्त कॉन्फ़िगरेशन विकल्पों का अध्ययन करेंगे, और अगले में हम देखेंगे कि अदृश्य रूप से उन्हें गेटर/सेटर फ़ंक्शन में कैसे बदला जाए।
+## संपत्ति के झंडे (Property flags)
 
-## Property flags
 
-Object properties, besides a **`value`**, have three special attributes (so-called "flags"):
+वस्तु गुण, एक **`मान`** के अलावा, तीन विशेष विशेषताएं हैं (तथाकथित "झंडे"):
+- **`writable`** --यदि `सत्य` है, तो मान बदला जा सकता है, अन्यथा यह केवल-पढ़ने के लिए है।
+- **`enumerable`** -- यदि `सत्य` है, तो लूप में सूचीबद्ध है, अन्यथा सूचीबद्ध नहीं है।
+- **`configurable`** -- यदि `सत्य` है, तो संपत्ति को हटाया जा सकता है और इन विशेषताओं को संशोधित किया जा सकता है, अन्यथा नहीं।
 
-- **`writable`** -- if `true`, the value can be changed, otherwise it's read-only.
-- **`enumerable`** -- if `true`, then listed in loops, otherwise not listed.
-- **`configurable`** -- if `true`, the property can be deleted and these attributes can be modified, otherwise not.
+हमने उन्हें अभी तक नहीं देखा, क्योंकि आम तौर पर वे दिखाई नहीं देते हैं। जब हम एक संपत्ति "सामान्य तरीके" बनाते हैं, तो वे सभी 'सत्य' होते हैं। लेकिन हम उन्हें कभी भी बदल भी सकते हैं।
 
-We didn't see them yet, because generally they do not show up. When we create a property "the usual way", all of them are `true`. But we also can change them anytime.
+सबसे पहले, आइए देखें कि उन झंडों को कैसे प्राप्त किया जाए।
+प्रक्रिया [Object.getOwnPropertyDescriptor](mdn:js/Object/getOwnPropertyDescriptor) किसी संपत्ति के बारे में *पूर्ण* जानकारी पूछने की अनुमति देता है।
 
-First, let's see how to get those flags.
-
-The method [Object.getOwnPropertyDescriptor](mdn:js/Object/getOwnPropertyDescriptor) allows to query the *full* information about a property.
-
-The syntax is:
+वाक्य रचना है:
 ```js
 let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);
 ```
@@ -32,8 +30,7 @@ let descriptor = Object.getOwnPropertyDescriptor(obj, propertyName);
 `propertyName`
 : The name of the property.
 
-The returned value is a so-called "property descriptor" object: it contains the value and all the flags.
-
+लौटाया गया मूल्य एक तथाकथित "संपत्ति विवरणक" वस्तु है: इसमें मूल्य और सभी झंडे शामिल हैं।
 For instance:
 
 ```js run
@@ -54,9 +51,9 @@ alert( JSON.stringify(descriptor, null, 2 ) );
 */
 ```
 
-To change the flags, we can use [Object.defineProperty](mdn:js/Object/defineProperty).
+झंडे को बदलने के लिए, हम उपयोग कर सकते हैं [Object.defineProperty](mdn:js/Object/defineProperty).
 
-The syntax is:
+वाक्य रचना है:
 
 ```js
 Object.defineProperty(obj, propertyName, descriptor)
@@ -68,10 +65,8 @@ Object.defineProperty(obj, propertyName, descriptor)
 `descriptor`
 : Property descriptor object to apply.
 
-If the property exists, `defineProperty` updates its flags. Otherwise, it creates the property with the given value and flags; in that case, if a flag is not supplied, it is assumed `false`.
-
-For instance, here a property `name` is created with all falsy flags:
-
+यदि संपत्ति मौजूद है, तो `defineProperty` इसके झंडे को अपडेट करता है। अन्यथा, यह दिए गए मूल्य और झंडे के साथ संपत्ति बनाता है; उस स्थिति में, यदि ध्वज की आपूर्ति नहीं की जाती है, तो इसे 'झूठा' मान लिया जाता है।
+उदाहरण के लिए, यहां एक संपत्ति `नाम` सभी झूठे झंडों के साथ बनाई गई है:
 ```js run
 let user = {};
 
@@ -96,11 +91,9 @@ alert( JSON.stringify(descriptor, null, 2 ) );
  */
 ```
 
-Compare it with "normally created" `user.name` above: now all flags are falsy. If that's not what we want then we'd better set them to `true` in `descriptor`.
-
-Now let's see effects of the flags by example.
-
-## Non-writable
+इसकी तुलना ऊपर "सामान्य रूप से बनाए गए" `user.name` से करें: अब सभी फ़्लैग झूठे हैं। अगर हम यही नहीं चाहते हैं तो हम उन्हें 'डिस्क्रिप्टर' में 'सत्य' पर सेट करना बेहतर समझते हैं।
+आइए अब उदाहरण के द्वारा झंडों के प्रभाव को देखें।
+## गैर-लिखने योग्य (Non-writable)
 
 Let's make `user.name` non-writable (can't be reassigned) by changing `writable` flag:
 
@@ -308,15 +301,15 @@ for (let key in user) {
 }
 ```
 
-...But that does not copy flags. So if we want a "better" clone then `Object.defineProperties` is preferred.
+...लेकिन वह झंडे की नकल नहीं करता है। इसलिए यदि हम एक "बेहतर" क्लोन चाहते हैं तो `Object.defineProperties` को प्राथमिकता दी जाती है।
 
-Another difference is that `for..in` ignores symbolic properties, but `Object.getOwnPropertyDescriptors` returns *all* property descriptors including symbolic ones.
+एक और अंतर यह है कि `for..in` प्रतीकात्मक गुणों को अनदेखा करता है, लेकिन `ऑब्जेक्ट.getOwnPropertyDescriptors` प्रतीकात्मक वाले सहित सभी * संपत्ति वर्णनकर्ता देता है।
 
-## Sealing an object globally
+## किसी वस्तु को विश्व स्तर पर सील करना
 
-Property descriptors work at the level of individual properties.
+संपत्ति विवरणक व्यक्तिगत गुणों के स्तर पर काम करते हैं।
 
-There are also methods that limit access to the *whole* object:
+ऐसी विधियाँ भी हैं जो *संपूर्ण* वस्तु तक पहुँच को सीमित करती हैं:
 
 [Object.preventExtensions(obj)](mdn:js/Object/preventExtensions)
 : Forbids the addition of new properties to the object.
@@ -327,8 +320,7 @@ There are also methods that limit access to the *whole* object:
 [Object.freeze(obj)](mdn:js/Object/freeze)
 : Forbids adding/removing/changing of properties. Sets `configurable: false, writable: false` for all existing properties.
 
-And also there are tests for them:
-
+और उनके लिए परीक्षण भी हैं:
 [Object.isExtensible(obj)](mdn:js/Object/isExtensible)
 : Returns `false` if adding properties is forbidden, otherwise `true`.
 
@@ -338,4 +330,4 @@ And also there are tests for them:
 [Object.isFrozen(obj)](mdn:js/Object/isFrozen)
 : Returns `true` if adding/removing/changing properties is forbidden, and all current properties are `configurable: false, writable: false`.
 
-These methods are rarely used in practice.
+व्यवहार में इन विधियों का उपयोग शायद ही कभी किया जाता है।
