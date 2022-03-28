@@ -11,7 +11,11 @@ A good page to see the current state of support for language features is <https:
 
 As programmers, we'd like to use most recent features. The more good stuff - the better!
 
+<<<<<<< HEAD
 From the other hand, how to make out modern code work on older engines that don't understand recent features yet?
+=======
+On the other hand, how to make our modern code work on older engines that don't understand recent features yet?
+>>>>>>> 741d90ce8a730d66e987bff5e9794d6e41cb2f05
 
 There are two tools for that:
 
@@ -22,7 +26,11 @@ Here, in this chapter, our purpose is to get the gist of how they work, and thei
 
 ## Transpilers
 
+<<<<<<< HEAD
 A [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler) is a special piece of software that can parse ("read and understand") modern code, and rewrite it using older syntax constructs, so that the result would be the same.
+=======
+A [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler) is a special piece of software that translates source code to another source code. It can parse ("read and understand") modern code and rewrite it using older syntax constructs, so that it'll also work in outdated engines.
+>>>>>>> 741d90ce8a730d66e987bff5e9794d6e41cb2f05
 
 E.g. JavaScript before year 2020 didn't have the "nullish coalescing operator" `??`. So, if a visitor uses an outdated browser, it may fail to understand the code like `height = height ?? 100`.
 
@@ -42,13 +50,21 @@ Usually, a developer runs the transpiler on their own computer, and then deploys
 
 Speaking of names, [Babel](https://babeljs.io) is one of the most prominent transpilers out there. 
 
+<<<<<<< HEAD
 Modern project build systems, such as [webpack](http://webpack.github.io/), provide means to run transpiler automatically on every code change, so it's very easy to integrate into development process.
+=======
+Modern project build systems, such as [webpack](https://webpack.js.org/), provide means to run transpiler automatically on every code change, so it's very easy to integrate into development process.
+>>>>>>> 741d90ce8a730d66e987bff5e9794d6e41cb2f05
 
 ## Polyfills
 
 New language features may include not only syntax constructs and operators, but also built-in functions.
 
+<<<<<<< HEAD
 For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23) = 1`.
+=======
+For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23)` returns `1`.
+>>>>>>> 741d90ce8a730d66e987bff5e9794d6e41cb2f05
 
 In some (very outdated) JavaScript engines, there's no `Math.trunc`, so such code will fail.
 
@@ -82,7 +98,11 @@ In this chapter we'd like to motivate you to study modern and even "bleeding-edg
 
 Just don't forget to use transpiler (if using modern syntax or operators) and polyfills (to add functions that may be missing). And they'll ensure that the code works.
 
+<<<<<<< HEAD
 For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](http://webpack.github.io/) with [babel-loader](https://github.com/babel/babel-loader) plugin.
+=======
+For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](https://webpack.js.org/) with [babel-loader](https://github.com/babel/babel-loader) plugin.
+>>>>>>> 741d90ce8a730d66e987bff5e9794d6e41cb2f05
 
 Good resources that show the current state of support for various features:
 - <https://kangax.github.io/compat-table/es6/> - for pure JavaScript.
