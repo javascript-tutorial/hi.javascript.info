@@ -31,6 +31,10 @@ It works like this:
 
 The tag `pattern:<body.*?>` won't be returned. The result of this regexp is literally an empty string, but it matches only at positions preceeded by `pattern:<body.*?>`.
 
+<<<<<<< HEAD
 So we replaces the "empty line", preceeded by `pattern:<body.*?>`, with `<h1>Hello</h1>`. That's the insertion after `<body>`.
+=======
+So it replaces the "empty line", preceeded by `pattern:<body.*?>`, with `<h1>Hello</h1>`. That's the insertion after `<body>`.
+>>>>>>> 45934debd9bb31376ea5da129e266df5b43e545f
 
 P.S. Regexp flags, such as `pattern:s` and `pattern:i` can also be useful: `pattern:/<body.*?>/si`. The `pattern:s` flag makes the dot `pattern:.` match a newline character, and `pattern:i` flag makes `pattern:<body>` also match `match:<BODY>` case-insensitively.
