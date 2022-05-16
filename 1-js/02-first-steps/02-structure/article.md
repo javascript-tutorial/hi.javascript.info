@@ -46,7 +46,11 @@ alert(3 +
 + 2);
 ```
 
+<<<<<<< HEAD
 कोड `6` आउटपुट करता है क्योंकि जावास्क्रिप्ट यहाँ अर्धविराम नहीं डालता है। यह सहज रूप से स्पष्ट है कि यदि उक्ति एक प्लस `" + "` के साथ समाप्त होता है, तो यह एक "अपूर्ण उक्ति" है, इसलिए अर्धविराम की आवश्यकता नहीं है। और इस मामले में जो इरादा के अनुसार काम करता है।
+=======
+The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so a semicolon there would be incorrect. And in this case, that works as intended.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 
 **लेकिन ऐसी परिस्थितियां भी हैं जहां जावास्क्रिप्ट अर्धविराम लगाने के लिए "विफल" होता है, जहां इसकी वास्तव में आवश्यकता होती है।**
 
@@ -56,28 +60,43 @@ alert(3 +
 यदि आप ऐसी त्रुटि का ठोस उदाहरण देखने के लिए उत्सुक हैं, तो इस कोड को देखें:
 
 ```js run
-[1, 2].forEach(alert)
+alert("Hello");
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 `[]` और 'forEach` के अर्थ के बारे में सोचने की आवश्यकता नहीं है। हम उनका अध्ययन बाद में करेंगे। अभी के लिए, बस कोड का परिणाम याद रखें: यह `1` दिखाता है फिर` 2`।
 
 अब, कोड से पहले एक `अलर्ट` जोड़ें और अर्धविराम के साथ इसे *समाप्त न करें*:
 
 ```js run no-beautify
 alert("इस कोड में एक त्रुटि होगी")
+=======
+No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
 
-[1, 2].forEach(alert)
+Now let's remove the semicolon after the `alert`:
+
+```js run no-beautify
+alert("Hello")
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 अब यदि हम कोड चलाते हैं, तो केवल पहले `alert` दिखाया जाता है और फिर एक त्रुटि होती है!
 
 लेकिन सब कुछ फिर से ठीक है अगर हम `alert` के बाद एक अर्धविराम जोड़ते हैं:
 ```js run
 alert("अब सब ठीक है");
+=======
+The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 
-[1, 2].forEach(alert)  
-```
+If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
 
+<<<<<<< HEAD
 अब हमें "अब सब ठीक है" संदेश मिलता है और उसके बाद `1` और` 2` मिलते हैं।
 
 
@@ -90,6 +109,19 @@ alert("इस कोड में एक त्रुटि होग")[1, 2].fo
 ```
 
 लेकिन यह दो अलग-अलग कथन होने चाहिए, एक नहीं। इस मामले में ऐसा विलय सिर्फ गलत है, इसलिए त्रुटि होती है। यह अन्य स्थितियों में हो सकता है।
+=======
+That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+
+Here's how the engine sees it:
+
+```js run no-beautify
+alert("Hello")[1, 2].forEach(alert);
+```
+
+Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+
+This can happen in other situations also.
+>>>>>>> 2901e0c64590a67d8a2bde1ea76a514d96f80469
 ````
 
 हम बयानों के बीच अर्धविराम लगाने की सलाह देते हैं, भले ही वे नई लाइनों से अलग हों। इस नियम को समुदाय द्वारा व्यापक रूप से अपनाया जाता है। आइए एक बार फिर ध्यान दें -- *यह संभव है* अधिकांश समय अर्धविरामों को छोड़ने के लिए। लेकिन यह सुरक्षित है -- विशेष रूप से नौसिखिए के लिए -- अर्धविराम का उपयोग करने के लिए।
