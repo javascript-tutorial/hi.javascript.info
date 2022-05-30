@@ -24,11 +24,19 @@
 
 अलग-अलग इंजनों के अलग-अलग "कोडनेम" होते हैं। उदाहरण के लिए:
 
+<<<<<<< HEAD
 - [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- क्रोम (Chrome) और ओपेरा (Opera) में।
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- फ़ायरफ़ॉक्स (Firefox) में।
 - ...IE के विभिन्न संस्करणों के लिए "ट्राइडेंट" (Trident) और "चक्र" (Chakra) जैसे अन्य कोडनेम हैं, माइक्रोसॉफ्ट एज के लिए "चक्रकोर" (ChakraCore), "नाइट्रो" (Nitro) और सफारी के लिए "स्क्विरफेलिश" (SquirrelFish) आदि।
 
 उपरोक्त शब्द याद रखने के लिए अच्छे हैं क्योंकि इनका उपयोग इंटरनेट पर डेवलपर लेखों में किया जाता है। हम भी उनका उपयोग करेंगे। उदाहरण के लिए, यदि "एक सुविधा X V8 द्वारा समर्थित है", तो यह शायद क्रोम और ओपेरा में काम करता है।
+=======
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+
+The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+>>>>>>> 2efe0dce18a57f2b6121ed6656d6fe10b0ee8f96
 
 ```smart header="How do engines work?"
 
@@ -59,7 +67,11 @@
 
 ## ब्राउज़र जावास्क्रिप्ट क्या नहीं कर सकता?
 
+<<<<<<< HEAD
 ब्राउज़र में जावास्क्रिप्ट की क्षमताएं उपयोगकर्ता की सुरक्षा के लिए सीमित हैं। उद्देश्य एक बुरे वेबपृष्ठ को निजी जानकारी तक पहुँचने या उपयोगकर्ता के डेटा को नुकसान पहुँचाने से रोकना है।
+=======
+JavaScript's abilities in the browser are limited for the sake of a user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+>>>>>>> 2efe0dce18a57f2b6121ed6656d6fe10b0ee8f96
 
 ऐसे प्रतिबंधों के उदाहरणों में शामिल हैं:
 
@@ -84,9 +96,15 @@
 जावास्क्रिप्ट के बारे में कम से कम * तीन * महान बातें हैं:
 
 ```compare
+<<<<<<< HEAD
 + HTML / CSS के साथ पूर्ण एकीकरण (integration)।
 + साधारण चीजें सरल तरीके से की जाती हैं.
 + सभी प्रमुख ब्राउज़रों द्वारा समर्थन और डिफ़ॉल्ट रूप से सक्षम.
+=======
++ Full integration with HTML/CSS.
++ Simple things are done simply.
++ Supported by all major browsers and enabled by default.
+>>>>>>> 2efe0dce18a57f2b6121ed6656d6fe10b0ee8f96
 ```
 जावास्क्रिप्ट इकलौता ब्राउज़र तकनीक है जो इन तीन चीजों को जोड़ती है।
 
@@ -106,12 +124,21 @@
 
 ऐसी भाषाओं के उदाहरण:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) यह जावास्क्रिप्ट के लिए "सिंटैक्टिक शुगर" है। यह छोटे वाक्यविन्यास का परिचय देता है, जिससे हमें स्पष्ट और अधिक सटीक कोड लिखने की अनुमति मिलती है। आमतौर पर, Ruby (रूबी) डेवलपर इसे पसंद करते हैं।
 - [TypeScript](http://www.typescriptlang.org/) यह जटिल प्रणालियों के विकास और समर्थन को आसान बनाने के लिए "सख्त डेटा टाइपिंग" को जोड़ने पर केंद्रित है। यह Microsoft द्वारा विकसित किया गया है।
 - [Flow](http://flow.org/) यह डेटा टाइपिंग भी जोड़ता है, लेकिन एक अलग तरीके से। Facebook द्वारा विकसित।
 - [Dart](https://www.dartlang.org/) यह एक स्वतंत्र भाषा है जिसका अपना इंजन है जो गैर-ब्राउज़र वातावरण (जैसे मोबाइल ऐप) में चलता है, लेकिन इसे जावास्क्रिप्ट पर भी रूपांतरित किया जा सकता है। Google द्वारा विकसित किया गया।
 और भी कई हैं। बेशक, भले ही हम रूपांतरित भाषाओं में से एक का उपयोग करें, हमें यह भी जानना चाहिए कि हम वास्तव में क्या कर रहे हैं, यह समझने के लिए जावास्क्रिप्ट जानना महत्वपूर्ण है।
 - [Brython](https://brython.info/) यह जावास्क्रिप्ट के लिए एक पायथन ट्रांसपिलर है जो जावास्क्रिप्ट के बिना शुद्ध पायथन में एप्लिकेशन लिखने में सक्षम बनाता है।
+=======
+- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
+- [Kotlin](https://kotlinlang.org/docs/reference/js-overview.html) is a modern, concise and safe programming language that can target the browser or Node.
+>>>>>>> 2efe0dce18a57f2b6121ed6656d6fe10b0ee8f96
 
 ## सारांश
 
@@ -119,3 +146,9 @@
 - आज, जावास्क्रिप्ट HTML / CSS के साथ पूर्ण एकीकरण के साथ सबसे व्यापक रूप से अपनाया जाने वाला एक अद्वितीय ब्राउज़र-भाषा है।
 - कई भाषाएं हैं जो जावास्क्रिप्ट में रूपांतरित ("transpiled", किसी अन्य भाषा में अनुवाद करने की प्रक्रिया) होती हैं और कुछ विशेषताएं प्रदान करती हैं।जावास्क्रिप्ट पर महारत हासिल करने के बाद, कम से कम संक्षेप में उन पर एक नज़र डालने की सलाह दी जाती है।
 
+<<<<<<< HEAD
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 2efe0dce18a57f2b6121ed6656d6fe10b0ee8f96
