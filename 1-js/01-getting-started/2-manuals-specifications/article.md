@@ -13,20 +13,32 @@
 
 नवीनतम विशेषताओं के बारे में पढ़ने के लिए, जिनमें "लगभग मानक" (तथाकथित "स्टेज 3") शामिल हैं, <https://github.com/tc39/proposals> पर प्रस्ताव देखें।
 
+<<<<<<< HEAD
 इसके अलावा, यदि आप ब्राउज़र के लिए विकसित कर रहे हैं, तो ट्यूटोरियल के [दूसरे भाग](info:browser-environment) में अन्य विशिष्टताएं शामिल हैं।
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 ## मैनुअल
 
+<<<<<<< HEAD
 - **एमडीएन (मोज़िला) जावास्क्रिप्ट संदर्भ** उदाहरण और अन्य जानकारी के साथ एक मैनुअल है।यह जावास्क्रिप्ट के फंक्षन, मेतड आदि के बारे में गहराई से जानकारी प्राप्त करना बहुत अच्छा है।
+=======
+- **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
     कोई इसे <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> पर पा सकता है।
 
+<<<<<<< HEAD
     हालांकि, इसके बजाय अक्सर इंटरनेट खोज का उपयोग करना सबसे अच्छा है। बस क्वेरी में "एमडीएन [टर्म]" का उपयोग करें। {`parseInt`} फ़ंक्शन की खोज करने के लिए <https://google.com/search?q=MDN+parseInt> पर जाएं।
 
 
 - **MSDN** – Microsoft की मैनुअल मे बहुत सारी जानकारी है, जिसमें जावास्क्रिप्ट (अक्सर JScript के रूप में संदर्भित) शामिल है। अगर किसी को इंटरनेट एक्सप्लोरर के लिए कुछ विशिष्ट चाहिए, तो यहा जाएं: <http://msdn.microsoft.com/>।
 
     इसके अलावा, हम "RegExp MSDN" या "RegExp MSDN jscript" जैसे वाक्यांशों के साथ एक इंटरनेट खोज का उपयोग कर सकते हैं।
+=======
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 ## संगतता टेबल
 
@@ -34,8 +46,13 @@
 
 ब्राउज़र-आधारित और अन्य इंजनों के बीच उनका समर्थन देखने के लिए, देखें:
 
+<<<<<<< HEAD
 - <http://caniuse.com> - समर्थन की प्रति-सुविधा तालिका, उदाहरण के लिए, यह देखने के लिए कि कौन से इंजन आधुनिक क्रिप्टोग्राफी फंक्षन का समर्थन करते हैं: <http://caniuse.com/#feat=cryptography>
 - <https://kangax.github.io/compat-table> - जावास्क्रिप्ट सुविधाओं और इंजनों के साथ एक तालिका जो समर्थन करती है या समर्थन नहीं करती है।
+=======
+- <https://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 ये सभी संसाधन वास्तविक जीवन के विकास में उपयोगी होते हैं, क्योंकि इनमें जावास्क्रिप्ट के विवरण, उनके समर्थन आदि के बारे में बहुमूल्य जानकारी होती है।
 

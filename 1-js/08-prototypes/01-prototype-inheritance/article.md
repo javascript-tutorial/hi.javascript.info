@@ -12,7 +12,11 @@ In JavaScript, objects have a special hidden property `[[Prototype]]` (as named 
 
 ![prototype](object-prototype-empty.svg)
 
+<<<<<<< HEAD
 When we read a property from `object`, and it's missing, JavaScript automatically takes it from the prototype. In programming, such thing is called "prototypal inheritance". And soon we'll study many examples of such inheritance, as well as cooler language features built upon it.
+=======
+When we read a property from `object`, and it's missing, JavaScript automatically takes it from the prototype. In programming, this is called "prototypal inheritance". And soon we'll study many examples of such inheritance, as well as cooler language features built upon it.
+>>>>>>> 30a5d5e2a7c3504c9afd5028f83f4a696e60aede
 
 The property `[[Prototype]]` is internal and hidden, but there are many ways to set it.
 
@@ -54,7 +58,7 @@ alert( rabbit.eats ); // true (**)
 alert( rabbit.jumps ); // true
 ```
 
-Here the line `(*)` sets `animal` to be a prototype of `rabbit`.
+Here the line `(*)` sets `animal` to be the prototype of `rabbit`.
 
 Then, when `alert` tries to read property `rabbit.eats` `(**)`, it's not in `rabbit`, so JavaScript follows the `[[Prototype]]` reference and finds it in `animal` (look from the bottom up):
 
@@ -130,7 +134,6 @@ There are only two limitations:
 2. The value of `__proto__` can be either an object or `null`. Other types are ignored.
 
 Also it may be obvious, but still: there can be only one `[[Prototype]]`. An object may not inherit from two others.
-
 
 ```smart header="`__proto__` is a historical getter/setter for `[[Prototype]]`"
 It's a common mistake of novice developers not to know the difference between these two.
@@ -287,7 +290,7 @@ for(let prop in rabbit) alert(prop); // jumps, then eats
 */!*
 ```
 
-If that's not what we want, and we'd like to exclude inherited properties, there's a built-in method [obj.hasOwnProperty(key)](mdn:js/Object/hasOwnProperty): it returns `true` if `obj` has its own (not inherited) property named `key`.
+If that's not what we want, and we'd like to exclude inherited properties, there's a built-in method [obj.hasOwnProperty(key)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty): it returns `true` if `obj` has its own (not inherited) property named `key`.
 
 So we can filter out inherited properties (or do something else with them):
 
