@@ -1,7 +1,11 @@
 
 # मैनुअल और विशिष्टता
 
+<<<<<<< HEAD
 यह पुस्तक एक * ट्यूटोरियल * है। इसका उद्देश्य आपको धीरे-धीरे जावास्क्रिप्ट सीखने में मदद करना है। एक बार जब आप मूल बातें से परिचित हो जाते हैं, तो आपको अन्य स्त्रोत की आवश्यकता होगी।
+=======
+This book is a *tutorial*. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other resources.
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 ## विशिष्टता
 
@@ -9,14 +13,23 @@
 
 लेकिन औपचारिक होने के नाते, यह पहली बार में समझना मुश्किल है। इसलिए यदि आपको जावास्क्रिप्ट के विवरण के बारे में सबसे भरोसेमंद स्त्रोत की आवश्यकता है, तो विशिष्टता सही जगह है। लेकिन यह रोजमर्रा के उपयोग के लिए नहीं है।
 
+<<<<<<< HEAD
 हर साल एक नया विशिष्टता संस्करण जारी किया जाता है। इन रिलीज़ों के बीच, नवीनतम विशिष्टता ड्राफ्ट <https://tc39.es/ecma262/> पर है।
+=======
+A new specification version is released every year. Between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 नवीनतम विशेषताओं के बारे में पढ़ने के लिए, जिनमें "लगभग मानक" (तथाकथित "स्टेज 3") शामिल हैं, <https://github.com/tc39/proposals> पर प्रस्ताव देखें।
 
+<<<<<<< HEAD
 इसके अलावा, यदि आप ब्राउज़र के लिए विकसित कर रहे हैं, तो ट्यूटोरियल के [दूसरे भाग](info:browser-environment) में अन्य विशिष्टताएं शामिल हैं।
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 ## मैनुअल
 
+<<<<<<< HEAD
 - **एमडीएन (मोज़िला) जावास्क्रिप्ट संदर्भ** उदाहरण और अन्य जानकारी के साथ एक मैनुअल है।यह जावास्क्रिप्ट के फंक्षन, मेतड आदि के बारे में गहराई से जानकारी प्राप्त करना बहुत अच्छा है।
 
     कोई इसे <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference> पर पा सकता है।
@@ -27,6 +40,13 @@
 - **MSDN** – Microsoft की मैनुअल मे बहुत सारी जानकारी है, जिसमें जावास्क्रिप्ट (अक्सर JScript के रूप में संदर्भित) शामिल है। अगर किसी को इंटरनेट एक्सप्लोरर के लिए कुछ विशिष्ट चाहिए, तो यहा जाएं: <http://msdn.microsoft.com/>।
 
     इसके अलावा, हम "RegExp MSDN" या "RegExp MSDN jscript" जैसे वाक्यांशों के साथ एक इंटरनेट खोज का उपयोग कर सकते हैं।
+=======
+- **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+
+    You can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for the `parseInt` function.
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 ## संगतता टेबल
 
@@ -34,9 +54,16 @@
 
 ब्राउज़र-आधारित और अन्य इंजनों के बीच उनका समर्थन देखने के लिए, देखें:
 
+<<<<<<< HEAD
 - <http://caniuse.com> - समर्थन की प्रति-सुविधा तालिका, उदाहरण के लिए, यह देखने के लिए कि कौन से इंजन आधुनिक क्रिप्टोग्राफी फंक्षन का समर्थन करते हैं: <http://caniuse.com/#feat=cryptography>
 - <https://kangax.github.io/compat-table> - जावास्क्रिप्ट सुविधाओं और इंजनों के साथ एक तालिका जो समर्थन करती है या समर्थन नहीं करती है।
 
 ये सभी संसाधन वास्तविक जीवन के विकास में उपयोगी होते हैं, क्योंकि इनमें जावास्क्रिप्ट के विवरण, उनके समर्थन आदि के बारे में बहुमूल्य जानकारी होती है।
+=======
+- <https://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <https://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+
+All these resources are useful in real-life development, as they contain valuable information about language details, their support, etc.
+>>>>>>> 1edb0a38330b54d2e1916f5193fc043e6fbbea78
 
 कृपया उन्हें (या यह पृष्ठ) उन मामलों के लिए याद रखें जब आपको किसी विशेष सुविधा के बारे में गहराई से जानकारी की आवश्यकता होगी।
