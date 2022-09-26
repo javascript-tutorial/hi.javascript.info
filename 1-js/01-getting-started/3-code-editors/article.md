@@ -12,8 +12,13 @@
 
 यदि आपने अभी तक आईडीई का चयन नहीं किया है, तो निम्नलिखित विकल्पों पर विचार करें:
 
+<<<<<<< HEAD
 - [विजुअल स्टूडियो कोड](https://code.visualstudio.com/) (क्रॉस-प्लेटफॉर्म, निशुल्क)।
 - [WebStorm](https://www.jetbrains.com/webstorm/) (क्रॉस-प्लेटफ़ॉर्म, सशुल्क)।
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> ff4ef57c8c2fd20f4a6aa9032ad37ddac93aa3c4
 
 विंडोज के लिए, "विज़ुअल स्टूडियो" भी है, जो "विज़ुअल स्टूडियो कोड" के समान नहीं है। "विज़ुअल स्टूडियो" एक सशुल्क और शक्तिशाली विंडोज-केवल एडिटर है, जो .NET प्लेटफॉर्म के लिए अनुकूल है। यह जावास्क्रिप्ट में भी अच्छा है। एक मुक्त संस्करण [विजुअल स्टूडियो कम्युनिटी](https://www.visualstudio.com/vs/community/) भी है।
 
@@ -31,11 +36,17 @@
 
 निम्नलिखित विकल्प आपके ध्यान देने योग्य हैं:
 
+<<<<<<< HEAD
 - [एटम](https://atom.io/) (क्रॉस-प्लेटफॉर्म, निशुल्करी)।
 - [विजुअल स्टूडियो कोड](https://code.visualstudio.com/) (क्रॉस-प्लेटफॉर्म, निशुल्कत)।
 - [उदात्त पाठ](http://www.sublimetext.com) (क्रॉस-प्लेटफ़ॉर्म, शेयरवेयर)।
 - [नोटपैड](https://notepad-plus-plus.org/) (विंडोज,निशुल्क)।
 - [Vim](http://www.vim.org/) और [Emacs](https://www.gnu.org/software/emacs/) भी अच्छे हैं यदि आप जानते हैं कि उनका उपयोग कैसे करना है।
+=======
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> ff4ef57c8c2fd20f4a6aa9032ad37ddac93aa3c4
 
 ## चलो बहस नहीं करते
 
