@@ -5,13 +5,17 @@ The JavaScript language steadily evolves. New proposals to the language appear r
 
 Teams behind JavaScript engines have their own ideas about what to implement first. They may decide to implement proposals that are in draft and postpone things that are already in the spec, because they are less interesting or just harder to do.
 
-So it's quite common for an engine to implement only the part of the standard.
+So it's quite common for an engine to implement only part of the standard.
 
 A good page to see the current state of support for language features is <https://kangax.github.io/compat-table/es6/> (it's big, we have a lot to study yet).
 
 As programmers, we'd like to use most recent features. The more good stuff - the better!
 
+<<<<<<< HEAD
 From the other hand, how to make out modern code work on older engines that don't understand recent features yet?
+=======
+On the other hand, how to make our modern code work on older engines that don't understand recent features yet?
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 
 There are two tools for that:
 
@@ -22,7 +26,11 @@ Here, in this chapter, our purpose is to get the gist of how they work, and thei
 
 ## Transpilers
 
+<<<<<<< HEAD
 A [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler) is a special piece of software that can parse ("read and understand") modern code, and rewrite it using older syntax constructs, so that the result would be the same.
+=======
+A [transpiler](https://en.wikipedia.org/wiki/Source-to-source_compiler) is a special piece of software that translates source code to another source code. It can parse ("read and understand") modern code and rewrite it using older syntax constructs, so that it'll also work in outdated engines.
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 
 E.g. JavaScript before year 2020 didn't have the "nullish coalescing operator" `??`. So, if a visitor uses an outdated browser, it may fail to understand the code like `height = height ?? 100`.
 
@@ -40,15 +48,25 @@ Now the rewritten code is suitable for older JavaScript engines.
 
 Usually, a developer runs the transpiler on their own computer, and then deploys the transpiled code to the server.
 
+<<<<<<< HEAD
 Speaking of names, [Babel](https://babeljs.io) is one of the most prominent transpilers out there. 
 
 Modern project build systems, such as [webpack](http://webpack.github.io/), provide means to run transpiler automatically on every code change, so it's very easy to integrate into development process.
+=======
+Speaking of names, [Babel](https://babeljs.io) is one of the most prominent transpilers out there.
+
+Modern project build systems, such as [webpack](https://webpack.js.org/), provide a means to run a transpiler automatically on every code change, so it's very easy to integrate into the development process.
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 
 ## Polyfills
 
 New language features may include not only syntax constructs and operators, but also built-in functions.
 
+<<<<<<< HEAD
 For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23) = 1`.
+=======
+For example, `Math.trunc(n)` is a function that "cuts off" the decimal part of a number, e.g `Math.trunc(1.23)` returns `1`.
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 
 In some (very outdated) JavaScript engines, there's no `Math.trunc`, so such code will fail.
 
@@ -69,9 +87,15 @@ if (!Math.trunc) { // if no such function
 }
 ```
 
+<<<<<<< HEAD
 JavaScript is a highly dynamic language, scripts may add/modify any functions, even including built-in ones. 
 
 Two interesting libraries of polyfills are:
+=======
+JavaScript is a highly dynamic language. Scripts may add/modify any function, even built-in ones.
+
+Two interesting polyfill libraries are:
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 - [core js](https://github.com/zloirock/core-js) that supports a lot, allows to include only needed features.
 - [polyfill.io](http://polyfill.io) service that provides a script with polyfills, depending on the features and user's browser.
 
@@ -80,9 +104,15 @@ Two interesting libraries of polyfills are:
 
 In this chapter we'd like to motivate you to study modern and even "bleeding-edge" language features, even if they aren't yet well-supported by JavaScript engines.
 
+<<<<<<< HEAD
 Just don't forget to use transpiler (if using modern syntax or operators) and polyfills (to add functions that may be missing). And they'll ensure that the code works.
 
 For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](http://webpack.github.io/) with [babel-loader](https://github.com/babel/babel-loader) plugin.
+=======
+Just don't forget to use a transpiler (if using modern syntax or operators) and polyfills (to add functions that may be missing). They'll ensure that the code works.
+
+For example, later when you're familiar with JavaScript, you can setup a code build system based on [webpack](https://webpack.js.org/) with the [babel-loader](https://github.com/babel/babel-loader) plugin.
+>>>>>>> bf7d8bb1af3b416d393af1c15b03cb1352da1f9c
 
 Good resources that show the current state of support for various features:
 - <https://kangax.github.io/compat-table/es6/> - for pure JavaScript.
