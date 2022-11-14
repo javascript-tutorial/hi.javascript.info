@@ -4,7 +4,7 @@ This repository hosts the translation of <https://javascript.info> in Hindi.
 =======
 # The Modern JavaScript Tutorial
 
-This repository hosts the English content of the Modern JavaScript Tutorial, published in [https://javascript.info](https://javascript.info).
+This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
 
 **That's how you can contribute:**
 
@@ -53,17 +53,27 @@ See <https://javascript.info/translate> for the details.
 
 We'd also like to collaborate on the tutorial with other people.
 
-Something's wrong? A topic is missing? Explain it to people, add as PR 👏
+Something's wrong? A topic is missing? Explain it to people, add it as PR 👏
 
+<<<<<<< HEAD
 **You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.
+=======
+**You can edit the text in any editor.** The tutorial uses an enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.
+>>>>>>> 8d9ecb724c7df59774d1e5ffb5e5167740b7d321
 
 The list of contributors is available at <https://javascript.info/about#contributors>.
 
 ## Translation Tips
 
+<<<<<<< HEAD
 Please keep line breaks and paragraphs "as is": don't add newlines and don't remove existing ones. Makes it easy to merge future changes from the English version into the translation. 
 
 If you see that the English version can be improved – great, please send a PR to it.
+=======
+Every chapter, article, or task has its folder.
+
+The folder is named like `N-url`, where `N` is a number for the sorting purposes and `URL` is the URL part with the title of the material.
+>>>>>>> 8d9ecb724c7df59774d1e5ffb5e5167740b7d321
 
 ### Terms
 
@@ -131,6 +141,7 @@ Some files, usually tasks, have YAML metadata at the top, delimited by `---`:
 ```md
 importance: 5
 
+<<<<<<< HEAD
 ---
 ...
 ```
@@ -154,6 +165,8 @@ You can run the tutorial server locally to see how the translation looks.
 The server and install instructions are at <https://github.com/javascript-tutorial/server>. 
 
 
+=======
+>>>>>>> 8d9ecb724c7df59774d1e5ffb5e5167740b7d321
 ---  
 ♥  
 Ilya Kantor @iliakan

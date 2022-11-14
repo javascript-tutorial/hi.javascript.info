@@ -15,4 +15,8 @@ str.test = 5;
 alert(str.test);
 ```
 
+<<<<<<< HEAD
 आप कैसे सोचते हैं, क्या यह काम करेगा? क्या दिखाया जाएगा?
+=======
+What do you think, will it work? What will be shown?
+>>>>>>> 8d9ecb724c7df59774d1e5ffb5e5167740b7d321
