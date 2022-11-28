@@ -10,7 +10,13 @@
 
 जावास्क्रिप्ट प्रोग्रामों को HTML दस्तावेज़ के किसी भी भाग में `<script>` टैग की सहायता से डाला जा सकता है।
 
+<<<<<<< HEAD
 उदाहरण के लिए:
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+
+For instance:
+>>>>>>> 746ad803c878e33182e7fab1578c0d15b9b75ca0
 
 ```html run height=100
 <!DOCTYPE HTML>
@@ -71,7 +77,11 @@
 <script src="/path/to/script.js"></script>
 ```
 
+<<<<<<< HEAD
 यहाँ, `/path/to/script.js` यह साइट रूट से स्क्रिप्ट के लिए एक absolute (निरपेक्ष) पथ है। वर्तमान पृष्ठ से कोई एक relative (आपेक्षिक) पथ भी प्रदान कर सकता है। उदाहरण के लिए, `src="script.js"` वर्तमान फोल्डर के अंदर एक फ़ाइल `"script.js"` का अर्थ होगा।
+=======
+Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
+>>>>>>> 746ad803c878e33182e7fab1578c0d15b9b75ca0
 
 हम एक पूर्ण URL भी दे सकते हैं। उदाहरण के लिए:
 
