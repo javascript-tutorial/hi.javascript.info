@@ -1,5 +1,5 @@
 
-Try running it:
+कोशिश करो run(दौड़ना) करने की:
 
 ```js run
 let str = "Hello";
@@ -9,16 +9,16 @@ str.test = 5; // (*)
 alert(str.test);
 ```
 
-Depending on whether you have `use strict` or not, the result may be:
+आपके पास `use strict` है, या नहीं इसके आधार, हो सकता है परिणाम यह हो:
 1. `undefined` (no strict mode)
 2. An error (strict mode).
 
-Why? Let's replay what's happening at line `(*)`:
+क्यों? चलाएं फिर से देखते हैं, पंक्ति(line) `(*)` पर क्या हो रहा है :
 
-1. When a property of `str` is accessed, a "wrapper object" is created.
-2. In strict mode, writing into it is an error.
-3. Otherwise, the operation with the property is carried on, the object gets the `test` property, but after that the "wrapper object" disappears, so in the last line `str` has no trace of the property.
+1. जब `str` का गुणधर्म(property) पहुँचा जाता है , फिर एक "wrapper object" बनाया जाता है. 
+2. strict mode में, इसमें लिखना एक त्रुटि(error) है.
+3. वरना, गुणधर्म(property) के साथ कार्रवाई(operation) जारी हो जाति है, वस्तु(object) को `test` गुणधर्म(property) मिलाती है, लेकिन उसके बाद "wrapper object" गायब हो जाता है, तो अंतिम पंक्ति(line) में `str` गुणधर्म(property) का कोई निशान नहीं है.
 
-**This example clearly shows that primitives are not objects.**
+**यह उदाहरण स्पष्ट रूप से दिखाता है कि प्राथमिक(primitives) वस्तुएं(objects) नहीं हैं.**
 
-They can't store additional data.
+ये अतिरिक्त जानकारी(data) संग्रह (store) नहीं कर सकते!
