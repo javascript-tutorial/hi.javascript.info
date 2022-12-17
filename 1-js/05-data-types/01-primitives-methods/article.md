@@ -1,13 +1,14 @@
-# Methods of primitives
+# प्राथमिक (primitives) के तरीके
 
-JavaScript allows us to work with primitives (strings, numbers, etc.) as if they were objects. They also provide methods to call as such. We will study those soon, but first we'll see how it works because, of course, primitives are not objects (and here we will make it even clearer).
+JavaScript हमें (strings, numbers, आदि.) के साथ काम करने की अनुमति देता है , जैसे कि वे वस्तु(objects) हों. वे call(वापस) करने के तरीके भी प्रदान करते हैं। हम जल्द ही इनका अध्ययन करेंगे , लेकिन पहले हम देखेंगे कि यह कैसे काम करता है क्योंकि, बिल्कुल , प्राथमिक (primitives) वस्तु(objects) नहीं है (और यहां हम इसे और भी स्पष्ट करेंगे).
 
-Let's look at the key distinctions between primitives and objects.
 
-A primitive
+आइए प्राथमिक(primitives) और वस्तु(objects) के बीच मुख्य अंतर देखें .
 
-- Is a value of a primitive type.
-- There are 7 primitive types: `string`, `number`, `bigint`, `boolean`, `symbol`, `null` and `undefined`.
+एक प्राथमिक (primitives)
+
+- एक प्राथमिक(primitives) प्रकार का एक मूल्य है
+- प्राथमिक (primitives) के कुल 7 प्रकार हैं: `string`, `number`, `bigint`, `boolean`, `symbol`, `null` और `undefined`.
 
 An object
 
