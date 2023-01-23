@@ -143,7 +143,11 @@ function pow(x, n) {
 
 वैसे, [WebStorm](https://www.jetbrains.com/webstorm/) जैसे कई संपादक उन्हें भी समझ सकते हैं और स्वत: पूर्ण और कुछ स्वचालित कोड-जांच प्रदान करने के लिए उनका उपयोग कर सकते हैं।
 
+<<<<<<< HEAD
 साथ ही, [JSDoc 3](https://github.com/jsdoc3/jsdoc) जैसे टूल हैं जो टिप्पणियों से HTML-दस्तावेज़ीकरण उत्पन्न कर सकते हैं। आप JSDoc के बारे में अधिक जानकारी <http://usejsdoc.org/> पर पढ़ सकते हैं।
+=======
+Also, there are tools like [JSDoc 3](https://github.com/jsdoc/jsdoc) that can generate HTML-documentation from the comments. You can read more information about JSDoc at <https://jsdoc.app>.
+>>>>>>> ea7738bb7c3616bb51ff14ae3db2a2747d7888ff
 
 इस तरह से कार्य क्यों हल किया जाता है?
 : क्या लिखा है महत्वपूर्ण है। लेकिन जो *नहीं* लिखा है, वह और भी महत्वपूर्ण हो सकता है समझने के लिए कि क्या हो रहा है। कार्य को ठीक इस तरह क्यों हल किया जाता है? कोड कोई जवाब नहीं देता है।
