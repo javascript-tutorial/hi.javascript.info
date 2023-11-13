@@ -1,8 +1,10 @@
+
 # WeakMap and WeakSet
 
-As we know from the chapter <info:garbage-collection>, JavaScript engine stores a value in memory while it is reachable (and can potentially be used).
+As we know from the chapter <info:garbage-collection>, JavaScript engine keeps a value in memory while it is "reachable" and can potentially be used.
 
 For instance:
+
 ```js
 let john = { name: "John" };
 
@@ -54,13 +56,17 @@ john = null; // overwrite the reference
 */!*
 ```
 
-`WeakMap` is fundamentally different in this aspect. It doesn't prevent garbage-collection of key objects.
+[`WeakMap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) is fundamentally different in this aspect. It doesn't prevent garbage-collection of key objects.
 
 Let's see what it means on examples.
 
 ## WeakMap
 
+<<<<<<< HEAD
 The first difference between `Map` and `WeakMap` is that keys must be objects, not primitive values:
+=======
+The first difference between [`Map`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) and [`WeakMap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) is that keys must be objects, not primitive values:
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 
 ```js run
 let weakMap = new WeakMap();
@@ -94,10 +100,10 @@ Compare it with the regular `Map` example above. Now if `john` only exists as th
 
 `WeakMap` has only the following methods:
 
-- `weakMap.get(key)`
-- `weakMap.set(key, value)`
-- `weakMap.delete(key)`
-- `weakMap.has(key)`
+- [`weakMap.set(key, value)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/set)
+- [`weakMap.get(key)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/get)
+- [`weakMap.delete(key)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/delete)
+- [`weakMap.has(key)`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap/has)
 
 Why such a limitation? That's for technical reasons. If an object has lost all other references (like `john` in the code above), then it is to be garbage-collected automatically. But technically it's not exactly specified *when the cleanup happens*.
 
@@ -182,6 +188,7 @@ function process(obj) {
     let result = /* calculations of the result for */ obj;
 
     cache.set(obj, result);
+    return result;
   }
 
   return cache.get(obj);
@@ -221,6 +228,7 @@ function process(obj) {
     let result = /* calculate the result for */ obj;
 
     cache.set(obj, result);
+    return result;
   }
 
   return cache.get(obj);
@@ -242,11 +250,11 @@ obj = null;
 
 ## WeakSet
 
-`WeakSet` behaves similarly:
+[`WeakSet`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) behaves similarly:
 
 - It is analogous to `Set`, but we may only add objects to `WeakSet` (not primitives).
 - An object exists in the set while it is reachable from somewhere else.
-- Like `Set`, it supports `add`, `has` and `delete`, but not `size`, `keys()` and no iterations.
+- Like `Set`, it supports [`add`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Weakset/add), [`has`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Weakset/has) and [`delete`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Weakset/delete), but not `size`, `keys()` and no iterations.
 
 Being "weak", it also serves as additional storage. But not for arbitrary data, rather for "yes/no" facts. A membership in `WeakSet` may mean something about the object.
 
@@ -280,12 +288,19 @@ The most notable limitation of `WeakMap` and `WeakSet` is the absence of iterati
 
 ## Summary
 
-`WeakMap` is `Map`-like collection that allows only objects as keys and removes them together with associated value once they become inaccessible by other means.
+[`WeakMap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakMap) is `Map`-like collection that allows only objects as keys and removes them together with associated value once they become inaccessible by other means.
 
-`WeakSet` is `Set`-like collection that stores only objects and removes them once they become inaccessible by other means.
+[`WeakSet`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/WeakSet) is `Set`-like collection that stores only objects and removes them once they become inaccessible by other means.
 
+Their main advantages are that they have weak reference to objects, so they can easily be removed by garbage collector.
+
+<<<<<<< HEAD
 Their main advantages are that they have weak reference to objects, so they can easily be removed by garbage collector.
 
 That comes at the cost of not having support for `clear`, `size`, `keys`, `values`...
 
+=======
+That comes at the cost of not having support for `clear`, `size`, `keys`, `values`...
+
+>>>>>>> 285083fc71ee3a7cf55fd8acac9c91ac6f62105c
 `WeakMap` and `WeakSet` are used as "secondary" data structures in addition to the "primary" object storage. Once the object is removed from the primary storage, if it is only found as the key of `WeakMap` or in a `WeakSet`, it will be cleaned up automatically.
