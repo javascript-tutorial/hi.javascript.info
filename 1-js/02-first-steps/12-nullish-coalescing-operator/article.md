@@ -2,92 +2,91 @@
 
 [recent browser="new"]
 
-Here, in this article, we'll say that an expression is "defined" when it's neither `null` nor `undefined`.
+इस लेख में, हम यह कहेंगे कि एक व्यंजक को परिभाषित (defined) तब मानेंगे, जब उसका मान न तो `null` हो और न ही `undefined`।
 
-The nullish coalescing operator is written as two question marks `??`.
+नलिश कोलेसिंग (या शून्यवत् सम्मिलन) ऑपरेटर को दो प्रश्न चिन्ह, `??` लिखकर प्रयोग में लाया जाता है।
 
-The result of `a ?? b` is:
-- if `a` is defined, then `a`,
-- if `a` isn't defined, then `b`.
+`a ?? b` का परिणाम :
+- `a` होगा, यदि `a` परिभाषित है।
+- `b` होगा, यदि `b` परिभाषित नही है।
 
+दूसरे शब्दों में, हम यह कह सकते हैं कि अगर पहला argument (तर्क) `null/undefined` नही है तब `??` ऑपरेटर `a` का मान लौटाएगा, नहीं तो `b`।
 
-In other words, `??` returns the first argument if it's not `null/undefined`. Otherwise, the second one.
+यह कोई बिल्कुल नया ऑपरेटर नहीं है, बल्कि बस एक आसान तरीका है यह जानने के लिए कि दोनों में से पहला कौन-सा वेरिएबल "परिभाषित" है।
 
-The nullish coalescing operator isn't anything completely new. It's just a nice syntax to get the first "defined" value of the two.
-
-We can rewrite `result = a ?? b` using the operators that we already know, like this:
+जैसा की हम यह पहले से जानते हैं, `result = a ?? b` को हम कुछ इस प्रकार, `?` ऑपरेटर के साथ लिखा जा सकता है :
 
 ```js
 result = (a !== null && a !== undefined) ? a : b;
 ```
 
-The common use case for `??` is to provide a default value for a potentially undefined variable.
+`??` ऑपरेटर का प्रयोग हम उन variable को एक डिफॉल्ट मान प्रदान करने के लिए या उनके स्थान पर एक डिफॉल्ट मान रखने के लिए कर सकते हैं, जिन्हे अभी तक परिभाषित न किया गया हो।
 
-For example, here we show `Anonymous` if `user` isn't defined:
+उदाहरण के लिए, यहां पर हमें `user` के परिभाषित न होने के कारण `गुमनाम` दिखेगा। 
 
 ```js run
 let user;
 
-alert(user ?? "Anonymous"); // Anonymous
+alert(user ?? "गुमनाम"); // गुमनाम
 ```
 
-Of course, if `user` had any value except `null/undefined`, then we would see it instead:
+यदि `user` का मान `null/undefined` के अलावा कुछ होता, निश्चित रूप से हमें कुछ ऐसा परिणाम मिलता : 
 
 ```js run
-let user = "John";
+let user = "जॉन";
 
-alert(user ?? "Anonymous"); // John
+alert(user ?? "Anonymous"); // जॉन
 ```
 
-We can also use a sequence of `??` to select the first value from a list that isn't `null/undefined`.
+किसी सूची में से पहले निश्चित मान के चुनाव के लिए भी हम `??` को उपयोग में ला सकते हैं। 
 
-Let's say we have a user's data in variables `firstName`, `lastName` or `nickName`. All of them may be undefined, if the user decided not to enter a value.
+चलिए मान लेते हैं, हमारे पास किसी ग्राहक का डाटा `firstName`, `lastName` या `nickName` में संग्रहित है। ये सभी वेरिएबल `undefined` हो सकते हैं यदि ग्राहक कोई मान दर्ज नहीं करता।
 
-We'd like to display the user name using one of these variables, or show "Anonymous" if all of them are undefined.
+अब हम इनमे से किसी वेरिएबल का उपयोग करके ग्राहक का नाम प्रदर्शित करना चाहते हैं। इनमे से कुछ परिभाषित न होने पर `बेनाम` दिखाना चाहते हैं। 
 
-Let's use the `??` operator for that:
-
-```js run
-let firstName = null;
-let lastName = null;
-let nickName = "Supercoder";
-
-// shows the first defined value:
-*!*
-alert(firstName ?? lastName ?? nickName ?? "Anonymous"); // Supercoder
-*/!*
-```
-
-## Comparison with ||
-
-The OR `||` operator can be used in the same way as `??`, as it was described in the [previous chapter](info:logical-operators#or-finds-the-first-truthy-value).
-
-For example, in the code above we could replace `??` with `||` and still get the same result:
+देखते हैं, यहां `??` कैसे मदद करता है:
 
 ```js run
 let firstName = null;
 let lastName = null;
-let nickName = "Supercoder";
+let nickName = "सूपर कोडर";
 
-// shows the first truthy value:
+// पहला परिभाषित मान प्रदर्शित होगी :
 *!*
-alert(firstName || lastName || nickName || "Anonymous"); // Supercoder
+alert(firstName ?? lastName ?? nickName ?? "बेनाम"); // सूपर कोडर
 */!*
 ```
 
-The OR `||` operator exists since the beginning of JavaScript, so developers were using it for such purposes for a long time.
+## || के साथ तुलना
 
-On the other hand, the nullish coalescing operator `??` was added to JavaScript only recently, and the reason for that was that people weren't quite happy with `||`.
+जैसा कि हमने [पिछले अध्याय](info:logical-operators#or-finds-the-first-truthy-value) में देखा, हम `??` की तरह OR ऑपरेटर का भी इस्तेमाल में ला सकते हैं।
 
-The important difference between them is that:
-- `||` returns the first *truthy* value.
-- `??` returns the first *defined* value.
+उदाहरण के लिए, यदि पिछले कोड में `??` की जगह `||` को रखा जाए, हमें वही परिणाम देखने मिलेंगे :
 
-In other words, `||` doesn't distinguish between `false`, `0`, an empty string `""` and `null/undefined`. They are all the same -- falsy values. If any of these is the first argument of `||`, then we'll get the second argument as the result.
+```js run
+let firstName = null;
+let lastName = null;
+let nickName = "सूपर कोडर";
 
-In practice though, we may want to use default value only when the variable is `null/undefined`. That is, when the value is really unknown/not set.
+// पहला परिभाषित मान प्रदर्शित होगा :
+*!*
+alert(firstName || lastName || nickName || "बेनाम"); // सूपर कोडर
+*/!*
+```
 
-For example, consider this:
+जावास्क्रिप्ट में शुरुआत से OR `||` ऑपरेटर मौजूद रहा है, इसलिए आमतौर पर डेवलपर्स इसका प्रयोग इस उद्देश्य से करते आए हैं।
+
+वहीं दूसरी ओर, नल्लिश कोलेसिंग ऑपरेटर `??` को हाल ही में जावास्क्रिप्ट में स्थान दिया गया, और ऐसा लोगो का `||` से असंतुष्टि के कारण हुआ।
+
+इनके बीच का बड़ा अंतर यह था कि :
+- `||` पहला `सत्य` मान को लौटता है। जबकि
+- `??` पहले `निश्चित` मान को लौटता है। 
+
+दूसरे शब्दों में, `false`, `0`, खाली स्ट्रिंग `""` और `null/undefined` के बीच अंतर `||` ऑपरेटर को नहीं दिखता है। इनके लिए यह सब एक -- झूठे मान के बराबर थे। इसलिए अगर कभी इनमे से किसी मान से `||` को गुरजरना पड़ता, हमें इससे अगला तर्क ही परिणाम स्वरूप देखने मिलता।  
+
+व्यवहारिक रूप से, हम इसका इस्तेमाल डिफॉल्ट मान के साथ तभी करेंगे, जब वेरिएबल का मान `null/undefined` हो। अर्थात, जब मान अज्ञात/सेट न हो।
+
+इस उदाहरण को देखते हैं : 
 
 ```js run
 let height = 0;
@@ -96,71 +95,74 @@ alert(height || 100); // 100
 alert(height ?? 100); // 0
 ```
 
-- The `height || 100` checks `height` for being a falsy value, and it really is.
-    - so the result is the second argument, `100`.
-- The `height ?? 100` checks `height` for being `null/undefined`, and it's not,
-    - so the result is `height` "as is", that is `0`.
+- `height || 100` पहले `height` का मान गलत होना सुनिश्चित करेगा, जो यहां पहले से है।
+    - इसलिए हमे परिणामस्वरूप दूसरा तर्क, `100` देखने मिलेगा।
+- जबकि अगले लाइन में, `height ?? 100` यह सुनिश्चित करेगा कि `height` कहीं  `null/undefined` तो नहीं, और वह नहीं है,
+    - परिणामस्वरूप हमें `height` का मान, `0` देखने मिलेगा।
 
-If the zero height is a valid value, that shouldn't be replaced with the default, then `??` does just the right thing.
+व्यवहारिक रूप से, शून्य height ज़रूरत अनुसार मान्य मान हो सकता है, जिसे डिफ़ॉल्ट मान से नहीं बदला जाना चाहिए। इसलिए, `??` ऑपरेटर यहां सही कार्य करता है।
 
-## Precedence
 
-The precedence of the `??` operator is rather low: `5` in the [MDN table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table). So `??` is evaluated before `=` and `?`, but after most other operations, such as `+`, `*`.
+## प्राथमिकता (precedence)
 
-So if we'd like to choose a value with `??` in an expression with other operators, consider adding parentheses:
+[MDN table](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Operator_Precedence#Table) के अनुसार `5`: `??` ऑपरेटर को अपेक्षाकृत कम प्राथमिकता मिली है। इसका मतलब यह है कि `??` का मूल्यांकन `=` और `?` से पहले होता है, लेकिन `+`, `*` जैसे अधिकांश अन्य कार्यों के बाद होता है।
+
+इसलिए, अब अगर बाकी ऑपरेटरों के बीच `??` की सहायता से मूल्यों का चुनाव करना हो, हमें कोष्ठक चिन्ह को प्रयोग में लेना होगा : 
 
 ```js run
 let height = null;
 let width = null;
 
-// important: use parentheses
+// ध्यान दें : कोष्ठकों का उपयोग करें
 let area = (height ?? 100) * (width ?? 50);
 
 alert(area); // 5000
 ```
 
-Otherwise, if we omit parentheses, then as `*` has the higher precedence than `??`, it would execute first, leading to incorrect results.
+यदि हम कोष्ठकों को छोड़ देते, `*` की प्राथमिकता `??` से ज्यादा होने के कारण, वह पहले निष्पादित होगा, लेकिन गलत परिणाम के साथ : 
 
 ```js
-// without parentheses
+// कोष्ठकों से रहित
 let area = height ?? 100 * width ?? 50;
 
-// ...works the same as this (probably not what we want):
+// ... कुछ ऐसे काम करेगा (और शायद हम यह न करना चाहें):
 let area = height ?? (100 * width) ?? 50;
 ```
 
-### Using ?? with && or ||
+### || और && के साथ ??
 
-Due to safety reasons, JavaScript forbids using `??` together with `&&` and `||` operators, unless the precedence is explicitly specified with parentheses.
+कुछ सुरक्षा कारणों को मध्यनजर रखते हुए, जावास्क्रिप्ट हमें `??` का उपयोग `&&` और `||` ऑपरेटर के साथ करने की अनुमति नहीं देता। इसके कारण, कोष्ठकों द्वारा प्राथमिकता सुनिश्चित करा जाना आवश्यक है।
 
-The code below triggers a syntax error:
+यह कोड हमें एक सिंटेक्स एरर (syntax error) देता है : 
 
 ```js run
-let x = 1 && 2 ?? 3; // Syntax error
+let x = 1 && 2 ?? 3; // सिंटेक्स एरर
 ```
+<!-- starting from here -->
+यह बाधा विवाद-योग्य हो सकती है। लेकिन यह प्रतिबंध `||` की जगह `??` अपनाने वाले नए डेवलपरों द्वारा प्रोग्रामिंग में की गई गलतियों से बचने के लिए लगाया गया था।
+<!-- ^this portion needs some sort of edit (maybe) for easier to understand tone -->
 
-The limitation is surely debatable, but it was added to the language specification with the purpose to avoid programming mistakes, when people start to switch to `??` from `||`.
-
-Use explicit parentheses to work around it:
+इसलिए, इनको साथ में इस्तेमाल करने के लिए कोष्ठाकों का स्पष्ट रूप से प्रयोग करें :
 
 ```js run
 *!*
-let x = (1 && 2) ?? 3; // Works
+let x = (1 && 2) ?? 3; // कोई एरर नहीं
 */!*
 
 alert(x); // 2
 ```
 
-## Summary
+## सारांश
 
-- The nullish coalescing operator `??` provides a short way to choose the first "defined" value from a list.
+- जावास्क्रिप्ट में, नल्लिश कोलेसिंग ऑपरेटर `??` (nullish coalescing operator) हमें एक सूची से पहला "परिभाषित" मान चुनने का एक संक्षिप्त तरीका प्रदान करता है।
 
-    It's used to assign default values to variables:
+    इससे वेरिएबल को एक डिफॉल्ट मान दिया जा सकता है : 
 
     ```js
-    // set height=100, if height is null or undefined
-    height = height ?? 100;
+    // अगर height का मान null या undefined है
+    height = height ?? 100; // height = 100
     ```
 
-- The operator `??` has a very low precedence, only a bit higher than `?` and `=`, so consider adding parentheses when using it in an expression.
-- It's forbidden to use it with `||` or `&&` without explicit parentheses.
+- `??` ऑपरेटर को प्राथमिकता में काफी कम अंक दिया गया है। साथ ही, यह प्राथमिकता में `?` और `=` ऑपरेटर से थोड़ा ही आगे है, इसलिए `??` का उपयोग करने वाले व्यंजको में कोष्ठकों के बारें में जरूर सोचें।
+
+- जावास्क्रिप्ट में `||` या `&&` के साथ `??` का प्रयोग, स्पष्ट कोष्ठकों के बिना वर्जित है।
