@@ -24,7 +24,11 @@ let message;
 let message;
 
 *!*
+<<<<<<< HEAD
 message = 'Hello'; // string स्टोर करें
+=======
+message = 'Hello'; // store the string 'Hello' in the variable named message
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 */!*
 ```
 
@@ -63,7 +67,12 @@ let age = 25;
 let message = 'Hello';
 ```
 
+<<<<<<< HEAD
 कुछ लोग इस बहुस्तरीय शैली में कई variable भी परिभाषित करते हैं:
+=======
+Some people also define multiple variables in this multiline style:
+
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 ```js no-beautify
 let user = 'John',
   age = 25,
@@ -87,23 +96,38 @@ let user = 'John'
 *!*var*/!* message = 'Hello';
 ```
 
+<<<<<<< HEAD
 `var` कीवर्ड *लगभग* वही है जो `let` है। यह एक variable ही घोषित करता है, लेकिन थोड़ा अलग, "पुराने-स्कूल" तरीके से।
 
 `let` और` var` के बीच सूक्ष्म अंतर हैं, लेकिन वे हमारे लिए अभी तक कोई मायने नहीं रखते हैं। हम उन्हें विस्तार से अध्याय <info:var> में शामिल करेंगे.
+=======
+The `var` keyword is *almost* the same as `let`. It also declares a variable but in a slightly different, "old-school" way.
+
+There are subtle differences between `let` and `var`, but they do not matter to us yet. We'll cover them in detail in the chapter <info:var>.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 ````
 
 ## एक वास्तविक जीवन सादृश्य
 
 हम आसानी से "variable" की अवधारणा को समझ सकते हैं यदि हम इसे डेटा के लिए "बॉक्स" के रूप में कल्पना करते हैं, उस पर विशिष्ट रूप से नामित स्टिकर के साथ।
 
+<<<<<<< HEAD
 For instance, the variable `message` can be imagined as a box labeled `"message"` with the value `"Hello!"` in it:
 उदाहरण के लिए, variable `message` को एक बॉक्स के रूप में कल्पना की जा सकती है, जिस पर `"message"` लिखा है, जिसका मूल्य `"Hello!"` है:
+=======
+For instance, the variable `message` can be imagined as a box labelled `"message"` with the value `"Hello!"` in it:
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 ![](variable.svg)
 
 हम बॉक्स में कोई भी मूल्य डाल सकते हैं।
 
+<<<<<<< HEAD
 हम इसे जितनी बार चाहें बदल सकते हैं:
+=======
+We can also change it as many times as we want:
+
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 ```js run
 let message;
 
@@ -151,11 +175,19 @@ let message = "That"; // SyntaxError: 'message' has already been declared
 ````
 
 ```smart header="Functional languages"
+<<<<<<< HEAD
 यह ध्यान रखना दिलचस्प है कि [functional](https://en.wikipedia.org/wiki/Functional_programming) प्रोग्रामिंग भाषाएं, जैसे कि [Scala](http://www.scala-lang.org/) या [Erlang](http://www.erlang.org/) मौजूद हैं| जो variable मानों को बदलने से मना करती है।
+=======
+It's interesting to note that there exist so-called [pure functional](https://en.wikipedia.org/wiki/Purely_functional_programming) programming languages, such as [Haskell](https://en.wikipedia.org/wiki/Haskell), that forbid changing variable values.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 ऐसी भाषाओं में, मान को "बॉक्स में" संग्रहीत करने के बाद, यह हमेशा के लिए रहता है। अगर हमें कुछ और स्टोर करने की आवश्यकता है, तो भाषा हमें एक नया बॉक्स बनाने के लिए मजबूर करती है (एक नया variable घोषित करें)। हम पुराने का पुन: उपयोग नहीं कर सकते।
 
+<<<<<<< HEAD
 हालाँकि यह पहली नज़र में थोड़ा अजीब लग सकता है, लेकिन ये भाषाएँ गंभीर विकास के लिए काफी सक्षम हैं। इससे भी बड़ी बात यह है कि समानांतर संगणना जैसे क्षेत्र हैं जहाँ यह सीमा निश्चित लाभ देती है। ऐसी भाषा का अध्ययन (भले ही आप इसे जल्द ही उपयोग करने की योजना नहीं बना रहे हों) कर दिमाग को व्यापक बनाने की सिफारिश की जाती है।
+=======
+Though it may seem a little odd at first sight, these languages are quite capable of serious development. More than that, there are areas like parallel computations where this limitation confers certain benefits.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 ```
 
 ## Variable नामकरण [#variable-naming]
@@ -194,18 +226,30 @@ let my-name; // नाम में '-' की अनुमति नहीं �
 ```
 
 ```smart header="Case matters"
+<<<<<<< HEAD
 `apple` और `AppLE` नाम के variables दो अलग-अलग variables हैं।
 ```
 
 ````smart header="गैर-लैटिन अक्षरों की अनुमति है, लेकिन अनुशंसित नहीं है"
 किसी भी भाषा का उपयोग करना संभव है, जिसमें cyrillic अक्षरों या यहां तक ​​कि चित्रलिपि भी शामिल हैं:
+=======
+Variables named `apple` and `APPLE` are two different variables.
+```
+
+````smart header="Non-Latin letters are allowed, but not recommended"
+It is possible to use any language, including Cyrillic letters, Chinese logograms and so on, like this:
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 ```js
 let имя = '...';
 let 我 = '...';
 ```
 
+<<<<<<< HEAD
 तकनीकी रूप से, यहां कोई त्रुटि नहीं है। ऐसे नामों की अनुमति है, लेकिन variable नामों में अंग्रेजी का उपयोग करने के लिए एक अंतर्राष्ट्रीय सम्मेलन है। यहां तक ​​कि अगर हम एक छोटी सी स्क्रिप्ट लिख रहे हैं, उसका आगे का लंबा जीवन हो सकता है। अन्य देशों के लोगों को इसे कुछ समय पढ़ने की आवश्यकता हो सकती है।
+=======
+Technically, there is no error here. Such names are allowed, but there is an international convention to use English in variable names. Even if we're writing a small script, it may have a long life ahead. People from other countries may need to read it sometime.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 ````
 
 ````warn header="Reserved names"
@@ -261,12 +305,20 @@ const myBirthday = '18.04.1982';
 myBirthday = '01.01.2001'; // त्रुटि, constant आश्वस्त नहीं कर सकता!
 ```
 
+<<<<<<< HEAD
 जब एक प्रोग्रामर यह सुनिश्चित करता है कि एक variable कभी नहीं बदलेगा, तो वे गारंटी देने के लिए इसे `const` के साथ घोषित कर सकते हैं और उस तथ्य को सभी को स्पष्ट रूप से बता सकते हैं।
 
+=======
+When a programmer is sure that a variable will never change, they can declare it with `const` to guarantee and communicate that fact to everyone.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 ### बड़े अक्षर वाले constants
 
+<<<<<<< HEAD
 मुश्किल से याद रखने वाले मूल्यों के लिए constants का उपयोग करना एक व्यापक अभ्यास है जिसे क्रियान्वयन से पहले जाना जाता है।
+=======
+There is a widespread practice to use constants as aliases for difficult-to-remember values that are known before execution.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 ऐसे constants को बड़े अक्षरों और अंडरस्कोर का उपयोग करके नाम दिया गया है।
 
@@ -291,16 +343,29 @@ alert(color); // #FF7F00
 
 हमें एक स्थिरांक के लिए बड़े अक्षर का उपयोग कब करना चाहिए और हमें इसे सामान्य रूप से कब नाम देना चाहिए? स्पष्ट करते हैं।
 
+<<<<<<< HEAD
 "constant" होने का मतलब है कि एक variable का मूल्य कभी नहीं बदलता है। लेकिन ऐसे constants होते हैं जिन्हें क्रियान्वयन से पहले जाना जाता है (जैसे लाल के लिए एक हेक्साडेसिमल मान) और ऐसे constants हैं जो क्रियान्वयन के दौरान रन-टाइम में *गणना* करते हैं, लेकिन उनके प्रारंभिक असाइनमेंट के बाद नहीं बदलते हैं।
 
 उदाहरण के लिए:
+=======
+Being a "constant" just means that a variable's value never changes. But some constants are known before execution (like a hexadecimal value for red) and some constants are *calculated* in run-time, during the execution, but do not change after their initial assignment.
+
+For instance:
+
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 ```js
 const pageLoadTime = /* लोड करने के लिए वेबपृष्ठ द्वारा लिया गया समय */;
 ```
 
+<<<<<<< HEAD
 पेज लोड होने से पहले `pageLoadTime` का मूल्य ज्ञात नहीं है, इसलिए इसे सामान्य रूप से नाम दिया गया है। लेकिन यह अभी भी एक constant है क्योंकि यह असाइनमेंट के बाद नहीं बदलता है।
 
 दूसरे शब्दों में, बड़ा-अक्षर-नामित constants केवल "हार्ड-कोडेड" मूल्यों के लिए उपनाम के रूप में उपयोग किए जाते हैं।  
+=======
+The value of `pageLoadTime` is not known before the page load, so it's named normally. But it's still a constant because it doesn't change after the assignment.
+
+In other words, capital-named constants are only used as aliases for "hard-coded" values.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 ## चीजों को सही नाम दें
 
@@ -308,18 +373,31 @@ Variables के बारे में बात करते हुए, एक
 
 एक variable नाम का एक साफ, स्पष्ट अर्थ होना चाहिए, यह उस डेटा का वर्णन करता है जो इसे संग्रहीत करता है।
 
+<<<<<<< HEAD
 Variable नामकरण प्रोग्रामिंग में सबसे महत्वपूर्ण और जटिल कौशल है। Variable नामों पर एक त्वरित नज़र बता सकती है कि किस कोड को एक शुरुआत बनाम एक अनुभवी द्वारा लिखा गया था।
 
 एक वास्तविक परियोजना में, अधिकांश समय खरोंच को पूरी तरह से अलग करने के बजाय मौजूदा कोड आधार को संशोधित और विस्तारित करने में खर्च किया जाता है। जब हम कुछ समय के लिए कुछ और करने के बाद किसी कोड पर लौटते हैं, तो ऐसी जानकारी प्राप्त करना बहुत आसान होता है जो अच्छी तरह से लेबल की गई हो। या, दूसरे शब्दों में, जब variable के अच्छे नाम हैं।
+=======
+Variable naming is one of the most important and complex skills in programming. A glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+
+In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. When we return to some code after doing something else for a while, it's much easier to find information that is well-labelled. Or, in other words, when the variables have good names.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 कृपया इसे घोषित करने से पहले एक variable के लिए सही नाम के बारे में सोचने में समय व्यतीत करें। ऐसा करना आपके बहुत काम का साबित होगा।
 
 कुछ अच्छे नियम हैं:
 
+<<<<<<< HEAD
 - मानव-पठनीय नामों का उपयोग करें जैसे `userName` या `shoppingCart`।
 - संक्षिप्त या संक्षिप्त नाम जैसे `A`, `B`, `C` से दूर रहें, जब तक कि आप वास्तव में नहीं जानते कि आप क्या कर रहे हैं।
 - अधिकतम विवरणात्मक और संक्षिप्त नाम बनाएं। बुरे नामों के उदाहरण `data` और `value` हैं। ऐसे नाम कुछ भी नहीं कहते हैं। यदि कोड का संदर्भ असाधारण रूप से स्पष्ट है कि कौन सा डेटा या variable क्या संदर्भित कर रहा है तो इसका उपयोग करना ही ठीक है।
 - अपनी टीम के भीतर और अपने मन में शर्तों पर सहमत हों। यदि किसी साइट विज़िटर को "user" कहा जाता है, तो हमें 'currentVisitor' या `newManInTown` के बजाय संबंधित variable का नाम `currentUser` या `newUser` रखना चाहिए।
+=======
+- Use human-readable names like `userName` or `shoppingCart`.
+- Stay away from abbreviations or short names like `a`, `b`, and `c`, unless you know what you're doing.
+- Make names maximally descriptive and concise. Examples of bad names are `data` and `value`. Such names say nothing. It's only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
+- Agree on terms within your team and in your mind. If a site visitor is called a "user" then we should name related variables `currentUser` or `newUser` instead of `currentVisitor` or `newManInTown`.
+>>>>>>> 540d753e90789205fc6e75c502f68382c87dea9b
 
 सरल लगता है? वास्तव में यह है भी, लेकिन हमारे व्यवहार में वर्णनात्मक और संक्षिप्त variable नाम बनाना नहीं है। इसका लाभ उठाएं।
 
