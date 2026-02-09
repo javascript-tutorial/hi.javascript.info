@@ -22,7 +22,7 @@
 
 यह कुछ इस तरह दिखता है:
 
-![chrome](chrome.png)
+![chrome](chrome.webp)
 
 डेवलपर टूल का सटीक रूप आपके Chrome के संस्करण पर निर्भर करता है। यह समय-समय पर बदलता रहता है लेकिन यह इस तरह ही होना चाहिए।
 
@@ -49,7 +49,11 @@
 
 सफारी (मैक ब्राउज़र, विंडोज/लिनक्स द्वारा समर्थित नहीं है) थोड़ा विशेष है। हमें पहले "Develop menu" को सक्रिय करने की आवश्यकता है।
 
+<<<<<<< HEAD
 Preferences खोलें और "Advanced" फलक पर जाएं। नीचे एक चेकबॉक्स है:
+=======
+Open Settings and go to the "Advanced" pane. There's a checkbox at the bottom:
+>>>>>>> d78b01e9833009fab534462e05c03cffc51bf0e3
 
 ![safari](safari.png)
 
