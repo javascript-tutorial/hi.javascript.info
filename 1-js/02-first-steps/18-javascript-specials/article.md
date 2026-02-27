@@ -43,9 +43,9 @@ for(;;) {
 
 More in: <info:structure>.
 
-## Strict mode
+## स्ट्रिक्ट मोड (Strict Mode)
 
-To fully enable all features of modern JavaScript, we should start scripts with `"use strict"`.
+आधुनिक जावास्क्रिप्ट (Modern JavaScript) की सभी सुविधाओं को पूरी तरह सक्षम (enable) करने के लिए, हमें स्क्रिप्ट की शुरुआत में `"use strict"` लिखना चाहिए।
 
 ```js
 'use strict';
@@ -53,13 +53,13 @@ To fully enable all features of modern JavaScript, we should start scripts with 
 ...
 ```
 
-The directive must be at the top of a script or at the beginning of a function body.
+यह निर्देश स्क्रिप्ट (script) के सबसे ऊपर या किसी फंक्शन बॉडी (function body) की शुरुआत में होना चाहिए।
 
-Without `"use strict"`, everything still works, but some features behave in the old-fashion, "compatible" way. We'd generally prefer the modern behavior.
+यदि "use strict" नहीं लिखा जाता, तो सब कुछ फिर भी काम करता है, लेकिन कुछ फीचर्स (features) पुराने, "अनुकूल" तरीके से व्यवहार करते हैं। सामान्यतः हम आधुनिक (modern) व्यवहार को ही प्राथमिकता देते हैं।
 
-Some modern features of the language (like classes that we'll study in the future) enable strict mode implicitly.
+भाषा के कुछ आधुनिक फीचर्स (features) जैसे क्लासेस (classes), जिन्हें हम आगे सीखेंगे अपने-आप स्ट्रिक्ट मोड (strict mode) को सक्षम कर देते हैं।
 
-More in: <info:strict-mode>.
+अधिक जानकारी के लिए देखें: <info:strict-mode>।
 
 ## Variables
 
