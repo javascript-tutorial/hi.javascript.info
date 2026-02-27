@@ -178,9 +178,9 @@ alert( "Tea wanted: " + isTeaWanted ); // true
 
 अधिक जानकारी के लिए देखें: <info:operators>, <info:comparison>, <info:logical-operators>, <info:nullish-coalescing-operator>।
 
-## Loops
+## लूप्स (Loops)
 
-- We covered 3 types of loops:
+  - हमने लूप्स (loops) के 3 प्रकार कवर किए हैं:
 
     ```js
     // 1
@@ -199,12 +199,12 @@ alert( "Tea wanted: " + isTeaWanted ); // true
     }
     ```
 
-- The variable declared in `for(let...)` loop is visible only inside the loop. But we can also omit `let` and reuse an existing variable.
-- Directives `break/continue` allow to exit the whole loop/current iteration. Use labels to break nested loops.
+- `for(let...)` लूप में घोषित किया गया वेरिएबल (variable) केवल उसी लूप के अंदर दिखाई देता है। लेकिन हम `let` को हटा (omit) भी सकते हैं और पहले से मौजूद वेरिएबल (existing variable) का दोबारा उपयोग (reuse) कर सकते हैं।
+- निर्देश (directives) `break/continue` पूरे लूप या वर्तमान इटरेशन (current iteration) से बाहर निकलने की अनुमति देते हैं। नेस्टेड लूप्स (nested loops) को तोड़ने (break) के लिए लेबल्स (labels) का उपयोग करें।
 
-Details in: <info:while-for>.
+विस्तार से जानकारी के लिए देखें: <info:while-for>।
 
-Later we'll study more types of loops to deal with objects.
+आगे हम ऑब्जेक्ट्स (objects) के साथ काम करने के लिए अन्य प्रकार के लूप्स (Loops) भी सीखेंगे।
 
 ## The "switch" construct
 
