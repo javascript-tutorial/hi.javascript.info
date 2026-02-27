@@ -127,55 +127,56 @@ alert( "Tea wanted: " + isTeaWanted ); // true
 
 अधिक जानकारी के लिए देखें: <info:alert-prompt-confirm>।
 
-## Operators
+## ऑपरेटर्स (Operators)
 
-JavaScript supports the following operators:
+जावास्क्रिप्ट (JavaScript) निम्न प्रकार के ऑपरेटर्स (operators) को सपोर्ट करता है:
 
-Arithmetical
-: Regular: `* + - /`, also `%` for the remainder and `**` for power of a number.
+अंकगणितीय (Arithmetical)
+: सामान्य ऑपरेटर्स: `* + - /`, इसके अलावा `%` शेष (remainder) के लिए और `**` किसी संख्या की घात (power) के लिए उपयोग किया जाता है।
 
-    The binary plus `+` concatenates strings. And if any of the operands is a string, the other one is converted to string too:
+    Binary plus `+` strings को जोड़ता (concatenate) है। और यदि किसी भी ऑपेरेंड (operand) का प्रकार string हो, तो दूसरा ऑपेरेंड (operand) भी string में बदल दिया जाता है।
 
     ```js run
     alert( '1' + 2 ); // '12', string
     alert( 1 + '2' ); // '12', string
     ```
 
-Assignments
-: There is a simple assignment: `a = b` and combined ones like `a *= 2`.
+असाइनमेंट (Assignment)
+: एक सामान्य assignment होता है: `a = b` और कुछ combined assignments भी होते हैं, जैसे: `a *= 2`।
 
-Bitwise
-: Bitwise operators work with 32-bit integers at the lowest, bit-level: see the [docs](mdn:/JavaScript/Guide/Expressions_and_Operators#Bitwise) when they are needed.
+बिटवाइज़ (Bitwise)
+: Bitwise operators 32-bit integers bit-level पर काम करते हैं। ज़रूरत पड़ने पर विवरण के लिए [docs](mdn:/JavaScript/Guide/Expressions_and_Operators#Bitwise) देखें।
 
-Conditional
-: The only operator with three parameters: `cond ? resultA : resultB`. If `cond` is truthy, returns `resultA`, otherwise `resultB`.
+कंडीशनल (Conditional)
+: यह एकमात्र ऑपरेटर (operator) है जिसमें तीन पैरामीटर्स (parameters) होते हैं: `cond ? resultA : resultB` यदि `cond` सत्य (truthy) है, तो `resultA` लौटाया जाता है, अन्यथा `resultB।`
 
-Logical operators
-: Logical AND `&&` and OR `||` perform short-circuit evaluation and then return the value where it stopped (not necessary `true`/`false`). Logical NOT `!` converts the operand to boolean type and returns the inverse value.
+लॉजिकल ऑपरेटर्स (Logical Operators)
+: लॉजिकल (Logical) AND `&&` और OR || शॉर्ट-सर्किट मूल्यांकन (short-circuit evaluation) करते हैं और जहाँ मूल्यांकन (evaluation) रुकता है, वहीं की वैल्यू (value) लौटाते हैं (ज़रूरी नहीं कि परिणाम हमेशा `true/false` ही हो)। लॉजिकल (Logical) NOT `!` ऑपेरेंड (operand) को बूलियन टाइप (boolean type) में बदलता है और उसका उल्टा (inverse) मान लौटाता है।
 
-Nullish coalescing operator
-: The `??` operator provides a way to choose a defined value from a list of variables. The result of `a ?? b` is `a` unless it's `null/undefined`, then `b`.
+नलिश कोएलसिंग ऑपरेटर (Nullish Coalescing Operator)
+: `??` ऑपरेटर वेरिएबल्स (variables) की सूची में से एक निर्धारित (defined) वैल्यू (value) चुनने का तरीका देता है। `a ?? b` का परिणाम `a` होगा, जब तक कि वह `null` या `undefined` न हो।
+यदि a `null/undefined` है, तो परिणाम `b` होगा।
 
-Comparisons
-: Equality check `==` for values of different types converts them to a number (except `null` and `undefined` that equal each other and nothing else), so these are equal:
+तुलनाएँ (Comparisons)
+: समानता जाँच (Equality check) `==` अलग अलग टाइप (types) की वैल्यूज़ (values) को पहले नंबर (number) में बदल देता है (सिवाय `null` और `undefined` के, जो केवल एक-दूसरे के बराबर होते हैं और किसी अन्य के नहीं), इसलिए ये समान माने जाते हैं:
 
     ```js run
     alert( 0 == false ); // true
     alert( 0 == '' ); // true
     ```
 
-    Other comparisons convert to a number as well.
+    अन्य तुलनाएँ (comparisons) भी वैल्यूज़ (values) को संख्या (number) में बदल देती हैं।
 
-    The strict equality operator `===` doesn't do the conversion: different types always mean different values for it.
+    स्ट्रिक्ट समानता ऑपरेटर (strict equality operator) `===` यह परिवर्तन (conversion) नहीं करता। इसके लिए अलग-अलग टाइप (types) हमेशा अलग वैल्यू (value) माने जाते हैं।
 
-    Values `null` and `undefined` are special: they equal `==` each other and don't equal anything else.
+    वैल्यूज़ (values) `null` और `undefined` विशेष (special) हैं: ये `==` में केवल एक-दूसरे के बराबर होते हैं और किसी अन्य के नहीं।
 
-    Greater/less comparisons compare strings character-by-character, other types are converted to a number.
+    बड़ी/छोटी तुलना (greater/less comparisons) में स्ट्रिंग्स (strings) की तुलना कैरेक्टर-दर-कैरेक्टर(character-by-character) की जाती है। अन्य टाइप्स (types) को संख्या (number) में बदल दिया जाता है।
 
-Other operators
-: There are few others, like a comma operator.
+अन्य ऑपरेटर्स (Other Operators)
+: कुछ अन्य ऑपरेटर्स (operators) भी हैं, जैसे कॉमा ऑपरेटर (comma operator)।
 
-More in: <info:operators>, <info:comparison>, <info:logical-operators>, <info:nullish-coalescing-operator>.
+अधिक जानकारी के लिए देखें: <info:operators>, <info:comparison>, <info:logical-operators>, <info:nullish-coalescing-operator>।
 
 ## Loops
 
