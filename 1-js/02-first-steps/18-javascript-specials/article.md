@@ -232,11 +232,11 @@ switch (age) {
 
 अधिक जानकारी के लिए देखें: <info:switch>।
 
-## Functions
+## फंक्शन्स (Functions)
 
-We covered three ways to create a function in JavaScript:
+हमने जावास्क्रिप्ट (JavaScript) में फंक्शन (function) बनाने के तीन तरीके कवर किए हैं:
 
-1. Function Declaration: the function in the main code flow
+1. फंक्शन डिक्लेरेशन (Function Declaration): यह वह फंक्शन है जो मुख्य कोड प्रवाह (main code flow) में लिखा जाता है।
 
     ```js
     function sum(a, b) {
@@ -246,7 +246,7 @@ We covered three ways to create a function in JavaScript:
     }
     ```
 
-2. Function Expression: the function in the context of an expression
+2. फंक्शन एक्सप्रेशन (Function Expression): यह वह फंक्शन है जो किसी एक्सप्रेशन (expression) के संदर्भ (context) में लिखा जाता है।
 
     ```js
     let sum = function(a, b) {
@@ -256,7 +256,7 @@ We covered three ways to create a function in JavaScript:
     };
     ```
 
-3. Arrow functions:
+3. एरो फंक्शन्स (Arrow Functions):
 
     ```js
     // expression at the right side
@@ -275,13 +275,13 @@ We covered three ways to create a function in JavaScript:
     let double = n => n * 2;
     ```
 
+- फंक्शन्स (functions) में लोकल वेरिएबल्स (local variables) हो सकते हैं: यानी वे वेरिएबल्स (variables) जो उनकी बॉडी (body) के अंदर घोषित (declared) किए गए हों। ऐसे वेरिएबल्स केवल उसी फंक्शन के अंदर दिखाई (visible) देते हैं।
+- पैरामीटर्स (parameters) की डिफ़ॉल्ट वैल्यूज़ (default values) हो सकती हैं: `function sum(a = 1, b = 2) {...}`
+- फंक्शन्स (functions) हमेशा कुछ न कुछ रिटर्न (return) करते हैं। यदि `return` स्टेटमेंट (statement) नहीं है, तो परिणाम (result) `undefined` होता है।
 
-- Functions may have local variables: those declared inside its body. Such variables are only visible inside the function.
-- Parameters can have default values: `function sum(a = 1, b = 2) {...}`.
-- Functions always return something. If there's no `return` statement, then the result is `undefined`.
+विस्तार से जानकारी के लिए देखें: <info:function-basics>, <info:arrow-functions-basics>।
 
-Details: see <info:function-basics>, <info:arrow-functions-basics>.
+## आगे क्या? (More to come)
 
-## More to come
-
-That was a brief list of JavaScript features. As of now we've studied only basics. Further in the tutorial you'll find more specials and advanced features of JavaScript.
+यह जावास्क्रिप्ट (JavaScript) की विशेषताओं (features) की एक संक्षिप्त सूची थी।
+अभी तक हमने केवल मूल बातें (basics) सीखी हैं। आगे के अध्यायों (tutorial) में आपको जावास्क्रिप्ट की और विशेषताएँ (special features) और उन्नत (advanced) फीचर्स मिलेंगे।
