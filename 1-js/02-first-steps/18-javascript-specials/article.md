@@ -1,23 +1,23 @@
-# JavaScript specials
+# जावास्क्रिप्ट विशेष बातें (JavaScript Specials)
 
-This chapter briefly recaps the features of JavaScript that we've learned by now, paying special attention to subtle moments.
+इस अध्याय में हम अब तक सीखी गई जावास्क्रिप्ट (JavaScript) की मुख्य विशेषताओं का संक्षिप्त सारांश करेंगे, खासकर उन बारीकियों पर ध्यान देते हुए जहाँ अक्सर भ्रम होता है।
 
-## Code structure
+## कोड संरचना (Code Structire)
 
-Statements are delimited with a semicolon:
+हर स्टेटमेंट के बाद आमतौर पर सेमीकोलन (;) लगाया जाता है:
 
 ```js run no-beautify
 alert('Hello'); alert('World');
 ```
 
-Usually, a line-break is also treated as a delimiter, so that would also work:
+आमतौर पर नई पंक्ति (line-break) को भी डिलिमिटर (delimeter) की तरह माना जाता है, इसलिए यह तरीका भी काम करता है:
 
 ```js run no-beautify
 alert('Hello')
 alert('World')
 ```
 
-That's called "automatic semicolon insertion". Sometimes it doesn't work, for instance:
+इसे स्वचालित सेमीकोलन सम्मिलन (Automatic Semicolon Insertion) कहा जाता है। लेकिन कुछ स्थितियों में यह सही तरीके से काम नहीं करता। उदाहरण के लिए:
 
 ```js run
 alert("There will be an error after this message")
@@ -25,21 +25,21 @@ alert("There will be an error after this message")
 [1, 2].forEach(alert)
 ```
 
-Most codestyle guides agree that we should put a semicolon after each statement.
+अधिकांश कोड स्टाइल गाइड्स (code style guides) इस बात से सहमत हैं कि हर स्टेटमेंट (statement) के बाद सेमीकोलन (semicolon) लगाना चाहिए।
 
-Semicolons are not required after code blocks `{...}` and syntax constructs with them like loops:
+लेकिन कोड ब्लॉक्स (code blocks) `{...}` और उनके साथ आने वाले सिंटैक्स कंस्ट्रक्ट्स (syntax constructs) जैसे लूप्स (loops) के बाद सेमीकोलन (semicolon) लगाने की आवश्यकता नहीं होती।
 
 ```js
 function f() {
-  // no semicolon needed after function declaration
+  // फंक्शन डिक्लेरेशन (function declaration) के बाद सेमीकोलन (semicolon) की ज़रूरत नहीं है
 }
 
 for(;;) {
-  // no semicolon needed after the loop
+  // लूप (loop) के बाद सेमीकोलन (semicolon) की ज़रूरत नहीं है
 }
 ```
 
-...But even if we can put an "extra" semicolon somewhere, that's not an error. It will be ignored.
+लेकिन अगर हम कहीं अतिरिक्त सेमीकोलन (semicolon) लगा भी दें, तो यह error (त्रुटि) नहीं देगा। उसे जावास्क्रिप्ट (JavaScript) द्वारा अनदेखा कर दिया जाएगा।
 
 More in: <info:structure>.
 
