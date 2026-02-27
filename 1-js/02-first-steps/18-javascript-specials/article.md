@@ -61,43 +61,44 @@ More in: <info:structure>.
 
 अधिक जानकारी के लिए देखें: <info:strict-mode>।
 
-## Variables
+## वेरिएबल्स (Variables)
 
-Can be declared using:
+वेरिएबल्स (variables) को निम्न तरीकों से declare किया जा सकता है:
 
 - `let`
-- `const` (constant, can't be changed)
-- `var` (old-style, will see later)
+- `const` (constant — जिसे बदला नहीं जा सकता)
+- `var` (पुराना तरीका, इसे हम आगे विस्तार से देखेंगे)
 
-A variable name can include:
-- Letters and digits, but the first character may not be a digit.
-- Characters `$` and `_` are normal, on par with letters.
-- Non-Latin alphabets and hieroglyphs are also allowed, but commonly not used.
+वेरिएबल का नाम इन अक्षरों या चिन्हों से मिलकर बन सकता है:
 
-Variables are dynamically typed. They can store any value:
+- अक्षर (letters) और अंक (digits) इस्तेमाल किए जा सकते हैं, लेकिन पहला अक्षर अंक नहीं होना चाहिए।
+- $ और _ भी सामान्य characters हैं और अक्षरों की तरह उपयोग किए जा सकते हैं।
+- Non-Latin alphabets और hieroglyphs भी अनुमत (allowed) हैं, लेकिन आमतौर पर उनका उपयोग नहीं किया जाता।
+
+वेरिएबल्स डायनेमिकली टाइप्ड (dynamically typed) होते हैं, यानी वे किसी भी प्रकार का वैल्यू स्टोर कर सकते हैं:
 
 ```js
 let x = 5;
 x = "John";
 ```
 
-There are 8 data types:
+जावास्क्रिप्ट (JavaScript) में 8 डेटा टाइप्स (data types) होते हैं:
 
-- `number` for both floating-point and integer numbers,
-- `bigint` for integer numbers of arbitrary length,
-- `string` for strings,
-- `boolean` for logical values: `true/false`,
-- `null` -- a type with a single value `null`, meaning "empty" or "does not exist",
-- `undefined` -- a type with a single value `undefined`, meaning "not assigned",
-- `object` and `symbol` -- for complex data structures and unique identifiers, we haven't learnt them yet.
+ - `number` — floating-point और integer दोनों प्रकार की संख्याओं के लिए।
+ - `bigint` — बहुत बड़ी लंबाई (arbitrary length) वाली integer संख्याओं के लिए।
+ - `string` — टेक्स्ट (text) के लिए।
+ - `boolean` — तार्किक (logical) वैल्यू के लिए: `true/false`।
+ - `null` — एक ऐसा टाइप जिसकी केवल एक वैल्यू null होती है, जिसका अर्थ है "खाली (empty)" या "मौजूद नहीं है (does not exist)"।
+ - `undefined` — एक ऐसा टाइप जिसकी केवल एक वैल्यू undefined होती है, जिसका अर्थ है "निर्धारित करना (assign) नहीं किया गया"।  
+ - `object` और `symbol` — जटिल डेटा संरचनाओं (complex data structures) और विशिष्ट पहचानकर्ता (unique identifiers) के लिए। इन्हें हम आगे सीखेंगे।
 
-The `typeof` operator returns the type for a value, with two exceptions:
+`typeof` ऑपरेटर किसी वैल्यू (value) का टाइप (type) लौटाता है, लेकिन इसके दो अपवाद (exceptions) हैं:
 ```js
-typeof null == "object" // error in the language
-typeof function(){} == "function" // functions are treated specially
+typeof null == "object" // भाषा (language) की एक गलती
+typeof function(){} == "function" // फंक्शन्स (functions) को विशेष रूप से ट्रीट (treat) किया जाता है
 ```
 
-More in: <info:variables> and <info:types>.
+अधिक जानकारी के लिए देखें: <info:variables> और <info:types>।
 
 ## Interaction
 
