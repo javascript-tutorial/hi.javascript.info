@@ -100,22 +100,22 @@ typeof function(){} == "function" // फंक्शन्स (functions) को
 
 अधिक जानकारी के लिए देखें: <info:variables> और <info:types>।
 
-## Interaction
+## इंटरैक्शन (Interaction)
 
-We're using a browser as a working environment, so basic UI functions will be:
+हम ब्राउज़र (browser) को अपने काम करने के वातावरण (working environment) के रूप में उपयोग कर रहे हैं, इसलिए कुछ बुनियादी UI functions का उपयोग करेंगे:
 
 [`prompt(question, [default])`](mdn:api/Window/prompt)
-: Ask a `question`, and return either what the visitor entered or `null` if they clicked "cancel".
+: यह user से एक `प्रश्न (question)` पूछता है और जो भी input वह देता है, उसे लौटाता है। यदि user "Cancel" पर क्लिक करता है, तो यह `null` लौटाता है।
 
 [`confirm(question)`](mdn:api/Window/confirm)
-: Ask a `question` and suggest to choose between Ok and Cancel. The choice is returned as `true/false`.
+: यह एक `प्रश्न (question)` पूछता है और user को Ok और Cancel में से एक चुनने का विकल्प देता है। चुना गया परिणाम `true/false` के रूप में लौटाया जाता है।
 
 [`alert(message)`](mdn:api/Window/alert)
-: Output a `message`.
+: यह एक `message` दिखाता है।
 
-All these functions are *modal*, they pause the code execution and prevent the visitor from interacting with the page until they answer.
+ये सभी फंक्शन्स (functions) *मोडल (modal)* होते हैं। ये कोड के निष्पादन (execution) को रोक देते हैं और यूज़र (user) को तब तक पेज के साथ इंटरैक्ट करने से रोकते हैं, जब तक वह जवाब नहीं दे देता।
 
-For instance:
+उदाहरण के लिए:
 
 ```js run
 let userName = prompt("Your name?", "Alice");
@@ -125,7 +125,7 @@ alert( "Visitor: " + userName ); // Alice
 alert( "Tea wanted: " + isTeaWanted ); // true
 ```
 
-More in: <info:alert-prompt-confirm>.
+अधिक जानकारी के लिए देखें: <info:alert-prompt-confirm>।
 
 ## Operators
 
