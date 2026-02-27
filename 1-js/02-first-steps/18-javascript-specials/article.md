@@ -206,18 +206,19 @@ alert( "Tea wanted: " + isTeaWanted ); // true
 
 आगे हम ऑब्जेक्ट्स (objects) के साथ काम करने के लिए अन्य प्रकार के लूप्स (Loops) भी सीखेंगे।
 
-## The "switch" construct
+## "switch" संरचना (The "switch" Construct)
 
-The "switch" construct can replace multiple `if` checks. It uses `===` (strict equality) for comparisons.
+"switch" संरचना (construct) कई `if` जाँचों (checks) की जगह ले सकती है।
+यह तुलना (comparisons) के लिए `===` (स्ट्रिक्ट समानता / strict equality) का उपयोग करती है।
 
-For instance:
+उदाहरण:
 
 ```js run
 let age = prompt('Your age?', 18);
 
 switch (age) {
   case 18:
-    alert("Won't work"); // the result of prompt is a string, not a number
+    alert("Won't work"); // prompt से मिलने वाला परिणाम (result) string होता है, नंबर (number) नहीं
     break;
 
   case "18":
@@ -229,7 +230,7 @@ switch (age) {
 }
 ```
 
-Details in: <info:switch>.
+अधिक जानकारी के लिए देखें: <info:switch>।
 
 ## Functions
 
