@@ -1,23 +1,23 @@
-# JavaScript specials
+# जावास्क्रिप्ट विशेष बातें (JavaScript Specials)
 
-This chapter briefly recaps the features of JavaScript that we've learned by now, paying special attention to subtle moments.
+इस अध्याय में हम अब तक सीखी गई जावास्क्रिप्ट (JavaScript) की मुख्य विशेषताओं का संक्षिप्त सारांश करेंगे, खासकर उन बारीकियों पर ध्यान देते हुए जहाँ अक्सर भ्रम होता है।
 
-## Code structure
+## कोड संरचना (Code Structure)
 
-Statements are delimited with a semicolon:
+हर स्टेटमेंट के बाद आमतौर पर सेमीकोलन (;) लगाया जाता है:
 
 ```js run no-beautify
 alert('Hello'); alert('World');
 ```
 
-Usually, a line-break is also treated as a delimiter, so that would also work:
+आमतौर पर नई पंक्ति (line-break) को भी डिलिमिटर (delimeter) की तरह माना जाता है, इसलिए यह तरीका भी काम करता है:
 
 ```js run no-beautify
 alert('Hello')
 alert('World')
 ```
 
-That's called "automatic semicolon insertion". Sometimes it doesn't work, for instance:
+इसे स्वचालित सेमीकोलन सम्मिलन (Automatic Semicolon Insertion) कहा जाता है। लेकिन कुछ स्थितियों में यह सही तरीके से काम नहीं करता। उदाहरण के लिए:
 
 ```js run
 alert("There will be an error after this message")
@@ -25,27 +25,27 @@ alert("There will be an error after this message")
 [1, 2].forEach(alert)
 ```
 
-Most codestyle guides agree that we should put a semicolon after each statement.
+अधिकांश कोड स्टाइल गाइड्स (code style guides) इस बात से सहमत हैं कि हर स्टेटमेंट (statement) के बाद सेमीकोलन (semicolon) लगाना चाहिए।
 
-Semicolons are not required after code blocks `{...}` and syntax constructs with them like loops:
+लेकिन कोड ब्लॉक्स (code blocks) `{...}` और उनके साथ आने वाले सिंटैक्स कंस्ट्रक्ट्स (syntax constructs) जैसे लूप्स (loops) के बाद सेमीकोलन (semicolon) लगाने की आवश्यकता नहीं होती।
 
 ```js
 function f() {
-  // no semicolon needed after function declaration
+  // फंक्शन डिक्लेरेशन (function declaration) के बाद सेमीकोलन (semicolon) की ज़रूरत नहीं है
 }
 
 for(;;) {
-  // no semicolon needed after the loop
+  // लूप (loop) के बाद सेमीकोलन (semicolon) की ज़रूरत नहीं है
 }
 ```
 
-...But even if we can put an "extra" semicolon somewhere, that's not an error. It will be ignored.
+लेकिन अगर हम कहीं अतिरिक्त सेमीकोलन (semicolon) लगा भी दें, तो यह error (त्रुटि) नहीं देगा। उसे जावास्क्रिप्ट (JavaScript) द्वारा अनदेखा कर दिया जाएगा।
 
 More in: <info:structure>.
 
-## Strict mode
+## स्ट्रिक्ट मोड (Strict Mode)
 
-To fully enable all features of modern JavaScript, we should start scripts with `"use strict"`.
+आधुनिक जावास्क्रिप्ट (Modern JavaScript) की सभी सुविधाओं को पूरी तरह सक्षम (enable) करने के लिए, हमें स्क्रिप्ट की शुरुआत में `"use strict"` लिखना चाहिए।
 
 ```js
 'use strict';
@@ -53,68 +53,69 @@ To fully enable all features of modern JavaScript, we should start scripts with 
 ...
 ```
 
-The directive must be at the top of a script or at the beginning of a function body.
+यह निर्देश स्क्रिप्ट (script) के सबसे ऊपर या किसी फंक्शन बॉडी (function body) की शुरुआत में होना चाहिए।
 
-Without `"use strict"`, everything still works, but some features behave in the old-fashion, "compatible" way. We'd generally prefer the modern behavior.
+यदि "use strict" नहीं लिखा जाता, तो सब कुछ फिर भी काम करता है, लेकिन कुछ फीचर्स (features) पुराने, "अनुकूल" तरीके से व्यवहार करते हैं। सामान्यतः हम आधुनिक (modern) व्यवहार को ही प्राथमिकता देते हैं।
 
-Some modern features of the language (like classes that we'll study in the future) enable strict mode implicitly.
+भाषा के कुछ आधुनिक फीचर्स (features) जैसे क्लासेस (classes), जिन्हें हम आगे सीखेंगे अपने-आप स्ट्रिक्ट मोड (strict mode) को सक्षम कर देते हैं।
 
-More in: <info:strict-mode>.
+अधिक जानकारी के लिए देखें: <info:strict-mode>।
 
-## Variables
+## वेरिएबल्स (Variables)
 
-Can be declared using:
+वेरिएबल्स (variables) को निम्न तरीकों से declare किया जा सकता है:
 
 - `let`
-- `const` (constant, can't be changed)
-- `var` (old-style, will see later)
+- `const` (constant — जिसे बदला नहीं जा सकता)
+- `var` (पुराना तरीका, इसे हम आगे विस्तार से देखेंगे)
 
-A variable name can include:
-- Letters and digits, but the first character may not be a digit.
-- Characters `$` and `_` are normal, on par with letters.
-- Non-Latin alphabets and hieroglyphs are also allowed, but commonly not used.
+वेरिएबल का नाम इन अक्षरों या चिन्हों से मिलकर बन सकता है:
 
-Variables are dynamically typed. They can store any value:
+- अक्षर (letters) और अंक (digits) इस्तेमाल किए जा सकते हैं, लेकिन पहला अक्षर अंक नहीं होना चाहिए।
+- $ और _ भी सामान्य characters हैं और अक्षरों की तरह उपयोग किए जा सकते हैं।
+- Non-Latin alphabets और hieroglyphs भी अनुमत (allowed) हैं, लेकिन आमतौर पर उनका उपयोग नहीं किया जाता।
+
+वेरिएबल्स डायनेमिकली टाइप्ड (dynamically typed) होते हैं, यानी वे किसी भी प्रकार का वैल्यू स्टोर कर सकते हैं:
 
 ```js
 let x = 5;
 x = "John";
 ```
 
-There are 8 data types:
+जावास्क्रिप्ट (JavaScript) में 8 डेटा टाइप्स (data types) होते हैं:
 
-- `number` for both floating-point and integer numbers,
-- `bigint` for integer numbers of arbitrary length,
-- `string` for strings,
-- `boolean` for logical values: `true/false`,
-- `null` -- a type with a single value `null`, meaning "empty" or "does not exist",
-- `undefined` -- a type with a single value `undefined`, meaning "not assigned",
-- `object` and `symbol` -- for complex data structures and unique identifiers, we haven't learnt them yet.
+ - `number` — floating-point और integer दोनों प्रकार की संख्याओं के लिए।
+ - `bigint` — बहुत बड़ी लंबाई (arbitrary length) वाली integer संख्याओं के लिए।
+ - `string` — टेक्स्ट (text) के लिए।
+ - `boolean` — तार्किक (logical) वैल्यू के लिए: `true/false`।
+ - `null` — एक ऐसा टाइप जिसकी केवल एक वैल्यू null होती है, जिसका अर्थ है "खाली (empty)" या "मौजूद नहीं है (does not exist)"।
+ - `undefined` — एक ऐसा टाइप जिसकी केवल एक वैल्यू undefined होती है, जिसका अर्थ है "निर्धारित करना (assign) नहीं किया गया"।  
+ - `object` और `symbol` — जटिल डेटा संरचनाओं (complex data structures) और विशिष्ट पहचानकर्ता (unique identifiers) के लिए। इन्हें हम आगे सीखेंगे।
 
-The `typeof` operator returns the type for a value, with two exceptions:
+`typeof` ऑपरेटर किसी वैल्यू (value) का टाइप (type) लौटाता है, लेकिन इसके दो अपवाद (exceptions) हैं:
 ```js
-typeof null == "object" // error in the language
-typeof function(){} == "function" // functions are treated specially
+typeof null == "object" // भाषा (language) की एक गलती
+typeof function(){} == "function" // फंक्शन्स (functions) को विशेष रूप से ट्रीट (treat) किया जाता है
 ```
 
-More in: <info:variables> and <info:types>.
+अधिक जानकारी के लिए देखें: <info:variables> और <info:types>।
 
-## Interaction
+## इंटरैक्शन (Interaction)
 
-We're using a browser as a working environment, so basic UI functions will be:
+हम ब्राउज़र (browser) को अपने काम करने के वातावरण (working environment) के रूप में उपयोग कर रहे हैं, इसलिए कुछ बुनियादी UI functions का उपयोग करेंगे:
 
 [`prompt(question, [default])`](mdn:api/Window/prompt)
-: Ask a `question`, and return either what the visitor entered or `null` if they clicked "cancel".
+: यह user से एक `प्रश्न (question)` पूछता है और जो भी input वह देता है, उसे लौटाता है। यदि user "Cancel" पर क्लिक करता है, तो यह `null` लौटाता है।
 
 [`confirm(question)`](mdn:api/Window/confirm)
-: Ask a `question` and suggest to choose between Ok and Cancel. The choice is returned as `true/false`.
+: यह एक `प्रश्न (question)` पूछता है और user को Ok और Cancel में से एक चुनने का विकल्प देता है। चुना गया परिणाम `true/false` के रूप में लौटाया जाता है।
 
 [`alert(message)`](mdn:api/Window/alert)
-: Output a `message`.
+: यह एक `message` दिखाता है।
 
-All these functions are *modal*, they pause the code execution and prevent the visitor from interacting with the page until they answer.
+ये सभी फंक्शन्स (functions) *मोडल (modal)* होते हैं। ये कोड के निष्पादन (execution) को रोक देते हैं और यूज़र (user) को तब तक पेज के साथ इंटरैक्ट करने से रोकते हैं, जब तक वह जवाब नहीं दे देता।
 
-For instance:
+उदाहरण के लिए:
 
 ```js run
 let userName = prompt("Your name?", "Alice");
@@ -124,61 +125,62 @@ alert( "Visitor: " + userName ); // Alice
 alert( "Tea wanted: " + isTeaWanted ); // true
 ```
 
-More in: <info:alert-prompt-confirm>.
+अधिक जानकारी के लिए देखें: <info:alert-prompt-confirm>।
 
-## Operators
+## ऑपरेटर्स (Operators)
 
-JavaScript supports the following operators:
+जावास्क्रिप्ट (JavaScript) निम्न प्रकार के ऑपरेटर्स (operators) को सपोर्ट करता है:
 
-Arithmetical
-: Regular: `* + - /`, also `%` for the remainder and `**` for power of a number.
+अंकगणितीय (Arithmetical)
+: सामान्य ऑपरेटर्स: `* + - /`, इसके अलावा `%` शेष (remainder) के लिए और `**` किसी संख्या की घात (power) के लिए उपयोग किया जाता है।
 
-    The binary plus `+` concatenates strings. And if any of the operands is a string, the other one is converted to string too:
+    Binary plus `+` strings को जोड़ता (concatenate) है। और यदि किसी भी ऑपेरेंड (operand) का प्रकार string हो, तो दूसरा ऑपेरेंड (operand) भी string में बदल दिया जाता है।
 
     ```js run
     alert( '1' + 2 ); // '12', string
     alert( 1 + '2' ); // '12', string
     ```
 
-Assignments
-: There is a simple assignment: `a = b` and combined ones like `a *= 2`.
+असाइनमेंट (Assignment)
+: एक सामान्य assignment होता है: `a = b` और कुछ combined assignments भी होते हैं, जैसे: `a *= 2`।
 
-Bitwise
-: Bitwise operators work with 32-bit integers at the lowest, bit-level: see the [docs](mdn:/JavaScript/Guide/Expressions_and_Operators#Bitwise) when they are needed.
+बिटवाइज़ (Bitwise)
+: Bitwise operators 32-bit integers bit-level पर काम करते हैं। ज़रूरत पड़ने पर विवरण के लिए [docs](mdn:/JavaScript/Guide/Expressions_and_Operators#Bitwise) देखें।
 
-Conditional
-: The only operator with three parameters: `cond ? resultA : resultB`. If `cond` is truthy, returns `resultA`, otherwise `resultB`.
+कंडीशनल (Conditional)
+: यह एकमात्र ऑपरेटर (operator) है जिसमें तीन पैरामीटर्स (parameters) होते हैं: `cond ? resultA : resultB` यदि `cond` सत्य (truthy) है, तो `resultA` लौटाया जाता है, अन्यथा `resultB।`
 
-Logical operators
-: Logical AND `&&` and OR `||` perform short-circuit evaluation and then return the value where it stopped (not necessary `true`/`false`). Logical NOT `!` converts the operand to boolean type and returns the inverse value.
+लॉजिकल ऑपरेटर्स (Logical Operators)
+: लॉजिकल (Logical) AND `&&` और OR || शॉर्ट-सर्किट मूल्यांकन (short-circuit evaluation) करते हैं और जहाँ मूल्यांकन (evaluation) रुकता है, वहीं की वैल्यू (value) लौटाते हैं (ज़रूरी नहीं कि परिणाम हमेशा `true/false` ही हो)। लॉजिकल (Logical) NOT `!` ऑपेरेंड (operand) को बूलियन टाइप (boolean type) में बदलता है और उसका उल्टा (inverse) मान लौटाता है।
 
-Nullish coalescing operator
-: The `??` operator provides a way to choose a defined value from a list of variables. The result of `a ?? b` is `a` unless it's `null/undefined`, then `b`.
+नलिश कोएलसिंग ऑपरेटर (Nullish Coalescing Operator)
+: `??` ऑपरेटर वेरिएबल्स (variables) की सूची में से एक निर्धारित (defined) वैल्यू (value) चुनने का तरीका देता है। `a ?? b` का परिणाम `a` होगा, जब तक कि वह `null` या `undefined` न हो।
+यदि a `null/undefined` है, तो परिणाम `b` होगा।
 
-Comparisons
-: Equality check `==` for values of different types converts them to a number (except `null` and `undefined` that equal each other and nothing else), so these are equal:
+तुलनाएँ (Comparisons)
+: समानता जाँच (Equality check) `==` अलग अलग टाइप (types) की वैल्यूज़ (values) को पहले नंबर (number) में बदल देता है (सिवाय `null` और `undefined` के, जो केवल एक-दूसरे के बराबर होते हैं और किसी अन्य के नहीं), इसलिए ये समान माने जाते हैं:
 
     ```js run
     alert( 0 == false ); // true
     alert( 0 == '' ); // true
     ```
 
-    Other comparisons convert to a number as well.
+    अन्य तुलनाएँ (comparisons) भी वैल्यूज़ (values) को संख्या (number) में बदल देती हैं।
 
-    The strict equality operator `===` doesn't do the conversion: different types always mean different values for it.
+    स्ट्रिक्ट समानता ऑपरेटर (strict equality operator) `===` यह परिवर्तन (conversion) नहीं करता। इसके लिए अलग-अलग टाइप (types) हमेशा अलग वैल्यू (value) माने जाते हैं।
 
-    Values `null` and `undefined` are special: they equal `==` each other and don't equal anything else.
+    वैल्यूज़ (values) `null` और `undefined` विशेष (special) हैं: ये `==` में केवल एक-दूसरे के बराबर होते हैं और किसी अन्य के नहीं।
 
-    Greater/less comparisons compare strings character-by-character, other types are converted to a number.
+    बड़ी/छोटी तुलना (greater/less comparisons) में स्ट्रिंग्स (strings) की तुलना कैरेक्टर-दर-कैरेक्टर(character-by-character) की जाती है। अन्य टाइप्स (types) को संख्या (number) में बदल दिया जाता है।
 
-Other operators
-: There are few others, like a comma operator.
+अन्य ऑपरेटर्स (Other Operators)
+: कुछ अन्य ऑपरेटर्स (operators) भी हैं, जैसे कॉमा ऑपरेटर (comma operator)।
 
-More in: <info:operators>, <info:comparison>, <info:logical-operators>, <info:nullish-coalescing-operator>.
+अधिक जानकारी के लिए देखें: <info:operators>, <info:comparison>, <info:logical-operators>, <info:nullish-coalescing-operator>।
 
-## Loops
+## लूप्स (Loops)
 
-- We covered 3 types of loops:
+  - हमने लूप्स (loops) के 3 प्रकार कवर किए हैं:
 
     ```js
     // 1
@@ -197,25 +199,26 @@ More in: <info:operators>, <info:comparison>, <info:logical-operators>, <info:nu
     }
     ```
 
-- The variable declared in `for(let...)` loop is visible only inside the loop. But we can also omit `let` and reuse an existing variable.
-- Directives `break/continue` allow to exit the whole loop/current iteration. Use labels to break nested loops.
+- `for(let...)` लूप में घोषित किया गया वेरिएबल (variable) केवल उसी लूप के अंदर दिखाई देता है। लेकिन हम `let` को हटा (omit) भी सकते हैं और पहले से मौजूद वेरिएबल (existing variable) का दोबारा उपयोग (reuse) कर सकते हैं।
+- निर्देश (directives) `break/continue` पूरे लूप या वर्तमान इटरेशन (current iteration) से बाहर निकलने की अनुमति देते हैं। नेस्टेड लूप्स (nested loops) को तोड़ने (break) के लिए लेबल्स (labels) का उपयोग करें।
 
-Details in: <info:while-for>.
+विस्तार से जानकारी के लिए देखें: <info:while-for>।
 
-Later we'll study more types of loops to deal with objects.
+आगे हम ऑब्जेक्ट्स (objects) के साथ काम करने के लिए अन्य प्रकार के लूप्स (Loops) भी सीखेंगे।
 
-## The "switch" construct
+## "switch" संरचना (The "switch" Construct)
 
-The "switch" construct can replace multiple `if` checks. It uses `===` (strict equality) for comparisons.
+"switch" संरचना (construct) कई `if` जाँचों (checks) की जगह ले सकती है।
+यह तुलना (comparisons) के लिए `===` (स्ट्रिक्ट समानता / strict equality) का उपयोग करती है।
 
-For instance:
+उदाहरण:
 
 ```js run
 let age = prompt('Your age?', 18);
 
 switch (age) {
   case 18:
-    alert("Won't work"); // the result of prompt is a string, not a number
+    alert("Won't work"); // prompt से मिलने वाला परिणाम (result) string होता है, नंबर (number) नहीं
     break;
 
   case "18":
@@ -227,13 +230,13 @@ switch (age) {
 }
 ```
 
-Details in: <info:switch>.
+अधिक जानकारी के लिए देखें: <info:switch>।
 
-## Functions
+## फंक्शन्स (Functions)
 
-We covered three ways to create a function in JavaScript:
+हमने जावास्क्रिप्ट (JavaScript) में फंक्शन (function) बनाने के तीन तरीके कवर किए हैं:
 
-1. Function Declaration: the function in the main code flow
+1. फंक्शन डिक्लेरेशन (Function Declaration): यह वह फंक्शन है जो मुख्य कोड प्रवाह (main code flow) में लिखा जाता है।
 
     ```js
     function sum(a, b) {
@@ -243,7 +246,7 @@ We covered three ways to create a function in JavaScript:
     }
     ```
 
-2. Function Expression: the function in the context of an expression
+2. फंक्शन एक्सप्रेशन (Function Expression): यह वह फंक्शन है जो किसी एक्सप्रेशन (expression) के संदर्भ (context) में लिखा जाता है।
 
     ```js
     let sum = function(a, b) {
@@ -253,7 +256,7 @@ We covered three ways to create a function in JavaScript:
     };
     ```
 
-3. Arrow functions:
+3. एरो फंक्शन्स (Arrow Functions):
 
     ```js
     // expression at the right side
@@ -272,13 +275,13 @@ We covered three ways to create a function in JavaScript:
     let double = n => n * 2;
     ```
 
+- फंक्शन्स (functions) में लोकल वेरिएबल्स (local variables) हो सकते हैं: यानी वे वेरिएबल्स (variables) जो उनकी बॉडी (body) के अंदर घोषित (declared) किए गए हों। ऐसे वेरिएबल्स केवल उसी फंक्शन के अंदर दिखाई (visible) देते हैं।
+- पैरामीटर्स (parameters) की डिफ़ॉल्ट वैल्यूज़ (default values) हो सकती हैं: `function sum(a = 1, b = 2) {...}`
+- फंक्शन्स (functions) हमेशा कुछ न कुछ रिटर्न (return) करते हैं। यदि `return` स्टेटमेंट (statement) नहीं है, तो परिणाम (result) `undefined` होता है।
 
-- Functions may have local variables: those declared inside its body. Such variables are only visible inside the function.
-- Parameters can have default values: `function sum(a = 1, b = 2) {...}`.
-- Functions always return something. If there's no `return` statement, then the result is `undefined`.
+विस्तार से जानकारी के लिए देखें: <info:function-basics>, <info:arrow-functions-basics>।
 
-Details: see <info:function-basics>, <info:arrow-functions-basics>.
+## आगे क्या? (More to come)
 
-## More to come
-
-That was a brief list of JavaScript features. As of now we've studied only basics. Further in the tutorial you'll find more specials and advanced features of JavaScript.
+यह जावास्क्रिप्ट (JavaScript) की विशेषताओं (features) की एक संक्षिप्त सूची थी।
+अभी तक हमने केवल मूल बातें (basics) सीखी हैं। आगे के अध्यायों (tutorial) में आपको जावास्क्रिप्ट की और विशेषताएँ (special features) और उन्नत (advanced) फीचर्स मिलेंगे।
