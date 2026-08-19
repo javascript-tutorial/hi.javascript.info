@@ -1,23 +1,23 @@
-# Object methods, "this"
+# ऑब्जेक्ट मेथड्स, "this"
 
-Objects are usually created to represent entities of the real world, like users, orders and so on:
+ऑब्जेक्ट्स आमतौर पर असली दुनिया की चीज़ों को दर्शाने के लिए बनाए जाते हैं, जैसे यूज़र, ऑर्डर वग़ैरह:
 
-```js
+````js
 let user = {
   name: "John",
   age: 30
 };
-```
+````
 
-And, in the real world, a user can *act*: select something from the shopping cart, login, logout etc.
+और असली दुनिया में यूज़र _कुछ कर भी सकता है_: शॉपिंग कार्ट से कुछ चुनना, लॉगिन करना, लॉगआउट करना वग़ैरह।
 
-Actions are represented in JavaScript by functions in properties.
+JavaScript में एक्शन्स को प्रॉपर्टीज़ में रखे फ़ंक्शन्स के ज़रिए दर्शाया जाता है।
 
-## Method examples
+## मेथड के उदाहरण
 
-For a start, let's teach the `user` to say hello:
+शुरुआत के लिए, चलो यूज़र को हैलो कहना सिखाते हैं:
 
-```js run
+````js run
 let user = {
   name: "John",
   age: 30
@@ -25,93 +25,94 @@ let user = {
 
 *!*
 user.sayHi = function() {
-  alert("Hello!");
+  alert("हैलो!");
 };
 */!*
 
-user.sayHi(); // Hello!
-```
+user.sayHi(); // हैलो!
+````
 
-Here we've just used a Function Expression to create a function and assign it to the property `user.sayHi` of the object.
+यहाँ हमने अभी-अभी Function Expression इस्तेमाल करके फ़ंक्शन बनाया और उसे ऑब्जेक्ट की प्रॉपर्टी `user.sayHi` में असाइन कर दिया।
 
-Then we can call it as `user.sayHi()`. The user can now speak!
+अब हम इसे `user.sayHi()` की तरह कॉल कर सकते हैं। यूज़र अब बोल सकता है!
 
-A function that is a property of an object is called its *method*.
+जो फ़ंक्शन किसी ऑब्जेक्ट की प्रॉपर्टी होता है, उसे उस ऑब्जेक्ट का _मेथड_ कहते हैं।
 
-So, here we've got a method `sayHi` of the object `user`.
+तो, यहाँ हमारे पास ऑब्जेक्ट `user` का मेथड `sayHi` है।
 
-Of course, we could use a pre-declared function as a method, like this:
+बेशक, हम किसी पहले से घोषित फ़ंक्शन को मेथड की तरह भी इस्तेमाल कर सकते हैं, जैसे:
 
-```js run
+````js run
 let user = {
   // ...
 };
 
 *!*
-// first, declare
+// पहले, घोषित करो
 function sayHi() {
-  alert("Hello!");
+  alert("हैलो!");
 };
 
-// then add as a method
+// फिर मेथड की तरह जोड़ो
 user.sayHi = sayHi;
 */!*
 
-user.sayHi(); // Hello!
-```
+user.sayHi(); // हैलो!
+````
 
-```smart header="Object-oriented programming"
-When we write our code using objects to represent entities, that's called [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming), in short: "OOP".
+````smart header="Object-oriented programming"
+जब हम अपना कोड लिखने में ऑब्जेक्ट्स का इस्तेमाल चीज़ों को दर्शाने के लिए करते हैं, तो इसे [object-oriented programming](https://en.wikipedia.org/wiki/Object-oriented_programming) कहते हैं, संक्षेप में: "OOP"।
 
-OOP is a big thing, an interesting science of its own. How to choose the right entities? How to organize the interaction between them? That's architecture, and there are great books on that topic, like "Design Patterns: Elements of Reusable Object-Oriented Software" by E. Gamma, R. Helm, R. Johnson, J. Vissides or "Object-Oriented Analysis and Design with Applications" by G. Booch, and more.
-```
-### Method shorthand
+OOP बड़ी चीज़ है, अपने आप में एक दिलचस्प विज्ञान। सही चीज़ों को चुनना कैसे है? उनके बीच इंटरैक्शन को व्यवस्थित कैसे करें? यही शिल्प है, और इस विषय पर बढ़िया किताबें भी हैं, जैसे E. Gamma, R. Helm, R. Johnson, J. Vissides की "Design Patterns: Elements of Reusable Object-Oriented Software", या G. Booch की "Object-Oriented Analysis and Design with Applications", और भी कई।
+````
 
-There exists a shorter syntax for methods in an object literal:
+### मेथड शॉर्टहैंड
 
-```js
-// these objects do the same
+object literal में मेथड्स के लिए छोटा सिंटैक्स भी मौजूद है:
+
+````js
+// ये दोनों ऑब्जेक्ट्स एक जैसा काम करते हैं
 
 user = {
   sayHi: function() {
-    alert("Hello");
+    alert("हैलो");
   }
 };
 
-// method shorthand looks better, right?
+// मेथड शॉर्टहैंड ज़्यादा अच्छा दिखता है, है ना?
 user = {
 *!*
-  sayHi() { // same as "sayHi: function()"
+  sayHi() { // "sayHi: function()" जैसा ही
 */!*
-    alert("Hello");
+    alert("हैलो");
   }
 };
-```
+````
 
-As demonstrated, we can omit `"function"` and just write `sayHi()`.
+जैसा दिखाया गया, हम `"function"` को छोड़ सकते हैं और सीधे `sayHi()` लिख सकते हैं।
 
-To tell the truth, the notations are not fully identical. There are subtle differences related to object inheritance (to be covered later), but for now they do not matter. In almost all cases the shorter syntax is preferred.
+सच कहें तो, दोनों नोटेशन्स पूरी तरह एक जैसे नहीं हैं। ऑब्जेक्ट इनहेरिटेंस से जुड़े कुछ बारीक फ़र्क़ हैं (बाद में देखेंगे), पर अभी उनसे कोई फ़र्क़ नहीं पड़ता। लगभग हर मामले में छोटा सिंटैक्स ही बेहतर माना जाता है।
 
-## "this" in methods
+## मेथड्स में "this"
 
-It's common that an object method needs to access the information stored in the object to do its job.
+आमतौर पर किसी ऑब्जेक्ट का मेथड अपना काम करने के लिए ऑब्जेक्ट में रखी जानकारी तक पहुँच बनाता है।
 
-For instance, the code inside `user.sayHi()` may need the name of the `user`.
+जैसे, `user.sayHi()` के अंदर का कोड `user` का नाम माँग सकता है।
 
-**To access the object, a method can use the `this` keyword.**
+**ऑब्जेक्ट तक पहुँच बनाने के लिए, कोई मेथड `this` कीवर्ड का इस्तेमाल कर सकता है।**
 
-The value of `this` is the object "before dot", the one used to call the method.
+`this` की वैल्यू वह ऑब्जेक्ट है जो "dot से पहले" आता है, यानी जिसका इस्तेमाल मेथड को कॉल करने के लिए हुआ।
 
-For instance:
+जैसे:
 
-```js run
+````js run
 let user = {
   name: "John",
   age: 30,
 
   sayHi() {
 *!*
-    // "this" is the "current object"
+    // "this" "करंट ऑब्जेक्ट" है
     alert(this.name);
 */!*
   }
@@ -119,38 +120,38 @@ let user = {
 };
 
 user.sayHi(); // John
-```
+````
 
-Here during the execution of `user.sayHi()`, the value of `this` will be `user`.
+यहाँ `user.sayHi()` के एक्ज़िक्यूशन के दौरान, `this` की वैल्यू `user` होगी।
 
-Technically, it's also possible to access the object without `this`, by referencing it via the outer variable:
+तकनीकी रूप से, बाहरी वेरिएबल के ज़रिए संदर्भित करके `this` के बिना भी ऑब्जेक्ट को एक्सेस करना संभव है:
 
-```js
+````js
 let user = {
   name: "John",
   age: 30,
 
   sayHi() {
 *!*
-    alert(user.name); // "user" instead of "this"
+    alert(user.name); // "this" की जगह "user"
 */!*
   }
 
 };
-```
+````
 
-...But such code is unreliable. If we decide to copy `user` to another variable, e.g. `admin = user` and overwrite `user` with something else, then it will access the wrong object.
+...लेकिन ऐसा कोड भरोसेमंद नहीं होता। अगर हम `user` को किसी दूसरे वेरिएबल में कॉपी करने का फ़ैसला करते हैं, जैसे `admin = user`, और `user` को किसी दूसरी चीज़ से ओवरराइट कर देते हैं, तो यह ग़लत ऑब्जेक्ट को एक्सेस करेगा।
 
-That's demonstrated below:
+इसे नीचे दिखाया गया है:
 
-```js run
+````js run
 let user = {
   name: "John",
   age: 30,
 
   sayHi() {
 *!*
-    alert( user.name ); // leads to an error
+    alert( user.name ); // इससे एरर आता है
 */!*
   }
 
@@ -158,32 +159,32 @@ let user = {
 
 
 let admin = user;
-user = null; // overwrite to make things obvious
+user = null; // चीज़ों को स्पष्ट करने के लिए ओवरराइट किया
 
 *!*
 admin.sayHi(); // TypeError: Cannot read property 'name' of null
 */!*
-```
+````
 
-If we used `this.name` instead of `user.name` inside the `alert`, then the code would work.
+अगर हम `alert` के अंदर `user.name` की जगह `this.name` का इस्तेमाल करते, तो कोड काम करता।
 
-## "this" is not bound
+## "this" बाउंड नहीं है
 
-In JavaScript, keyword `this` behaves unlike most other programming languages. It can be used in any function, even if it's not a method of an object.
+JavaScript में, `this` कीवर्ड ज़्यादातर दूसरी प्रोग्रामिंग भाषाओं से अलग तरह से काम करता है। इसे किसी भी फ़ंक्शन में इस्तेमाल किया जा सकता है, भले ही वह किसी ऑब्जेक्ट का मेथड न हो।
 
-There's no syntax error in the following example:
+नीचे दिए गए उदाहरण में कोई सिंटैक्स एरर नहीं है:
 
-```js
+````js
 function sayHi() {
   alert( *!*this*/!*.name );
 }
-```
+````
 
-The value of `this` is evaluated during the run-time, depending on the context.
+`this` की वैल्यू रन-टाइम के दौरान, कॉन्टेक्स्ट के आधार पर तय की जाती है।
 
-For instance, here the same function is assigned to two different objects and has different "this" in the calls:
+जैसे, यहाँ एक ही फ़ंक्शन दो अलग-अलग ऑब्जेक्ट्स को असाइन किया गया है और कॉल्स में इनके लिए "this" अलग-अलग है:
 
-```js run
+````js run
 let user = { name: "John" };
 let admin = { name: "Admin" };
 
@@ -192,23 +193,23 @@ function sayHi() {
 }
 
 *!*
-// use the same function in two objects
+// दोनों ऑब्जेक्ट्स में एक ही फ़ंक्शन का इस्तेमाल करो
 user.f = sayHi;
 admin.f = sayHi;
 */!*
 
-// these calls have different this
-// "this" inside the function is the object "before the dot"
+// इन दोनों calls में this अलग-अलग है
+// फ़ंक्शन के अंदर "this" वह ऑब्जेक्ट है जो "dot से पहले" है
 user.f(); // John  (this == user)
 admin.f(); // Admin  (this == admin)
 
-admin['f'](); // Admin (dot or square brackets access the method – doesn't matter)
-```
+admin['f'](); // Admin (dot हो या square brackets, मेथड को एक्सेस करने से फ़र्क़ नहीं पड़ता)
+````
 
-The rule is simple: if `obj.f()` is called, then `this` is `obj` during the call of `f`. So it's either `user` or `admin` in the example above.
+नियम आसान है: अगर `obj.f()` को कॉल किया जाता है, तो `f` के कॉल के दौरान `this`, `obj` होता है। यानी, ऊपर दिए गए उदाहरण में यह या तो `user` होगा या `admin`।
 
-````smart header="Calling without an object: `this == undefined`"
-We can even call the function without an object at all:
+````smart header="बिना किसी ऑब्जेक्ट के कॉल करना: `this == undefined`"
+हम फ़ंक्शन को बिना किसी ऑब्जेक्ट के भी कॉल कर सकते हैं:
 
 ```js run
 function sayHi() {
@@ -218,30 +219,30 @@ function sayHi() {
 sayHi(); // undefined
 ```
 
-In this case `this` is `undefined` in strict mode. If we try to access `this.name`, there will be an error.
+इस स्थिति में strict mode में `this` की वैल्यू `undefined` होती है। अगर हम `this.name` को एक्सेस करने की कोशिश करें, तो एरर आएगा।
 
-In non-strict mode the value of `this` in such case will be the *global object* (`window` in a browser, we'll get to it later in the chapter [](info:global-object)). This is a historical behavior that `"use strict"` fixes.
+non-strict mode में इस स्थिति में `this` की वैल्यू _ग्लोबल ऑब्जेक्ट_ होगी (browser में `window`, इसके बारे में बाद में chapter [](info:global-object) में जानेंगे)। यह एक हिस्टोरिकल बिहेवियर है जिसे `"use strict"` ठीक करता है।
 
-Usually such call is a programming error. If there's `this` inside a function, it expects to be called in an object context.
+आमतौर पर ऐसी कॉल प्रोग्रामिंग एरर होती है। अगर किसी फ़ंक्शन के अंदर `this` है, तो उससे यह उम्मीद की जाती है कि उसे किसी ऑब्जेक्ट के कॉन्टेक्स्ट में कॉल किया जाएगा।
 ````
 
-```smart header="The consequences of unbound `this`"
-If you come from another programming language, then you are probably used to the idea of a "bound `this`", where methods defined in an object always have `this` referencing that object.
+````smart header="अनबाउंड `this` के नतीजे"
+अगर तुम किसी दूसरी प्रोग्रामिंग भाषा से आए हो, तो शायद तुम "बाउंड `this`" के कॉन्सेप्ट से परिचित होगे, जहाँ किसी ऑब्जेक्ट में डिफ़ाइन किए गए मेथड्स में `this` हमेशा उसी ऑब्जेक्ट को रेफ़र करता है।
 
-In JavaScript `this` is "free", its value is evaluated at call-time and does not depend on where the method was declared, but rather on what object is "before the dot".
+JavaScript में `this` "free" है, इसकी वैल्यू कॉल-टाइम पर एवैल्युएट होती है और इस बात पर निर्भर नहीं करती कि मेथड कहाँ डिक्लेयर किया गया था, बल्कि इस पर निर्भर करती है कि dot से पहले कौन-सा ऑब्जेक्ट है।
 
-The concept of run-time evaluated `this` has both pluses and minuses. On the one hand, a function can be reused for different objects. On the other hand, the greater flexibility creates more possibilities for mistakes.
+रन-टाइम पर एवैल्युएट होने वाले `this` की इस कॉन्सेप्ट के अपने फ़ायदे और नुक़सान दोनों हैं। एक तरफ़, फ़ंक्शन को अलग-अलग ऑब्जेक्ट्स के लिए फिर से इस्तेमाल किया जा सकता है। दूसरी तरफ़, ज़्यादा फ्लेक्सिबिलिटी की वजह से ग़लतियों की संभावना भी बढ़ जाती है।
 
-Here our position is not to judge whether this language design decision is good or bad. We'll understand how to work with it, how to get benefits and avoid problems.
-```
+यहाँ हमारा मक़सद यह तय करना नहीं है कि भाषा के डिज़ाइन का यह फ़ैसला अच्छा है या बुरा। हम यह समझेंगे कि इसके साथ कैसे काम किया जाए, इसके फ़ायदे कैसे उठाए जाएँ और समस्याओं से कैसे बचा जाए।
+````
 
-## Arrow functions have no "this"
+## ऐरो फ़ंक्शन्स में "this" नहीं होता है
 
-Arrow functions are special: they don't have their "own" `this`. If we reference `this` from such a function, it's taken from the outer "normal" function.
+ऐरो फ़ंक्शन्स ख़ास हैं: उनका अपना कोई "own" `this` नहीं होता। अगर हम ऐसे किसी फ़ंक्शन से `this` को संदर्भित करें, तो वह बाहरी "normal" फ़ंक्शन से लिया जाता है।
 
-For instance, here `arrow()` uses `this` from the outer `user.sayHi()` method:
+जैसे, यहाँ `arrow()`, बाहरी `user.sayHi()` मेथड से `this` लेता है:
 
-```js run
+````js run
 let user = {
   firstName: "Ilya",
   sayHi() {
@@ -251,20 +252,20 @@ let user = {
 };
 
 user.sayHi(); // Ilya
-```
+````
 
-That's a special feature of arrow functions, it's useful when we actually do not want to have a separate `this`, but rather to take it from the outer context. Later in the chapter <info:arrow-functions> we'll go more deeply into arrow functions.
+यह ऐरो फ़ंक्शन्स की एक ख़ास ख़ूबी है, यह तब काम आती है जब हमें असल में अपना अलग `this` नहीं चाहिए होता, बल्कि उसे बाहरी कॉन्टेक्स्ट से लेना होता है। बाद में chapter <info:arrow-functions> में हम ऐरो फ़ंक्शन्स के बारे में और गहराई से जानेंगे।
 
 
-## Summary
+## सारांश
 
-- Functions that are stored in object properties are called "methods".
-- Methods allow objects to "act" like `object.doSomething()`.
-- Methods can reference the object as `this`.
+- ऑब्जेक्ट प्रॉपर्टीज़ में रखे गए फ़ंक्शन्स को "मेथड्स" कहते हैं।
+- मेथड्स, ऑब्जेक्ट्स को `object.doSomething()` जैसा "act" करने देते हैं।
+- मेथड्स, ऑब्जेक्ट को `this` के रूप में संदर्भित कर सकते हैं।
 
-The value of `this` is defined at run-time.
-- When a function is declared, it may use `this`, but that `this` has no value until the function is called.
-- A function can be copied between objects.
-- When a function is called in the "method" syntax: `object.method()`, the value of `this` during the call is `object`.
+`this` की वैल्यू रन-टाइम पर तय होती है।
+- जब कोई फ़ंक्शन डिक्लेयर किया जाता है, तो वह `this` का इस्तेमाल कर सकता है, लेकिन जब तक फ़ंक्शन को कॉल नहीं किया जाता, तब तक उस `this` की कोई वैल्यू नहीं होती।
+- किसी फ़ंक्शन को ऑब्जेक्ट्स के बीच कॉपी किया जा सकता है।
+- जब किसी फ़ंक्शन को "मेथड" सिंटैक्स में कॉल किया जाता है: `object.method()`, तो कॉल के दौरान `this` की वैल्यू `object` होती है।
 
-Please note that arrow functions are special: they have no `this`. When `this` is accessed inside an arrow function, it is taken from outside.
+ध्यान दो कि ऐरो फ़ंक्शन्स ख़ास होते हैं: इनमें `this` नहीं होता। जब ऐरो फ़ंक्शन के अंदर `this` को एक्सेस किया जाता है, तो इसे बाहर से लिया जाता है।
